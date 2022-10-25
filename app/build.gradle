@@ -10,7 +10,6 @@ android {
     compileSdk 31
 
     defaultConfig {
-        applicationId "com.arhamsoft.deskilz"
         minSdk 21
         targetSdk 31
         versionCode 1
