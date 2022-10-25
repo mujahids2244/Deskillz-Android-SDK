@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_centerInParent="true"
+        android:orientation="vertical"
+        android:padding="@dimen/size_30dp"
+        android:layout_margin="@dimen/size_30dp"
+        android:background="@drawable/background_layout_white_rounded">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Out Of Funds"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/text_size_20sp"
+            android:fontFamily="@font/titan_one_regular"
+            android:textColor="@color/black" />
+
+        <ImageView
+            android:layout_width="@dimen/size_100dp"
+            android:layout_height="@dimen/size_120dp"
+            android:layout_gravity="center_horizontal"
+            android:layout_margin="@dimen/size_10dp"
+            android:src="@drawable/out_of_funds" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Go to the store to get more funds!"
+            android:layout_gravity="center_horizontal"
+            android:textSize="@dimen/text_size_15sp"
+            android:layout_margin="@dimen/size_10dp"
+            android:fontFamily="@font/poppins_regular"/>
+
+        <Button
+            android:id="@+id/goToStore"
+            android:layout_width="@dimen/size_120dp"
+            android:layout_height="@dimen/size_50dp"
+            android:background="@drawable/button_bg_blue"
+            android:text="GO TO STORE"
+            android:layout_gravity="center_horizontal"
+            android:fontFamily="@font/titan_one_regular"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <ImageView
+        android:id="@+id/cancelBtn"
+        android:layout_width="@dimen/size_50dp"
+        android:layout_height="@dimen/size_50dp"
+        android:background="@drawable/button_bg_red"
+        android:src="@drawable/close_icon"
+        android:padding="@dimen/size_5dp"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:layout_marginEnd="@dimen/size_10dp"/>
+
+</RelativeLayout>

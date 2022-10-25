@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item android:id="@+id/homescreen"
+        android:title="Home"
+        android:icon="@drawable/homebnlarge"/>
+
+    <item android:id="@+id/playscreen"
+        android:title="Play"
+        android:icon="@drawable/playbnlarge"
+        />
+
+<!-- <item android:id="@+id/cartscreen"-->
+<!--        android:title="Cart"-->
+<!--     android:icon="@drawable/cart_icon_bg"/>-->
+
+    <item android:id="@+id/leaguescreen"
+        android:title="League"
+        android:icon="@drawable/leaguelarge"/>
+
+
+
+
+
+</menu>

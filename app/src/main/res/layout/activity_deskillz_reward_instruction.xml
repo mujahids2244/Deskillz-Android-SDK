@@ -1,0 +1,491 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splashbg"
+    tools:context=".activity.DeskillzRewardInstruction">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_40sdp">
+
+        <ImageView
+            android:id="@+id/backtoaccount"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/ic_baseline_kbackarrow" />
+
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toRightOf="@id/backtoaccount"
+            android:fontFamily="@font/titan_one_regular"
+            android:text="Deskillz Rewards"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_17sdp" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:background="@drawable/rounded_gradient"
+            android:fontFamily="@font/titan_one_regular"
+            android:padding="@dimen/_3sdp"
+            android:text="12.5K"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp"
+            app:drawableStartCompat="@drawable/ticketsmall" />
+
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@id/top"
+
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:id="@+id/works"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_20sdp">
+
+            <TextView
+                android:id="@+id/heading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/titan_one_regular"
+                android:text="How it Works"
+                android:textColor="#E33960"
+                android:textSize="@dimen/_17sdp" />
+
+            <TextView
+                android:id="@+id/para"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/heading"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                android:textColor="@color/white" />
+
+
+            <RelativeLayout
+                android:id="@+id/events"
+                android:layout_width="@dimen/_280sdp"
+                android:layout_height="@dimen/_190sdp"
+                android:layout_below="@id/para"
+                android:layout_marginTop="@dimen/_10sdp"
+
+                >
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:alpha=".5"
+                    android:background="@drawable/background_layout" />
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    >
+
+
+
+
+                    <RelativeLayout
+                        android:id="@+id/upper"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:padding="@dimen/_15sdp">
+
+                        <androidx.core.widget.ContentLoadingProgressBar
+                            android:id="@+id/progressBarOne"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="@dimen/_180sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:max="100"
+                            android:progress="50"
+                            android:progressTint="#E33960" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:src="@drawable/bronzelarge" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="Bronze (1x)"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15sdp"
+                                app:drawableStartCompat="@drawable/ticketsmall" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:src="@drawable/silverlarge" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="Silver (1x)"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15sdp"
+                                app:drawableStartCompat="@drawable/ticketsmall" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:layout_marginEnd="@dimen/_20sdp"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:src="@drawable/goldlarge" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="Gold (1x)"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15sdp"
+                                app:drawableStartCompat="@drawable/ticketsmall" />
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+                    <androidx.core.widget.ContentLoadingProgressBar
+                        android:id="@+id/progressBarTwo"
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="@dimen/_100sdp"
+                        android:layout_height="@dimen/_200sdp"
+                        android:layout_marginTop="@dimen/_5sdp"
+                        android:paddingStart="@dimen/_10sdp"
+                        android:paddingBottom="@dimen/_20sdp"
+                        android:layout_marginBottom="@dimen/_20sdp"
+                        android:rotation="270"
+                        android:progress="50"
+                        android:layout_alignParentEnd="true"
+                        android:max="100"
+                        android:progressTint="#E33960" />
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@id/upper"
+                        android:padding="@dimen/_15sdp">
+
+
+                        <androidx.core.widget.ContentLoadingProgressBar
+                            android:id="@+id/progressBarThree"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="@dimen/_180sdp"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/_5sdp"
+                            android:max="100"
+                            android:progressTint="#E33960" />
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentStart="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:src="@drawable/diamondlarge" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="BLock (1x)"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15sdp"
+                                app:drawableStartCompat="@drawable/ticketsmall" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerHorizontal="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:src="@drawable/diamlarge" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="Diamond (1x)"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15sdp"
+                                app:drawableStartCompat="@drawable/ticketsmall" />
+
+
+                        </LinearLayout>
+
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentEnd="true"
+                            android:orientation="vertical">
+
+                            <ImageView
+                                android:layout_width="@dimen/_20sdp"
+                                android:layout_height="@dimen/_25sdp"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:src="@drawable/platinumlarge" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_marginTop="@dimen/_5sdp"
+                                android:text="Platinum (1x)"
+                                android:textColor="@color/white" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginStart="@dimen/_10sdp"
+                                android:text="0"
+                                android:textColor="@color/white"
+                                android:textSize="@dimen/_15sdp"
+                                app:drawableStartCompat="@drawable/ticketsmall" />
+
+
+                        </LinearLayout>
+
+
+                    </RelativeLayout>
+
+
+
+
+
+
+
+
+                </RelativeLayout>
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/Earn1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/works"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_20sdp">
+
+
+            <TextView
+                android:id="@+id/heading2"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/titan_one_regular"
+                android:text="How to Earn"
+                android:textColor="#E33960"
+                android:textSize="@dimen/_17sdp" />
+
+            <TextView
+                android:id="@+id/text1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/heading2"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:background="@drawable/view_deisgn"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="@dimen/_10sdp"
+                android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/text2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text1"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/view_deisgn"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="@dimen/_10sdp"
+                android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaavf56v4sv4sf56v45sf64v56s4fv56s4f5vs64v6aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/text3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text2"
+                android:layout_marginTop="@dimen/_5sdp"
+                android:background="@drawable/view_deisgn"
+                android:fontFamily="@font/poppins_regular"
+                android:padding="@dimen/_10sdp"
+                android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                android:textColor="@color/black" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/Earn1"
+            android:layout_marginTop="@dimen/_20sdp"
+            android:paddingStart="@dimen/_20sdp"
+            android:paddingEnd="@dimen/_20sdp">
+
+            <TextView
+                android:id="@+id/earnheading"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/titan_one_regular"
+                android:text="How to Earn"
+                android:textColor="#E33960"
+                android:textSize="@dimen/_17sdp" />
+
+            <TextView
+                android:id="@+id/earnpara"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/earnheading"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="cvnmv,hjlfjlfhgjkhjlkljklhirtyerfvmhjmghgyfmk."
+                android:textColor="@color/white" />
+
+
+            <TextView
+                android:id="@+id/earnpara2"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/earnpara"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="2x Tickets Multiplier"
+                android:textColor="@color/white"
+                android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/earnpara3"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/earnpara2"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="cvnmv,hjlfjlfhgjkhjlkljklhirtyerfvmhjmghgyfmk."
+                android:textColor="@color/white" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+    </ScrollView>
+
+
+
+</RelativeLayout>

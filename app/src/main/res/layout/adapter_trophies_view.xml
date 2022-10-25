@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="@dimen/size_80dp"
+    android:background="@color/white"
+    android:layout_height="@dimen/size_100dp">
+
+    <LinearLayout
+        android:id="@+id/trophyLayout"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size_10dp"
+        android:orientation="horizontal">
+
+
+        <ImageView
+            android:id="@+id/trophy"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/trophy_lar"/>
+
+    </LinearLayout>
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/noData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="@color/black"
+        android:text="No Data"
+        android:layout_gravity="center"/>
+
+
+
+</LinearLayout>

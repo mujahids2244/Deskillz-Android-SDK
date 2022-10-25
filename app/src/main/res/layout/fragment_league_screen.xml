@@ -1,0 +1,172 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:background="@drawable/splash_bg"
+    android:padding="@dimen/size_30dp"
+    tools:context=".ui.fragment.navBarFragments.LeagueScreenFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:background="@drawable/background_layout_white_rounded">
+
+        <LinearLayout
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/league_view_design"
+            android:padding="@dimen/size_10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Players Ranking"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleListRanking"
+            android:layout_width="match_parent"
+            android:layout_below="@id/text"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/size_10dp"
+            android:layout_marginTop="20dp"
+            android:layout_marginEnd="@dimen/size_10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_notifications" />
+
+        <ProgressBar
+            android:id="@+id/progressBar"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:visibility="gone"
+
+            />
+
+        <!--        <ImageView-->
+        <!--            android:id="@+id/crown"-->
+        <!--            android:layout_width="@dimen/size_120dp"-->
+        <!--            android:layout_height="@dimen/size_120dp"-->
+        <!--            android:layout_below="@id/text"-->
+        <!--            android:layout_marginTop="@dimen/size_20dp"-->
+        <!--            android:layout_centerHorizontal="true"-->
+        <!--            android:src="@drawable/crownlarge" />-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/text2"-->
+        <!--            android:layout_below="@id/crown"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="PRIZES GUARANTEED"-->
+        <!--            android:textColor="@color/black"-->
+        <!--            android:fontFamily="@font/titan_one_regular"-->
+        <!--            android:textSize="@dimen/text_size_18sp"-->
+        <!--            android:gravity="center"/>-->
+
+        <!--        <LinearLayout-->
+        <!--            android:id="@+id/priceLayout"-->
+        <!--            android:layout_marginTop="@dimen/size_10dp"-->
+        <!--            android:layout_below="@id/text2"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:gravity="center"-->
+        <!--            android:orientation="horizontal">-->
+
+        <!--            <TextView-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:text="$62,000"-->
+        <!--                android:layout_weight="1"-->
+        <!--                android:textColor="#507EA4"-->
+        <!--                android:textStyle="bold"-->
+        <!--                android:textSize="@dimen/text_size_18sp"-->
+        <!--                android:gravity="center"/>-->
+
+        <!--            <View-->
+        <!--                android:layout_width="1dp"-->
+        <!--                android:layout_height="match_parent"-->
+        <!--                android:background="@color/black"/>-->
+
+        <!--            <LinearLayout-->
+        <!--                android:layout_width="wrap_content"-->
+        <!--                android:layout_height="wrap_content"-->
+        <!--                android:gravity="center"-->
+        <!--                android:layout_weight="1">-->
+
+        <!--                <ImageView-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:src="@drawable/coin_medium" />-->
+
+        <!--                <TextView-->
+        <!--                    android:layout_width="wrap_content"-->
+        <!--                    android:layout_height="wrap_content"-->
+        <!--                    android:text="$62,000"-->
+        <!--                    android:textColor="#507EA4"-->
+        <!--                    android:textStyle="bold"-->
+        <!--                    android:textSize="@dimen/text_size_18sp"-->
+        <!--                    android:gravity="center"/>-->
+
+        <!--            </LinearLayout>-->
+
+        <!--        </LinearLayout>-->
+
+        <!--        <TextView-->
+        <!--            android:id="@+id/text3"-->
+        <!--            android:layout_below="@id/priceLayout"-->
+        <!--            android:layout_width="match_parent"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:text="Play 2 more to unlock."-->
+        <!--            android:textColor="@color/black"-->
+        <!--            android:fontFamily="@font/poppins_regular"-->
+        <!--            android:textSize="@dimen/text_size_18sp"-->
+        <!--            android:gravity="center"/>-->
+        <!--
+        <RelativeLayout
+            android:id="@+id/playnow"
+            android:layout_below="@id/text3"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_30dp"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/button_bg_blue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:textColor="@color/white"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_18sp"/>
+
+        </RelativeLayout>-->
+
+        <!--        <Button-->
+        <!--            android:layout_width="wrap_content"-->
+        <!--            android:layout_height="wrap_content"-->
+        <!--            android:layout_below="@id/text3"-->
+        <!--            android:layout_centerHorizontal="true"-->
+        <!--            android:layout_marginTop="@dimen/size_30dp"-->
+        <!--            android:layout_marginBottom="@dimen/size_20dp"-->
+        <!--            android:background="@drawable/button_bg_blue"-->
+        <!--            android:text="Play Now"-->
+        <!--            android:textColor="@color/white"-->
+        <!--            android:textSize="@dimen/text_size_18sp"-->
+        <!--            android:textStyle="bold" />-->
+
+    </LinearLayout>
+
+</RelativeLayout>

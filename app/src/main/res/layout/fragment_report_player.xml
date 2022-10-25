@@ -1,0 +1,174 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    android:background="@drawable/splash_bg"
+    tools:context=".ui.fragment.ReportPlayerFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/layoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:layout_marginTop="@dimen/size_30dp"
+        android:layout_marginStart="@dimen/size_10dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="@dimen/size_30dp"
+            android:layout_height="@dimen/size_30dp"
+            android:src="@drawable/back_button" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/titan_one_regular"
+            android:text="Report Players"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/break_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/white" />
+
+
+    <RelativeLayout
+        android:id="@+id/practiceLeague1"
+        android:layout_width="match_parent"
+        android:padding="10dp"
+        android:layout_marginTop="10dp"
+        android:layout_height="410dp">
+
+        <com.arhamsoft.deskilz.ui.backGroundLayout.BackGroundLayoutView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:alpha=".8"
+            app:backgroundColorView="@color/gray_bg_color"
+            app:cornersValue="@dimen/size_20dp"
+            app:corners_side="0"
+            app:lower_cut_value="@dimen/size_20dp"
+            app:upper_cut_value="@dimen/size_20dp" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:orientation="vertical">
+
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Support Message"
+                android:layout_gravity="center_horizontal"
+                android:textColor="@color/white"
+                android:layout_marginTop="10dp"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="bold" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:gravity="center"
+                android:layout_marginTop="@dimen/_10sdp"
+                android:layout_marginStart="30dp"
+                android:layout_marginEnd="30dp"
+                android:background="@drawable/view_deisgn"
+                android:orientation="horizontal">
+
+
+                <Spinner
+                    android:id="@+id/categorySpinner"
+                    android:layout_width="match_parent"
+                    style="@style/Base.Widget.AppCompat.Spinner"
+                    android:layout_height="match_parent"
+                    />
+
+
+
+            </LinearLayout>
+
+
+            <TextView
+                android:id="@+id/matchid"
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_50dp"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:layout_marginEnd="30dp"
+                android:paddingStart="10dp"
+                android:textColorHint="@color/gray_text"
+                android:maxLines="1"
+                android:text="matchid"
+                android:gravity="center_vertical"
+                android:textSize="16sp"
+                android:textColor="@color/black"
+                android:fontFamily="@font/poppins_regular"
+                android:background="@drawable/view_deisgn"/>
+
+
+            <EditText
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="30dp"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:layout_marginEnd="30dp"
+                android:hint="Type your message here."
+                android:padding="10dp"
+                android:textColorHint="@color/gray_text"
+                android:lines="7"
+                android:gravity="top"
+                android:textSize="15sp"
+                android:fontFamily="@font/poppins_regular"
+                android:background="@drawable/view_deisgn"/>
+
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/btnSubmit"
+        android:layout_width="350dp"
+        android:layout_height="@dimen/size_50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="@dimen/size_10dp">
+
+        <com.arhamsoft.deskilz.ui.backGroundLayout.BackGroundLayoutView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_50dp"
+            app:apply_gradient="1"
+            app:cornersValue="@dimen/size_10dp"
+            app:corners_side="0"
+            app:gradient1="@color/blue1"
+            app:gradient2="@color/blue2"
+            app:lower_cut_value="@dimen/size_10dp"
+            app:upper_cut_value="@dimen/size_10dp" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/titan_one_regular"
+            android:text="Submit"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18sp" />
+
+    </RelativeLayout>
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/size_20dp"
+        android:layout_marginStart="@dimen/size_10dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="@dimen/size_30dp"
+            android:layout_height="@dimen/size_30dp"
+            android:src="@drawable/back_button"
+            android:contentDescription="@string/go_back"/>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:fontFamily="@font/titan_one_regular"
+            android:textSize="@dimen/text_size_18sp"
+            android:textColor="@color/white"
+            android:layout_marginStart="@dimen/size_10dp"
+            android:text="New Conversation" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/size_20dp"
+        android:background="#252525"
+        android:padding="@dimen/size_10dp">
+
+        <ImageView
+            android:layout_width="@dimen/size_30dp"
+            android:layout_height="@dimen/size_30dp"
+            android:src="@drawable/ic_baseline_search_24"
+            android:layout_gravity="center"/>
+
+        <EditText
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Search"
+            android:textSize="@dimen/text_size_15sp"
+            android:textColorHint="@color/white"
+            android:fontFamily="@font/poppins_regular"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Add Friends to start a conversation!"
+        android:textSize="@dimen/text_size_15sp"
+        android:textColor="@color/white"
+        android:gravity="center"
+        android:layout_margin="@dimen/size_10dp"/>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:layout_margin="@dimen/size_10dp"/>
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="@dimen/size_50dp"
+        android:layout_marginStart="@dimen/size_40dp"
+        android:layout_marginEnd="@dimen/size_40dp"
+        android:layout_gravity="bottom">
+
+        <com.arhamsoft.deskilz.ui.backGroundLayout.BackGroundLayoutView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            app:apply_gradient="1"
+            app:backgroundColorView="@color/gray_bg_color"
+            app:cornersValue="@dimen/size_10dp"
+            app:corners_side="0"
+            app:gradient1="@color/blue1"
+            app:gradient2="@color/blue2"
+            app:lower_cut_value="@dimen/size_20dp"
+            app:upper_cut_value="@dimen/size_20dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:text="SEE ALL RESULT"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18sp"
+            android:fontFamily="@font/titan_one_regular"/>
+
+    </RelativeLayout>
+
+</LinearLayout>

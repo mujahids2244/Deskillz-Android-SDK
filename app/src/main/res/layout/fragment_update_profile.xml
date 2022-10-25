@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    tools:context=".ui.fragment.navBarFragments.UpdateProfileFragment">
+
+    <LinearLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:paddingTop="10dp">
+
+        <ImageView
+            android:id="@+id/backtoProfile"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_keyboard_arrow_left_24" />
+
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="3"
+            android:text="Edit Profile"
+            android:layout_gravity="center_vertical"
+            android:textAlignment="center"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_17sdp"
+            tools:ignore="RtlCompat" />
+
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="0dp"
+            android:layout_weight="2"/>
+
+
+    </LinearLayout>
+
+
+    <View
+        android:layout_below="@+id/top"
+        android:id="@+id/break_line"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/greyish"/>
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/break_line">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/uploadpic"
+            android:layout_width="@dimen/_70sdp"
+            android:layout_height="@dimen/_70sdp"
+            android:layout_centerHorizontal="true"
+            android:layout_gravity="center"
+            android:layout_marginTop="30dp"
+            android:background="@drawable/ic_img_layout"
+            android:src="@drawable/ic_baseline_person_24" />
+
+
+<!--        <de.hdodenhof.circleimageview.CircleImageView-->
+<!--            android:layout_width="@dimen/_30sdp"-->
+<!--            android:layout_height="@dimen/_30sdp"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:id="@+id/clickforUpload"-->
+<!--            android:layout_marginStart="@dimen/_173sdp"-->
+<!--            android:layout_marginTop="@dimen/_63sdp"-->
+<!--            android:background="@drawable/img2"-->
+<!--            android:src="@drawable/ic_baseline_camera_alt_24"/>-->
+
+        <EditText
+            android:id="@+id/etname"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@id/uploadpic"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="@dimen/_40sdp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/edit_text_shape"
+            android:backgroundTint="@color/greyish"
+            android:hint="Name"
+            android:paddingStart="15dp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="18sp" />
+
+
+        <EditText
+            android:id="@+id/shoutout"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_below="@+id/etname"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="15dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/edit_text_shape"
+            android:backgroundTint="@color/greyish"
+            android:hint="Shoutout"
+            android:paddingStart="@dimen/_13sdp"
+            android:textColor="@color/white"
+            android:textColorHint="@color/white"
+            android:textSize="18sp" />
+
+        <Button
+            android:id="@+id/updateupbtn"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_below="@id/shoutout"
+            android:layout_marginStart="50dp"
+            android:layout_marginTop="70dp"
+            android:layout_marginEnd="50dp"
+            android:background="@drawable/edit_text_shape"
+            android:backgroundTint="@color/blue1"
+            android:text="Update"
+            android:textColor="@color/white"
+            android:textSize="18sp"
+            android:textStyle="bold" />
+
+
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

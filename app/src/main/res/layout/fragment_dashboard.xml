@@ -1,0 +1,202 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    tools:context=".ui.fragment.DashboardFragment">
+
+    <RelativeLayout
+        android:id="@+id/topBar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/size_10dp">
+
+        <ImageView
+            android:id="@+id/menuBtn"
+            android:layout_width="@dimen/size_50dp"
+            android:layout_height="@dimen/size_50dp"
+            android:layout_marginStart="@dimen/size_10dp"
+            android:src="@drawable/menu_bg" />
+
+        <ImageView
+            android:id="@+id/poweredLogo"
+            android:layout_width="@dimen/size_100dp"
+            android:layout_height="@dimen/size_50dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/size_10dp"
+            android:src="@drawable/poweredlogo" />
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/status_bar"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_65dp"
+        android:layout_below="@+id/topBar"
+        android:layout_centerHorizontal="true"
+        android:orientation="horizontal"
+        android:paddingStart="@dimen/size_10dp"
+        android:paddingEnd="@dimen/size_10dp">
+
+        <com.arhamsoft.deskilz.ui.backGroundLayout.BackGroundLayoutView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_65dp"
+            android:alpha=".8"
+            app:apply_gradient="1"
+            app:cornersValue="@dimen/size_10dp"
+            app:corners_side="1"
+            app:gradient1="@color/red1"
+            app:gradient2="@color/red2"
+            app:lower_cut_value="@dimen/size_20dp"
+            app:upper_cut_value="@dimen/size_20dp" />
+
+
+<!--        <LinearLayout-->
+<!--            android:id="@+id/ticketLayout"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerVertical="true"-->
+<!--            android:layout_marginStart="@dimen/size_20dp"-->
+<!--            android:gravity="center"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <ImageView-->
+<!--                android:layout_width="@dimen/size_30dp"-->
+<!--                android:layout_height="@dimen/size_30dp"-->
+<!--                android:src="@drawable/ticket_without_bg" />-->
+
+<!--            <TextView-->
+<!--                android:id="@+id/ticketsNo"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_marginStart="@dimen/size_5dp"-->
+<!--                android:fontFamily="@font/titan_one_regular"-->
+<!--                android:text="N/a"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="@dimen/text_size_18sp" />-->
+
+<!--        </LinearLayout>-->
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:orientation="horizontal">
+
+
+        <LinearLayout
+            android:id="@+id/gotoRedeemScreen"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_marginStart="@dimen/size_10dp"
+            android:gravity="center"
+            android:orientation="horizontal">
+
+            <ImageView
+                android:layout_width="@dimen/size_30dp"
+                android:layout_height="@dimen/size_30dp"
+                android:src="@drawable/coin_medium" />
+
+            <TextView
+                android:id="@+id/coinNo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_5dp"
+                android:text="N/a"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18sp"
+                android:fontFamily="@font/titan_one_regular"
+                />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="$"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_25sp"
+                android:fontFamily="@font/titan_one_regular"/>
+
+            <TextView
+                android:id="@+id/dollar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_5dp"
+                android:fontFamily="@font/titan_one_regular"
+
+                android:text="N/a"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18sp"/>
+
+        </LinearLayout>
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+    <androidx.fragment.app.FragmentContainerView
+        android:id="@+id/fragContainer"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@id/msgLayout"
+        android:layout_below="@+id/status_bar" />
+
+    <LinearLayout
+        android:id="@+id/msgLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_above="@id/bottomNavigation">
+
+        <com.airbnb.lottie.LottieAnimationView
+            android:id="@+id/lottieLoader"
+            android:layout_width="@dimen/size_30dp"
+            android:layout_height="@dimen/size_30dp"
+            app:lottie_rawRes="@raw/chat_animation"
+            app:lottie_loop="true"
+            android:layout_marginStart="@dimen/size_5dp"
+            app:lottie_autoPlay="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_weight="1"
+            android:gravity="center|center_vertical"
+            android:text="Click here to open chat."
+            android:layout_marginStart="@dimen/size_10dp"
+            android:textSize="@dimen/text_size_18sp"
+            android:textColor="@color/white" />
+
+    </LinearLayout>
+
+    <com.sdk.bottomsdktextandbglib.BottomBar
+        android:id="@+id/bottomNavigation"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/_50sdp"
+        android:layout_alignParentBottom="true"
+        app:backgroundColor="@color/transparent_black_hex_66"
+        app:indicatorDrawable="@drawable/bnbackgroundlarge"
+        app:menu="@menu/bottom_nav_menu" />
+
+    <include
+        android:id="@+id/menu"
+        layout="@layout/menu_layout" />
+
+    <include
+        android:id="@+id/noint"
+        layout="@layout/no_internet_connection" />
+
+</RelativeLayout>

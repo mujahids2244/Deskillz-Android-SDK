@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.RewardFragment"
+    android:background="@drawable/splash_bg">
+
+    <include
+        android:id="@+id/noint"
+        layout="@layout/no_internet_connection" />
+
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:gravity="center_vertical"
+            android:padding="@dimen/size_10dp">
+
+            <ImageView
+                android:id="@+id/backBtn"
+                android:layout_width="@dimen/size_30dp"
+                android:layout_height="@dimen/size_30dp"
+                android:src="@drawable/back_button" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:layout_weight="1"
+                android:fontFamily="@font/titan_one_regular"
+                android:text="Deskillz Rewards"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="@dimen/size_10dp"
+                android:background="@drawable/background_layout_red_round_gradient"
+                android:fontFamily="@font/titan_one_regular"
+                android:padding="@dimen/size_10dp"
+                android:gravity="center"
+                android:text="15K"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_15sp"
+                app:drawableStartCompat="@drawable/ticketsmall" />
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <com.arhamsoft.deskilz.ui.backGroundLayout.BackGroundLayoutView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_75dp"
+                app:cornersValue="@dimen/size_10dp"
+                app:corners_side="1"
+                app:upper_cut_value="@dimen/size_10dp"
+                app:lower_cut_value="@dimen/size_10dp"
+                app:apply_gradient="1"
+                app:gradient1="@color/blue1"
+                app:gradient2="@color/blue2"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_75dp"
+                android:orientation="horizontal"
+                android:gravity="center"
+                android:layout_margin="@dimen/size_10dp"
+                android:backgroundTint="#1C5FB1"
+                android:padding="@dimen/size_10dp">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_30dp"
+                        android:layout_height="@dimen/size_30dp"
+                        android:src="@drawable/silver_icon_bg" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="1x"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_weight="1"
+                    android:gravity="center">
+
+                    <androidx.core.widget.ContentLoadingProgressBar
+                        style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                        android:layout_width="match_parent"
+                        android:layout_height="@dimen/size_10dp"
+                        android:layout_gravity="center"
+                        android:layout_margin="@dimen/size_10dp"
+                        android:max="100"
+                        android:progress="30"
+                        android:progressTint="#E33960" />
+
+                    <TextView
+                        android:id="@+id/goToDetailScreen"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="View Tier Details"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    android:layout_marginEnd="@dimen/size_10dp"
+                    android:gravity="center_horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_30dp"
+                        android:layout_height="@dimen/size_30dp"
+                        android:src="@drawable/bronze_large_icon" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:fontFamily="@font/poppins_regular"
+                        android:text="2x"
+                        android:textSize="@dimen/text_size_15sp"
+                        android:textColor="@color/white" />
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleListReward"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10dp" />
+
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:id="@+id/recycleListallMarket"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="match_parent"-->
+<!--            android:layout_margin="@dimen/size_10dp" />-->
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_10dp"
+        tools:listitem="@layout/adapter_cart_skill_reward_allcategorys"
+        android:id="@+id/recycleListallMarket"/>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="@dimen/size_10dp"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:fontFamily="@font/titan_one_regular"-->
+<!--                android:text="Deskillz Swag"-->
+<!--                android:textColor="@color/red"-->
+<!--                android:textSize="@dimen/text_size_18sp" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/poppins_regular"-->
+<!--                android:text="See More"-->
+<!--                android:textColor="@color/gray_text"-->
+<!--                android:textSize="@dimen/text_size_15sp" />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="@dimen/size_10dp" />-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="@dimen/size_10dp"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:fontFamily="@font/titan_one_regular"-->
+<!--                android:text="Gift Cards"-->
+<!--                android:textColor="@color/red"-->
+<!--                android:textSize="@dimen/text_size_18sp" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/poppins_regular"-->
+<!--                android:text="See More"-->
+<!--                android:textColor="@color/gray_text"-->
+<!--                android:textSize="@dimen/text_size_15sp" />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="@dimen/size_10dp" />-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="@dimen/size_10dp"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <TextView-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_weight="1"-->
+<!--                android:fontFamily="@font/titan_one_regular"-->
+<!--                android:text="Bonus Cash"-->
+<!--                android:textColor="@color/red"-->
+<!--                android:textSize="@dimen/text_size_18sp" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:fontFamily="@font/poppins_regular"-->
+<!--                android:text="See More"-->
+<!--                android:textColor="@color/gray_text"-->
+<!--                android:textSize="@dimen/text_size_15sp" />-->
+
+<!--        </LinearLayout>-->
+
+<!--        <androidx.recyclerview.widget.RecyclerView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_margin="@dimen/size_10dp" />-->
+
+</LinearLayout>

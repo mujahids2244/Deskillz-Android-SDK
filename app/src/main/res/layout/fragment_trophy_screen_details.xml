@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    tools:context=".ui.fragment.TrophyScreenDetailFragment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_marginTop="@dimen/size_20dp"
+        android:padding="@dimen/size_10dp">
+
+        <ImageView
+            android:layout_width="@dimen/size_30dp"
+            android:layout_height="@dimen/size_30dp"
+            android:src="@drawable/back_button" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Trophies"
+            android:fontFamily="@font/titan_one_regular"
+            android:layout_marginStart="@dimen/size_10dp"
+            android:textSize="@dimen/text_size_20sp" />
+
+        <ImageView
+            android:layout_width="@dimen/size_30dp"
+            android:layout_height="@dimen/size_30dp"
+            android:src="@drawable/i_info_icon"
+            android:layout_marginStart="@dimen/size_10dp"/>
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:text="Features"
+        android:fontFamily="@font/titan_one_regular"
+        android:layout_marginStart="@dimen/size_10dp"
+        android:textSize="@dimen/text_size_20sp" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        tools:listitem="@layout/adpater_trophy_detail"
+        tools:itemCount="2"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="Total"
+            android:fontFamily="@font/titan_one_regular"
+            android:layout_marginStart="@dimen/size_10dp"
+            android:textSize="@dimen/text_size_20sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textColor="@color/white"
+            android:text="56"
+            android:layout_weight="1"
+            android:fontFamily="@font/titan_one_regular"
+            android:layout_marginStart="@dimen/size_10dp"
+            android:textSize="@dimen/text_size_20sp" />
+
+        <Button
+            android:layout_width="@dimen/size_150dp"
+            android:layout_height="wrap_content"
+            android:text="ALL TROPHIES"
+            android:textColor="@color/white"
+            android:padding="@dimen/size_10dp"
+            android:background="@drawable/button_bg_blue" />
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        tools:listitem="@layout/adpater_trophy_detail"/>
+
+
+</LinearLayout>

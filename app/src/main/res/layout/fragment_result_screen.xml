@@ -1,0 +1,318 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".ui.fragment.GameResultFragment"
+    android:background="@drawable/splash_bg"
+    >
+
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_margin="@dimen/size_10dp"
+        android:text="YOU PLACED"
+        android:textColor="@color/white"
+        android:fontFamily="@font/titan_one_regular"
+        android:textSize="@dimen/text_size_20sp"/>
+
+    <TextView
+        android:id="@+id/position"
+        android:layout_width="@dimen/size_300dp"
+        android:layout_height="@dimen/size_100dp"
+        android:layout_margin="@dimen/size_20dp"
+        android:text="You placed "
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_25sp"
+        android:gravity="center"
+        android:fontFamily="@font/titan_one_regular"
+        android:layout_gravity="center"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="@dimen/size_5dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/size_5dp"
+            android:padding="@dimen/size_10dp"
+            android:gravity="center"
+            android:background="@drawable/result_layout_bd_rounded">
+
+            <ImageView
+                android:layout_width="@dimen/size_30dp"
+                android:layout_height="@dimen/size_30dp"
+                android:src="@drawable/ticket_without_bg" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="12"
+                android:layout_marginStart="@dimen/size_5dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18sp"
+                android:fontFamily="@font/titan_one_regular"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/size_5dp"
+            android:padding="@dimen/size_10dp"
+            android:gravity="center"
+            android:background="@drawable/result_layout_bd_rounded">
+
+            <ImageView
+                android:layout_width="@dimen/size_30dp"
+                android:layout_height="@dimen/size_30dp"
+                android:src="@drawable/xp_icon" />
+
+            <TextView
+                android:id="@+id/xpvalueUser"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="+212"
+                android:layout_marginStart="@dimen/size_5dp"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18sp"
+                android:fontFamily="@font/titan_one_regular"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:id="@+id/realTimeView"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_10dp"
+        android:layout_marginEnd="@dimen/size_10dp"
+        android:layout_marginTop="@dimen/size_10dp">
+
+        <com.arhamsoft.deskilz.ui.backGroundLayout.BackGroundLayoutView
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            app:backgroundColorView="@color/gray_bg_color"
+            app:cornersValue="@dimen/size_10dp"
+            app:corners_side="1"
+            app:lower_cut_value="@dimen/size_20dp"
+            app:upper_cut_value="@dimen/size_30dp"
+            android:alpha=".7"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="5dp"
+            tools:ignore="MissingConstraints">
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleListresult"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_marginTop="@dimen/size_30dp"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:layout_marginEnd="@dimen/size_10dp"
+                android:layout_marginBottom="@dimen/size_10dp"
+                android:layout_weight="1"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/row_result_user_profile" />
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_height="@dimen/size_50dp"
+                android:layout_margin="@dimen/size_10dp">
+
+                <com.arhamsoft.deskilz.ui.backGroundLayout.BackGroundLayoutView
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_50dp"
+                    app:apply_gradient="1"
+                    app:cornersValue="@dimen/size_10dp"
+                    app:corners_side="0"
+                    app:gradient1="@color/blue1"
+                    app:gradient2="@color/blue2"
+                    app:lower_cut_value="@dimen/size_10dp"
+                    app:upper_cut_value="@dimen/size_10dp" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/titan_one_regular"
+                    android:text="Share"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_18sp"
+                    />
+
+            </RelativeLayout>
+            <!--<Button
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Share"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18sp"
+                android:layout_margin="@dimen/size_10dp"
+                android:fontFamily="@font/titan_one_regular"
+                android:background="@drawable/button_bg_blue"/>-->
+
+
+
+            <TextView
+                android:id="@+id/gotoReportScreen"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Report a Problem"
+                android:textColor="@color/white"
+                android:textSize="20sp"
+                android:layout_gravity="center_horizontal"
+                android:padding="5dp"/>
+        </LinearLayout>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+    <RelativeLayout
+        android:id="@+id/backtoDashboard"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_50dp"
+
+        android:layout_margin="@dimen/size_10dp">
+
+        <com.arhamsoft.deskilz.ui.backGroundLayout.BackGroundLayoutView
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_50dp"
+            android:layout_marginStart="20dp"
+            android:layout_marginEnd="20dp"
+            app:apply_gradient="1"
+            app:cornersValue="@dimen/size_10dp"
+            app:corners_side="0"
+            app:gradient1="@color/red1"
+            app:gradient2="@color/red2"
+            app:lower_cut_value="@dimen/size_15dp"
+            app:upper_cut_value="@dimen/size_15dp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Back To Home"
+            android:fontFamily="@font/titan_one_regular"
+            android:textSize="@dimen/text_size_18sp"
+            android:textColor="@color/white"
+            android:layout_centerInParent="true"/>
+
+    </RelativeLayout>
+    <!--<Button
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/size_50dp"
+        android:text="Back To Home"
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_18sp"
+        android:fontFamily="@font/titan_one_regular"
+        android:background="@drawable/button_bg_red"/>-->
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="@dimen/size_10dp">
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_100dp"
+            android:background="@drawable/result_layout_bd_rounded"
+            android:alpha="0.7"/>
+
+        <LinearLayout
+            android:id="@+id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_10dp"
+            android:layout_marginTop="@dimen/size_20dp"
+            android:layout_marginEnd="@dimen/size_10dp"
+            android:layout_marginBottom="@dimen/size_10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Title:"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/tournName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Test Your Deskillz"
+                android:layout_weight="1"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="Date:"
+                android:textColor="@color/white" />
+
+            <TextView
+                android:id="@+id/date"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:fontFamily="@font/poppins_regular"
+                android:text="4/ 7/ 2022"
+                android:layout_marginStart="@dimen/size_5dp"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_below="@+id/titleLayout"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10dp"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/fee"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Entry Fee:"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:text="Match Id:"
+                android:gravity="end"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_regular"/>
+
+            <TextView
+                android:id="@+id/matchId"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="3905138233"
+                android:layout_marginStart="@dimen/size_5dp"
+                android:textColor="@color/white"
+                android:fontFamily="@font/poppins_regular"/>
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</LinearLayout>

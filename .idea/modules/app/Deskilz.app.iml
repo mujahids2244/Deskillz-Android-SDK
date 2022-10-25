@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<module external.linked.project.id=":app" external.linked.project.path="$MODULE_DIR$/../../../app" external.root.project.path="$MODULE_DIR$/../../.." external.system.id="GRADLE" external.system.module.group="Deskilz" external.system.module.version="unspecified" type="JAVA_MODULE" version="4">
+  <component name="FacetManager">
+    <facet type="android-gradle" name="Android-Gradle">
+      <configuration>
+        <option name="GRADLE_PROJECT_PATH" value=":app" />
+        <option name="LAST_SUCCESSFUL_SYNC_AGP_VERSION" value="7.1.2" />
+        <option name="LAST_KNOWN_AGP_VERSION" value="7.1.2" />
+      </configuration>
+    </facet>
+    <facet type="kotlin-language" name="Kotlin">
+      <configuration version="4" platform="JVM 1.8" allPlatforms="JVM [1.8]" useProjectSettings="false">
+        <compilerSettings>
+          <option name="additionalArguments" value="-Xallow-no-source-files" />
+        </compilerSettings>
+        <compilerArguments>
+          <option name="destination" value="$MODULE_DIR$/../../../app/build/tmp/kotlin-classes/debug" />
+          <option name="classpath" value="$MODULE_DIR$/../../../app/build/intermediates/compile_and_runtime_not_namespaced_r_class_jar/debug/R.jar;C:/Users/HP/.gradle/caches/transforms-3/9123d74eb507f03a938a6f18884462d8/transformed/viewbinding-7.1.2-api.jar;C:/Users/HP/.gradle/caches/transforms-3/3899b6a49a1d925403e64e541fbbdae7/transformed/BottomBarSDK-0.0.2-alpha-api.jar;C:/Users/HP/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-core-jvm/1.6.0/f3b8fd26c2e76d2f18cbc36aacb6e349fcb9fd5f/kotlinx-coroutines-core-jvm-1.6.0.jar;C:/Users/HP/.gradle/caches/transforms-3/f2acefba032e0382955759cc73c0ba2a/transformed/navigation-fragment-ktx-2.4.2-api.jar;C:/Users/HP/.gradle/caches/transforms-3/963078175f5802bf04e968b90f502562/transformed/navigation-fragment-2.4.2-api.jar;C:/Users/HP/.gradle/caches/transforms-3/47c791bd830a5254b7e3deaa2167a294/transformed/fragment-ktx-1.4.1-api.jar;C:/Users/HP/.gradle/caches/transforms-3/8d76ff2b82942f1ae0df23ab6a8b0650/transformed/navigation-ui-ktx-2.4.2-api.jar;C:/Users/HP/.gradle/caches/transforms-3/b5f478a590d2c735c9986c83f704c369/transformed/navigation-runtime-ktx-2.4.2-api.jar;C:/Users/HP/.gradle/caches/transforms-3/c315590217d0ad4a3d9234135a030642/transformed/navigation-ui-2.4.2-api.jar;C:/Users/HP/.gradle/caches/transforms-3/c3e0ed02df607933d21660fd3b02bc7b/transformed/navigation-runtime-2.4.2-api.jar;C:/Users/HP/.gradle/caches/transforms-3/b5a2e419831e4b3021c756ce41c31159/transformed/activity-ktx-1.2.3-api.jar;C:/Users/HP/.gradle/caches/transforms-3/c794563f2a6a076e7841381b220361c3/transformed/navigation-common-ktx-2.4.2-api.jar;C:/Users/HP/.gradle/caches/transforms-3/874dad59cc6910271d1cbe7e6c25e6fc/transformed/navigation-common-2.4.2-api.jar;C:/Users/HP/.gradle/caches/transforms-3/1106cdfb46144867ae9b76eaa01aac94/transformed/lifecycle-viewmodel-ktx-2.3.1-api.jar;C:/Users/HP/.gradle/caches/transforms-3/0de16e87817007066a11ac9637fb6502/transformed/lifecycle-runtime-ktx-2.3.1-api.jar;C:/Users/HP/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlinx/kotlinx-coroutines-android/1.6.0/453fa53456bbaea50e51bd92d7f16f7bf6fcc58e/kotlinx-coroutines-android-1.6.0.jar;C:/Users/HP/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk8/1.6.20/dab8089bca6ac0e394c37281ea8cff2f99acd421/kotlin-stdlib-jdk8-1.6.20.jar;C:/Users/HP/.gradle/caches/transforms-3/8e96b23f9720bb661e7b30fb7333c279/transformed/material-1.6.1-api.jar;C:/Users/HP/.gradle/caches/transforms-3/0355bc81ac33521ee4a66f74259f5131/transformed/lottie-3.4.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/53888af7fdda034c97e040782dcc3216/transformed/appcompat-1.4.2-api.jar;C:/Users/HP/.gradle/caches/transforms-3/6fb72fe1aafb080e70058d4a169baeb2/transformed/legacy-support-v4-1.0.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/c8945f133f1794d821971f11a7bb22e2/transformed/viewpager2-1.0.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/00a7052125242f2e87285b260d225547/transformed/fragment-1.4.1-api.jar;C:/Users/HP/.gradle/caches/transforms-3/41951666e8e7a2874dca113b2971ac72/transformed/core-ktx-1.8.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/06198eeee854c4797d4e720c7181ae20/transformed/activity-1.2.4-api.jar;C:/Users/HP/.gradle/caches/transforms-3/e4c223604ee16d7f4c5fdb77a41396a7/transformed/appcompat-resources-1.4.2-api.jar;C:/Users/HP/.gradle/caches/transforms-3/afec90f36d59c0dc733fe84738e50cc6/transformed/legacy-support-core-ui-1.0.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/c7b1ca34328559e634298748c0ff6a64/transformed/drawerlayout-1.1.1-api.jar;C:/Users/HP/.gradle/caches/transforms-3/c877b6b9dd311be900bbdbf95292cec9/transformed/coordinatorlayout-1.1.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/426e3683666dcc91ff884f33500cd62b/transformed/dynamicanimation-1.0.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/10c61c7ee3da4ad1274ffddcdd7744a5/transformed/recyclerview-1.1.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/a6b558d463c1fbec492c2d7a5e3db045/transformed/transition-1.4.1-api.jar;C:/Users/HP/.gradle/caches/transforms-3/b1a5574049060468e1130e081b44a1cf/transformed/vectordrawable-animated-1.1.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/b064724f2844d8259406845c6d0d6c74/transformed/vectordrawable-1.1.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/d2f73938939a8ac165afb38100487a3d/transformed/media-1.0.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/f06c2006a78167bbf3c65d5648dbd4ca/transformed/legacy-support-core-utils-1.0.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/53e491b59f66928293a9abc4fbd05df5/transformed/viewpager-1.0.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/d6b1afdd30a6100a64797ee662b0f161/transformed/loader-1.0.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/83169963ac4148299f9d4dc3ac6df588/transformed/slidingpanelayout-1.2.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/18513b418b438eb30eba69d13e77bc75/transformed/customview-1.1.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/dc2dc577d965ec8da409152c7c42a903/transformed/swiperefreshlayout-1.0.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/508510792ca072444142974ce440e7a4/transformed/asynclayoutinflater-1.0.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/6dcf830cf76790166dd066977ca7e27c/transformed/core-1.8.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/096a296b3b17bcc0e365523c28db8079/transformed/cursoradapter-1.0.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/47c2d8d1eb3dee21212fe51a733b6af5/transformed/lifecycle-viewmodel-savedstate-2.3.1-api.jar;C:/Users/HP/.gradle/caches/transforms-3/7ed01ca2840d8849b4d6895a779742d5/transformed/savedstate-ktx-1.1.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/ba7e526e26bbabccf19c0f9d0a46708e/transformed/savedstate-1.1.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/7ed2b3d9e8d46b536e200691e299dfd9/transformed/cardview-1.0.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/a4cb4dff86c810105708db6265a3b133/transformed/lifecycle-runtime-2.4.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/198c07da4abfea991ae5936eaf32c4fa/transformed/versionedparcelable-1.1.1-api.jar;C:/Users/HP/.gradle/caches/transforms-3/82a9b00467d9fc4986bac18094f90d87/transformed/lifecycle-viewmodel-2.3.1-api.jar;C:/Users/HP/.gradle/caches/modules-2/files-2.1/androidx.collection/collection-ktx/1.1.0/f807b2f366f7b75142a67d2f3c10031065b5168/collection-ktx-1.1.0.jar;C:/Users/HP/.gradle/caches/modules-2/files-2.1/androidx.collection/collection/1.1.0/1f27220b47669781457de0d600849a5de0e89909/collection-1.1.0.jar;C:/Users/HP/.gradle/caches/transforms-3/6186aaf8ef4480bc5b529b5074441c83/transformed/lifecycle-livedata-2.0.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/07e754c0fb487ed6a9b7604abf520c66/transformed/lifecycle-livedata-core-ktx-2.3.1-api.jar;C:/Users/HP/.gradle/caches/transforms-3/099cb814d56255cbc8759d9added8c03/transformed/lifecycle-livedata-core-2.3.1-api.jar;C:/Users/HP/.gradle/caches/modules-2/files-2.1/androidx.lifecycle/lifecycle-common/2.4.0/1fdb7349701e9cf2f0a69fc10642b6fef6bb3e12/lifecycle-common-2.4.0.jar;C:/Users/HP/.gradle/caches/transforms-3/180a13ab357849c2110b1206338fd32a/transformed/core-runtime-2.1.0-api.jar;C:/Users/HP/.gradle/caches/modules-2/files-2.1/androidx.arch.core/core-common/2.1.0/b3152fc64428c9354344bd89848ecddc09b6f07e/core-common-2.1.0.jar;C:/Users/HP/.gradle/caches/transforms-3/7f58473fa9c3f4d5ce58e389cb9b8c43/transformed/documentfile-1.0.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/0b5c74db58c77ce90bde9c6ac264f97d/transformed/localbroadcastmanager-1.0.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/c6a1222aa10c31e9bde0cf9617e446e1/transformed/print-1.0.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/a6743bdfa7c08c7c487548b6668003a7/transformed/interpolator-1.0.0-api.jar;C:/Users/HP/.gradle/caches/modules-2/files-2.1/androidx.annotation/annotation/1.3.0/21f49f5f9b85fc49de712539f79123119740595/annotation-1.3.0.jar;C:/Users/HP/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-jdk7/1.6.20/f8629f336bad4001c89e9cffa5ef3d4b5d0f5e22/kotlin-stdlib-jdk7-1.6.20.jar;C:/Users/HP/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib/1.6.21/11ef67f1900634fd951bad28c53ec957fabbe5b8/kotlin-stdlib-1.6.21.jar;C:/Users/HP/.gradle/caches/modules-2/files-2.1/org.jetbrains.kotlin/kotlin-stdlib-common/1.6.21/5e5b55c26dbc80372a920aef60eb774b714559b8/kotlin-stdlib-common-1.6.21.jar;C:/Users/HP/.gradle/caches/modules-2/files-2.1/org.jetbrains/annotations/13.0/919f0dfe192fb4e063e7dacadee7f8bb9a2672a9/annotations-13.0.jar;C:/Users/HP/.gradle/caches/transforms-3/416dd4059b65e8a965894c347ac8302f/transformed/annotation-experimental-1.1.0-api.jar;C:/Users/HP/.gradle/caches/transforms-3/fb4aee6fd830758cf257f22f4bf0c987/transformed/constraintlayout-2.1.4-api.jar;C:/Users/HP/.gradle/caches/transforms-3/5d9f11f9d49691001ef715336ac6ea84/transformed/circleimageview-3.1.0-api.jar;C:/Users/HP/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/converter-gson/2.9.0/fc93484fc67ab52b1e0ccbdaa3922d8a6678e097/converter-gson-2.9.0.jar;C:/Users/HP/.gradle/caches/modules-2/files-2.1/com.squareup.retrofit2/retrofit/2.9.0/d8fdfbd5da952141a665a403348b74538efc05ff/retrofit-2.9.0.jar;C:/Users/HP/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/logging-interceptor/3.12.3/ddb507a18e987a57d0bb7ad1f7a6ed1305c4901/logging-interceptor-3.12.3.jar;C:/Users/HP/.gradle/caches/modules-2/files-2.1/com.squareup.okhttp3/okhttp/3.14.9/3e6d101343c7ea687cd593e4990f73b25c878383/okhttp-3.14.9.jar;C:/Users/HP/.gradle/caches/modules-2/files-2.1/com.squareup.okio/okio/1.17.4/50077892fbc179bc69c0ac488442fd3a864e897f/okio-1.17.4.jar;C:/Users/HP/.gradle/caches/transforms-3/149a5157731f72b7e00411e662d4304d/transformed/sdp-android-1.0.6-api.jar;C:/Users/HP/.gradle/caches/modules-2/files-2.1/com.google.code.gson/gson/2.8.5/f645ed69d595b24d4cf8b3fbb64cc505bede8829/gson-2.8.5.jar;C:/Users/HP/AppData/Local/Android/Sdk/platforms/android-31/android.jar;C:/Users/HP/AppData/Local/Android/Sdk/build-tools/30.0.3/core-lambda-stubs.jar" />
+          <option name="noStdlib" value="true" />
+          <option name="moduleName" value="app_debug" />
+          <option name="jvmTarget" value="1.8" />
+          <option name="languageVersion" value="1.6" />
+          <option name="apiVersion" value="1.6" />
+          <option name="pluginOptions">
+            <array />
+          </option>
+          <option name="pluginClasspaths">
+            <array />
+          </option>
+          <option name="errors">
+            <ArgumentParseErrors />
+          </option>
+        </compilerArguments>
+      </configuration>
+    </facet>
+    <facet type="android" name="Android">
+      <configuration>
+        <option name="SELECTED_BUILD_VARIANT" value="debug" />
+        <option name="ASSEMBLE_TASK_NAME" value="assembleDebug" />
+        <option name="COMPILE_JAVA_TASK_NAME" value="compileDebugSources" />
+        <afterSyncTasks>
+          <task>generateDebugSources</task>
+        </afterSyncTasks>
+        <option name="ALLOW_USER_CONFIGURATION" value="false" />
+        <option name="MANIFEST_FILE_RELATIVE_PATH" value="/src/main/AndroidManifest.xml" />
+        <option name="RES_FOLDER_RELATIVE_PATH" value="/src/main/res" />
+        <option name="RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/main/res;file://$MODULE_DIR$/../../../app/src/debug/res;file://$MODULE_DIR$/../../../app/build/generated/res/google-services/debug;file://$MODULE_DIR$/../../../app/build/generated/res/rs/debug;file://$MODULE_DIR$/../../../app/build/generated/res/resValues/debug" />
+        <option name="TEST_RES_FOLDERS_RELATIVE_PATH" value="file://$MODULE_DIR$/../../../app/src/androidTest/res;file://$MODULE_DIR$/../../../app/src/androidTestDebug/res;file://$MODULE_DIR$/../../../app/build/generated/res/rs/androidTest/debug;file://$MODULE_DIR$/../../../app/build/generated/res/resValues/androidTest/debug" />
+        <option name="ASSETS_FOLDER_RELATIVE_PATH" value="/src/main/assets" />
+        <option name="PROJECT_TYPE" value="1" />
+      </configuration>
+    </facet>
+  </component>
+  <component name="NewModuleRootManager" LANGUAGE_LEVEL="JDK_1_8">
+    <output url="file://$MODULE_DIR$/../../../app/build/intermediates/javac/debug/classes" />
+    <output-test url="file://$MODULE_DIR$/../../../app/build/intermediates/javac/debugUnitTest/classes" />
+    <exclude-output />
+    <content url="file://$MODULE_DIR$/../../../app">
+      <excludeFolder url="file://$MODULE_DIR$/../../../app/.gradle" />
+      <excludeFolder url="file://$MODULE_DIR$/../../../app/build" />
+    </content>
+    <orderEntry type="jdk" jdkName="Android API 31 Platform" jdkType="Android SDK" />
+    <orderEntry type="sourceFolder" forTests="false" />
+    <orderEntry type="module-library">
+      <library name="Gradle: kaptGeneratedClasses">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../../app/build/tmp/kapt3/classes/debug" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+    <orderEntry type="module-library" scope="TEST">
+      <library name="Gradle: kaptGeneratedTestClasses">
+        <CLASSES>
+          <root url="file://$MODULE_DIR$/../../../app/build/tmp/kapt3/classes/debugAndroidTest" />
+          <root url="file://$MODULE_DIR$/../../../app/build/tmp/kapt3/classes/debugUnitTest" />
+        </CLASSES>
+        <JAVADOC />
+        <SOURCES />
+      </library>
+    </orderEntry>
+  </component>
+</module>

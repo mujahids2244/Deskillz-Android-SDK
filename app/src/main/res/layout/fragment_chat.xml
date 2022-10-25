@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@drawable/splash_bg"
+    tools:context=".ui.fragment.ChatFragment">
+
+    <include
+        android:id="@+id/noint"
+        layout="@layout/no_internet_connection" />
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/size_30dp">
+
+        <ImageView
+            android:id="@+id/addFriends"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_20sdp"
+            android:padding="@dimen/_2sdp"
+            android:src="@drawable/chat_icon" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:layout_toEndOf="@id/addFriends"
+            android:fontFamily="@font/titan_one_regular"
+            android:text="(Game Name)"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_17sdp" />
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_5sdp"
+            android:padding="@dimen/_5sdp"
+            android:src="@drawable/close_icon" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/break_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/top"
+        android:background="@color/white" />
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleListComment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="9"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:overScrollMode="never"
+        android:paddingStart="@dimen/_10sdp" />
+
+    <LinearLayout
+        android:id="@+id/bottomPanal"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="bottom"
+        android:orientation="horizontal"
+        android:padding="@dimen/_5sdp"
+        android:layout_marginBottom="@dimen/_3sdp"
+        >
+
+        <EditText
+            android:id="@+id/comment"
+            android:textColor="@color/white"
+            android:layout_width="@dimen/_240sdp"
+            android:layout_height="wrap_content"
+            android:hint="Type Message"
+            android:textSize="@dimen/_12sdp"
+            android:textColorHint="@color/white"
+            android:background="@drawable/edit_text_deisgn"
+            android:backgroundTint="@color/greyish"
+            android:padding="@dimen/_10sdp" />
+
+        <ImageView
+            android:id="@+id/postComment"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_32sdp"
+            android:background="@drawable/send_chat_message_background"
+            android:src="@drawable/send_message_icon"
+            android:padding="@dimen/_10sdp"
+            android:layout_marginStart="@dimen/_10sdp" />
+
+    </LinearLayout>
+
+</LinearLayout>

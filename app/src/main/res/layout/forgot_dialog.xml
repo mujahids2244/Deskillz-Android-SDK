@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:background="@color/black"
+    android:layout_height="match_parent">
+
+    <RelativeLayout
+        android:layout_width="@dimen/size_300dp"
+        android:layout_height="@dimen/size_250dp"
+        android:layout_centerInParent="true"
+        android:background="@drawable/background_layout_white_rounded">
+
+        <TextView
+            android:id="@+id/h1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_20dp"
+            android:fontFamily="@font/titan_one_regular"
+            android:paddingStart="@dimen/size_30dp"
+            android:paddingEnd="@dimen/size_30dp"
+            android:text="Forgot Login "
+            android:textSize="@dimen/text_size_20sp" />
+
+        <TextView
+            android:id="@+id/para"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/h1"
+            android:layout_marginTop="@dimen/size_20dp"
+            android:fontFamily="@font/poppins_regular"
+            android:paddingStart="@dimen/size_10dp"
+            android:paddingEnd="@dimen/size_10dp"
+            android:text="Helpus remind you.We will email you your credentials."
+            android:textAlignment="center"
+            android:textSize="@dimen/text_size_15sp" />
+
+        <EditText
+            android:id="@+id/checkbox"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/para"
+            android:layout_centerHorizontal="true"
+            android:layout_marginStart="@dimen/size_20dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:layout_marginEnd="@dimen/size_20dp"
+            android:background="@drawable/edit_text_deisgn_white"
+            android:fontFamily="@font/poppins_regular"
+            android:hint="Username or email"
+            android:padding="@dimen/size_5dp"
+            android:paddingStart="@dimen/size_10dp"
+            android:textSize="@dimen/text_size_15sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/checkbox"
+            android:layout_centerHorizontal="true"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:orientation="horizontal">
+
+            <RelativeLayout
+                android:id="@+id/cancel_button"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_35sdp"
+                android:layout_marginEnd="@dimen/size_10dp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/cancelbtn" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/titan_one_regular"
+                    android:text="Cancel"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_15sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/submit_button"
+                android:layout_width="@dimen/_100sdp"
+                android:layout_height="@dimen/_35sdp">
+
+                <ImageView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:src="@drawable/button_bg_red" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/titan_one_regular"
+                    android:text="SUBMIT"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_15sp"
+                    android:textStyle="bold" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+</RelativeLayout>

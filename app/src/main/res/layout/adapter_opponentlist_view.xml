@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:visibility="gone"
+        android:id="@+id/competitivePlayer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="@dimen/size_20dp"
+        android:orientation="horizontal">
+
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/oppoenetImg"
+            android:layout_width="@dimen/size_80dp"
+            android:layout_height="@dimen/size_80dp"
+            android:padding="@dimen/size_10dp"
+            android:src="@drawable/personlarge" />
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/oppoenetName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/size_10dp"
+                android:fontFamily="@font/titan_one_regular"
+                android:text="Searching For \nOpponent"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_20sp" />
+
+            <ImageView
+                android:id="@+id/oppoenetFlag"
+                android:layout_width="30dp"
+                android:layout_height="20dp"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:background="@color/white"
+                android:paddingStart="@dimen/size_10dp"
+                android:paddingTop="@dimen/size_5dp"
+                android:paddingEnd="@dimen/size_10dp"
+                android:paddingBottom="@dimen/size_5dp"
+                />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/noData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="30sp"
+        android:textColor="@color/white"
+        android:text="No Data"
+        android:layout_gravity="center"/>
+
+
+
+</LinearLayout>

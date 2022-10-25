@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="BackgroundLayout">
+        <attr name="cornersValue" format="dimension" />
+        <attr name="corners_side" format="integer" />
+        <attr name="upper_cut_value" format="dimension" />
+        <attr name="lower_cut_value" format="dimension" />
+        <attr name="apply_gradient" format="integer" />
+        <attr name="gradient1" format="color" />
+        <attr name="gradient2" format="color" />
+        <attr name="backgroundColorView" format="color" />
+
+    </declare-styleable>
+
+    <attr name="BackGroundViewStyle" format="reference" />
+</resources>

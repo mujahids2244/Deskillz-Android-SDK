@@ -1,0 +1,549 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    tools:context=".ui.fragment.DeskillzRewardInstructionFragment">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/size_30dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="@dimen/size_30dp"
+            android:layout_height="@dimen/size_30dp"
+            android:layout_marginStart="@dimen/size_10dp"
+            android:src="@drawable/back_button" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_10dp"
+            android:layout_toEndOf="@id/backBtn"
+            android:fontFamily="@font/titan_one_regular"
+            android:text="Deskillz Rewards"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18sp" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginStart="@dimen/size_10dp"
+            android:background="@drawable/rounded_gradient"
+            android:fontFamily="@font/titan_one_regular"
+            android:padding="@dimen/size_5dp"
+            android:text="12.5K"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_15sp"
+            android:layout_marginEnd="@dimen/size_5dp"
+            app:drawableStartCompat="@drawable/background_layout_red_round_gradient" />
+
+    </RelativeLayout>
+
+    <ScrollView
+        android:layout_below="@id/top"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <RelativeLayout
+                android:id="@+id/works"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_20dp"
+                android:paddingStart="@dimen/size_20dp"
+                android:paddingEnd="@dimen/size_20dp">
+
+                <TextView
+                    android:id="@+id/heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/titan_one_regular"
+                    android:text="How it Works"
+                    android:textColor="#E33960"
+                    android:textSize="@dimen/text_size_18sp" />
+
+                <TextView
+                    android:id="@+id/para"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/heading"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="You are in Bronze Tier. You have to earn 3 Ticketsz in April. Earn 247 more Ticketz by May 1 to achieve Silver Tier for April &amp; May."
+                    android:textColor="@color/white" />
+
+                <androidx.constraintlayout.widget.ConstraintLayout
+                    android:id="@+id/events"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/para"
+                    android:layout_marginTop="@dimen/size_10dp">
+
+                    <com.arhamsoft.deskilz.ui.backGroundLayout.BackGroundLayoutView
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:alpha=".8"
+                        app:corners_side="1"
+                        app:upper_cut_value="@dimen/size_20dp"
+                        app:lower_cut_value="@dimen/size_20dp"
+                        app:cornersValue="@dimen/size_10dp"
+                        app:layout_constraintTop_toTopOf="parent"
+                        app:layout_constraintBottom_toBottomOf="parent"
+                        app:layout_constraintStart_toStartOf="parent"
+                        app:layout_constraintEnd_toEndOf="parent"
+                        app:backgroundColorView="@color/gray_bg_color"/>
+
+
+                        <androidx.core.widget.ContentLoadingProgressBar
+                            android:id="@+id/progressBarOne"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_20dp"
+                            android:layout_centerHorizontal="true"
+
+                            android:layout_marginStart="@dimen/size_50dp"
+                            android:layout_marginTop="@dimen/size_20dp"
+                            android:layout_marginEnd="@dimen/size_20dp"
+
+                            android:max="100"
+                            android:progress="100"
+                            android:progressTint="#E33960"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent" />
+
+                        <androidx.core.widget.ContentLoadingProgressBar
+                            android:id="@+id/progressBarThree"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"
+                            android:layout_width="match_parent"
+                            android:layout_height="@dimen/size_20dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginStart="@dimen/size_50dp"
+                            android:layout_marginEnd="@dimen/size_20dp"
+                            android:layout_marginTop="@dimen/size_10dp"
+                            android:max="100"
+                            android:progress="100"
+                            android:progressTint="#E33960"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/upper"/>
+
+                        <androidx.core.widget.ContentLoadingProgressBar
+                            android:id="@+id/progressBarTwo"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:max="100"
+                            android:progress="40"
+                            android:progressTint="#E33960"
+                            android:rotation="90"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/progressBarOne"
+                            app:layout_constraintBottom_toTopOf="@+id/progressBarThree"
+                            style="@style/Widget.AppCompat.ProgressBar.Horizontal"/>
+
+                        <RelativeLayout
+                            android:id="@+id/upper"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginEnd="@dimen/size_10dp"
+                            android:layout_marginTop="@dimen/size_5dp"
+                            android:padding="@dimen/size_10dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintTop_toTopOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/size_30dp"
+                                    android:layout_height="@dimen/size_30dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/bronze_large_icon" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/size_5dp"
+                                    android:text="Bronze (1x)"
+                                    android:textColor="@color/white" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_gravity="center_horizontal"
+                                    android:orientation="horizontal">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/size_30dp"
+                                        android:layout_height="@dimen/size_30dp"
+                                        android:src="@drawable/ticket_without_bg" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/size_30dp"
+                                        android:text="0"
+                                        android:layout_marginStart="@dimen/size_5dp"
+                                        android:gravity="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/text_size_15sp"/>
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/size_30dp"
+                                    android:layout_height="@dimen/size_30dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/silver_icon_bg" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/size_5dp"
+                                    android:text="Silver (1x)"
+                                    android:textColor="@color/white" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center_horizontal">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/size_30dp"
+                                        android:layout_height="@dimen/size_30dp"
+                                        android:src="@drawable/ticket_without_bg" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/size_30dp"
+                                        android:text="0"
+                                        android:layout_marginStart="@dimen/size_5dp"
+                                        android:gravity="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/text_size_15sp"/>
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="@dimen/size_20dp"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/size_30dp"
+                                    android:layout_height="@dimen/size_30dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/goldlarge" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/size_5dp"
+                                    android:text="Gold (1x)"
+                                    android:textColor="@color/white" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center_horizontal">
+
+                                    <ImageView
+                                        android:layout_width="@dimen/size_30dp"
+                                        android:layout_height="@dimen/size_30dp"
+                                        android:src="@drawable/ticket_without_bg" />
+
+                                    <TextView
+                                        android:layout_width="wrap_content"
+                                        android:layout_height="@dimen/size_30dp"
+                                        android:layout_marginStart="@dimen/size_5dp"
+                                        android:text="0"
+                                        android:gravity="center"
+                                        android:textColor="@color/white"
+                                        android:textSize="@dimen/text_size_15sp" />
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                        <RelativeLayout
+                            android:id="@+id/lowerView"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_below="@id/upper"
+                            android:layout_marginEnd="@dimen/size_10dp"
+                            android:padding="@dimen/size_10dp"
+                            app:layout_constraintStart_toStartOf="parent"
+                            app:layout_constraintEnd_toEndOf="parent"
+                            app:layout_constraintTop_toBottomOf="@+id/upper">
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentStart="true"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/size_30dp"
+                                    android:layout_height="@dimen/size_30dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/diamondlarge" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/size_5dp"
+                                    android:text="BLock (1x)"
+                                    android:textColor="@color/white" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center_horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/size_30dp"
+                                    android:layout_height="@dimen/size_30dp"
+                                    android:src="@drawable/ticket_without_bg" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/size_30dp"
+                                    android:text="0"
+                                    android:layout_marginStart="@dimen/size_5dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_size_18sp" />
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerHorizontal="true"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/size_30dp"
+                                    android:layout_height="@dimen/size_30dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/diamlarge" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/size_5dp"
+                                    android:text="Diamond (1x)"
+                                    android:textColor="@color/white" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center_horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/size_30dp"
+                                    android:layout_height="@dimen/size_30dp"
+                                    android:src="@drawable/ticket_without_bg" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/size_30dp"
+                                    android:text="0"
+                                    android:layout_marginStart="@dimen/size_5dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_size_18sp" />
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+                            </LinearLayout>
+
+                            <LinearLayout
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_alignParentEnd="true"
+                                android:layout_marginEnd="@dimen/size_20dp"
+                                android:orientation="vertical">
+
+                                <ImageView
+                                    android:layout_width="@dimen/size_30dp"
+                                    android:layout_height="@dimen/size_30dp"
+                                    android:layout_gravity="center_horizontal"
+                                    android:src="@drawable/platinumlarge" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:layout_marginTop="@dimen/size_5dp"
+                                    android:text="Platinum (1x)"
+                                    android:textColor="@color/white" />
+
+                                <androidx.appcompat.widget.LinearLayoutCompat
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="wrap_content"
+                                    android:orientation="horizontal"
+                                    android:layout_gravity="center_horizontal">
+
+                                <ImageView
+                                    android:layout_width="@dimen/size_30dp"
+                                    android:layout_height="@dimen/size_30dp"
+                                    android:src="@drawable/ticket_without_bg" />
+
+                                <TextView
+                                    android:layout_width="wrap_content"
+                                    android:layout_height="@dimen/size_30dp"
+                                    android:text="0"
+                                    android:layout_marginStart="@dimen/size_5dp"
+                                    android:gravity="center"
+                                    android:textColor="@color/white"
+                                    android:textSize="@dimen/text_size_18sp" />
+
+                                </androidx.appcompat.widget.LinearLayoutCompat>
+                            </LinearLayout>
+
+                        </RelativeLayout>
+
+                </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </RelativeLayout>
+
+            <RelativeLayout
+                android:id="@+id/Earn1"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/works"
+                android:layout_marginTop="@dimen/size_20dp"
+                android:paddingStart="@dimen/size_20dp"
+                android:paddingEnd="@dimen/size_20dp">
+
+                <TextView
+                    android:id="@+id/heading2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/titan_one_regular"
+                    android:text="How to Earn"
+                    android:textColor="#E33960"
+                    android:textSize="@dimen/text_size_18sp" />
+
+                <TextView
+                    android:id="@+id/text1"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/heading2"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:background="@drawable/background_layout_white_rounded"
+                    android:fontFamily="@font/poppins_regular"
+                    android:padding="@dimen/size_10dp"
+                    android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/text2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text1"
+                    android:layout_marginTop="@dimen/size_5dp"
+                    android:background="@drawable/background_layout_white_rounded"
+                    android:fontFamily="@font/poppins_regular"
+                    android:padding="@dimen/size_10dp"
+                    android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaavf56v4sv4sf56v45sf64v56s4fv56s4f5vs64v6aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    android:textColor="@color/black" />
+
+                <TextView
+                    android:id="@+id/priceLayout"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/text2"
+                    android:layout_marginTop="@dimen/size_5dp"
+                    android:background="@drawable/background_layout_white_rounded"
+                    android:fontFamily="@font/poppins_regular"
+                    android:padding="@dimen/size_10dp"
+                    android:text="aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa"
+                    android:textColor="@color/black" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/Earn1"
+                android:layout_marginTop="@dimen/size_20dp"
+                android:paddingStart="@dimen/size_20dp"
+                android:paddingEnd="@dimen/size_20dp">
+
+                <TextView
+                    android:id="@+id/earnheading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/titan_one_regular"
+                    android:text="How to Earn"
+                    android:textColor="#E33960"
+                    android:textSize="@dimen/text_size_18sp" />
+
+                <TextView
+                    android:id="@+id/earnpara"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/earnheading"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="cvnmv,hjlfjlfhgjkhjlkljklhirtyerfvmhjmghgyfmk."
+                    android:textColor="@color/white" />
+
+
+                <TextView
+                    android:id="@+id/earnpara2"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/earnpara"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="2x Tickets Multiplier"
+                    android:textColor="@color/white"
+                    android:textStyle="bold" />
+
+                <TextView
+                    android:id="@+id/earnpara3"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@id/earnpara2"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:text="cvnmv,hjlfjlfhgjkhjlkljklhirtyerfvmhjmghgyfmk."
+                    android:textColor="@color/white" />
+
+            </RelativeLayout>
+
+        </RelativeLayout>
+
+    </ScrollView>
+
+</RelativeLayout>

@@ -1,0 +1,211 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="horizontal"
+    android:weightSum="1"
+    android:background="@drawable/splash_bg"
+    tools:context=".ui.fragment.navBarFragments.ChatHeadsFragment">
+
+    <LinearLayout
+        android:layout_weight="0.2"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+
+<!--    <EditText-->
+<!--        android:id="@+id/search"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_marginStart="@dimen/size_20dp"-->
+<!--        android:layout_marginEnd="@dimen/size_20dp"-->
+<!--        android:layout_height="@dimen/size_40dp"-->
+<!--        android:layout_marginTop="@dimen/size_15dp"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:background="@drawable/searchview_background"-->
+<!--        android:drawableStart="@drawable/ic_search_sm"-->
+<!--        android:paddingStart="@dimen/_10sdp"-->
+<!--        app:iconifiedByDefault="false"-->
+<!--        app:queryBackground="@android:color/transparent"-->
+<!--        app:queryHint="Search" />-->
+
+
+
+<!--    <RelativeLayout-->
+<!--        android:layout_marginTop="@dimen/size_5dp"-->
+<!--        android:id="@+id/addFriend"-->
+<!--        android:layout_gravity="center"-->
+<!--        android:layout_width="@dimen/_220sdp"-->
+<!--        android:layout_height="wrap_content">-->
+
+<!--        <com.arhamsoft.deskilz.ui.backGroundLayout.BackGroundLayoutView-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="@dimen/size_40dp"-->
+<!--            app:apply_gradient="1"-->
+<!--            app:cornersValue="@dimen/size_10dp"-->
+<!--            app:corners_side="0"-->
+<!--            app:gradient1="@color/blue1"-->
+<!--            app:gradient2="@color/blue2"-->
+<!--            app:lower_cut_value="@dimen/size_15dp"-->
+<!--            app:upper_cut_value="@dimen/size_15dp" />-->
+
+<!--        <TextView-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_centerInParent="true"-->
+<!--            android:fontFamily="@font/titan_one_regular"-->
+<!--            android:text="AddFriends"-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="@dimen/_15sdp"-->
+<!--            android:textStyle="bold" />-->
+
+
+
+
+<!--    </RelativeLayout>-->
+
+        <ImageView
+            android:id="@+id/addFriend"
+            android:layout_width="@dimen/size_50dp"
+            android:layout_height="@dimen/size_40dp"
+            android:layout_gravity="end"
+            android:layout_marginEnd="@dimen/size_10dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:src="@drawable/ic_baseline_person_add_alt_1_24" />
+
+
+        <LinearLayout
+            android:id="@+id/friendReqLayout"
+            android:visibility="gone"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+
+        <TextView
+            android:id="@+id/acceptReq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Friend Requests"
+            android:textColor="@color/white"
+            android:textStyle="bold"
+            android:textSize="@dimen/size_20dp"
+            android:layout_margin="@dimen/size_15dp"/>
+
+
+
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleListReq"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            android:layout_below="@id/break_line"
+            android:overScrollMode="never"
+            android:paddingStart="@dimen/_10sdp"
+            android:layout_above="@+id/bottomPanal"/>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/channel"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Channel"
+                android:textSize="18sp"
+                android:layout_margin="@dimen/size_15dp"
+                android:textColor="#CCCCCC"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:paddingStart="@dimen/size_10dp"
+
+                >
+
+
+            <de.hdodenhof.circleimageview.CircleImageView
+                android:id="@+id/gamePic"
+                android:layout_width="@dimen/size_50dp"
+                android:layout_height="@dimen/size_50dp"
+                android:layout_alignParentTop="true"
+                android:src="@drawable/ic_baseline_person_24" />
+
+
+            <TextView
+                android:id="@+id/gameName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/_5sdp"
+                android:layout_toEndOf="@id/userPicReq"
+                android:padding="@dimen/_5sdp"
+
+                android:text="(Game Name)"
+                android:textColor="@color/white"
+                android:textSize="@dimen/_15sdp" />
+
+            </LinearLayout>
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:text="Direct Messages"
+            android:textSize="18sp"
+            android:layout_weight="1"
+            android:layout_margin="@dimen/size_15dp"
+            android:textColor="#CCCCCC"/>
+
+
+        <ImageView
+            android:id="@+id/gotoaddfreindList"
+            android:layout_width="35dp"
+            android:layout_height="35dp"
+            android:visibility="gone"
+            android:src="@drawable/ic_add_friend_sm"
+            android:layout_gravity="center_vertical"
+            />
+
+
+    </LinearLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleListChatHeads"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/break_line"
+        android:layout_marginTop="@dimen/_5sdp"
+        android:overScrollMode="never"
+        android:paddingStart="@dimen/_10sdp"
+        android:layout_above="@+id/bottomPanal"/>
+
+
+    </LinearLayout>
+
+
+
+
+</LinearLayout>

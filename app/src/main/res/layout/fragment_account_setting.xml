@@ -1,0 +1,405 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/splash_bg"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.AccountSettingFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/layoutTop"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_10dp"
+        android:layout_marginTop="@dimen/size_30dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/backBtn"
+            android:layout_width="@dimen/size_30dp"
+            android:layout_height="@dimen/size_30dp"
+            android:src="@drawable/back_button" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:fontFamily="@font/titan_one_regular"
+            android:text="Account"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18sp" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/break_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:background="@color/white" />
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginStart="20dp"
+        android:layout_marginEnd="20dp"
+        android:orientation="vertical"
+        android:padding="10dp">
+
+        <RelativeLayout
+            android:id="@+id/gotoUserProfile"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:orientation="horizontal">
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha=".5"
+                android:background="@drawable/edit_text_shape" />
+
+            <ImageView
+                android:id="@+id/img"
+                android:layout_width="@dimen/size_30dp"
+                android:layout_height="@dimen/size_30dp"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center_vertical"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_personal_info" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:layout_toRightOf="@id/img"
+                android:text="Personal info"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="bold" />
+
+
+        </RelativeLayout>
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_marginTop="@dimen/size_10dp"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:alpha=".5"-->
+<!--                android:background="@drawable/edit_text_shape" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/phone"-->
+<!--                android:layout_width="@dimen/size_30dp"-->
+<!--                android:layout_height="@dimen/size_30dp"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:src="@drawable/ic_save_number" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginStart="@dimen/size_10dp"-->
+<!--                android:layout_toRightOf="@id/phone"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:text="Save Phone Number"-->
+<!--                android:textColor="@color/gray_text"-->
+<!--                android:textSize="@dimen/text_size_18sp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--        </RelativeLayout>-->
+
+<!--        <RelativeLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_marginTop="@dimen/size_10dp"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:alpha=".5"-->
+<!--                android:background="@drawable/edit_text_shape" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/acc"-->
+<!--                android:layout_width="@dimen/size_30dp"-->
+<!--                android:layout_height="@dimen/size_30dp"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:src="@drawable/ic_acc_balance" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginStart="@dimen/size_10dp"-->
+<!--                android:layout_toRightOf="@id/acc"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:text="Account Balance"-->
+<!--                android:textColor="@color/gray_text"-->
+<!--                android:textSize="@dimen/text_size_18sp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--        </RelativeLayout>-->
+
+        <RelativeLayout
+            android:id="@+id/redeemPoints"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha=".5"
+                android:background="@drawable/edit_text_shape" />
+
+            <ImageView
+                android:id="@+id/imgRedeem"
+                android:layout_width="@dimen/size_30dp"
+                android:layout_height="@dimen/size_30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_withdraw" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:layout_toRightOf="@id/imgRedeem"
+                android:layout_centerVertical="true"
+                android:text="Redeem Points"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+<!--        <RelativeLayout-->
+
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_marginTop="@dimen/size_10dp"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:alpha=".5"-->
+<!--                android:background="@drawable/edit_text_shape" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/withdraw"-->
+<!--                android:layout_width="@dimen/size_30dp"-->
+<!--                android:layout_height="@dimen/size_30dp"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:src="@drawable/ic_withdraw" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginStart="@dimen/size_10dp"-->
+<!--                android:layout_toRightOf="@id/withdraw"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:text="Withdraw"-->
+<!--                android:textColor="@color/gray_text"-->
+<!--                android:textSize="@dimen/text_size_18sp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--        </RelativeLayout>-->
+
+        <RelativeLayout
+            android:id="@+id/changeUsername"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha=".5"
+                android:background="@drawable/edit_text_shape" />
+
+            <ImageView
+                android:id="@+id/name"
+                android:layout_width="@dimen/size_30dp"
+                android:layout_height="@dimen/size_30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_username" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:layout_toRightOf="@id/name"
+                android:text="Change Username"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/changePassword"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha=".5"
+                android:background="@drawable/edit_text_shape" />
+
+            <ImageView
+                android:id="@+id/pass"
+                android:layout_width="@dimen/size_30dp"
+                android:layout_height="@dimen/size_30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_password" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:layout_toRightOf="@id/pass"
+                android:text="Change Password"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:id="@+id/switchacc"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha=".5"
+                android:background="@drawable/edit_text_shape" />
+
+            <ImageView
+                android:id="@+id/switchimg"
+                android:layout_width="@dimen/size_30dp"
+                android:layout_height="@dimen/size_30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/ic_switch_acc" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerVertical="true"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:layout_toRightOf="@id/switchimg"
+                android:text="Switch Account"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>
+
+<!--        <RelativeLayout-->
+<!--            android:id="@+id/gotoReportScreen"-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="60dp"-->
+<!--            android:layout_marginTop="@dimen/size_10dp"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <View-->
+<!--                android:layout_width="match_parent"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:alpha=".5"-->
+<!--                android:background="@drawable/edit_text_shape" />-->
+
+<!--            <ImageView-->
+<!--                android:id="@+id/report"-->
+<!--                android:layout_width="@dimen/size_30dp"-->
+<!--                android:layout_height="@dimen/size_30dp"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_marginStart="10dp"-->
+<!--                android:src="@drawable/ic_switch_acc" />-->
+
+<!--            <TextView-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:layout_centerVertical="true"-->
+<!--                android:layout_gravity="center"-->
+<!--                android:layout_marginStart="@dimen/size_10dp"-->
+<!--                android:layout_toRightOf="@id/report"-->
+<!--                android:text="Report Account"-->
+<!--                android:textColor="@color/gray_text"-->
+<!--                android:textSize="@dimen/text_size_18sp"-->
+<!--                android:textStyle="bold" />-->
+
+<!--        </RelativeLayout>-->
+
+
+        <!--<RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_marginTop="@dimen/size_10dp"
+            android:orientation="horizontal">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha=".5"
+                android:background="@drawable/edit_text_shape" />
+
+            <ImageView
+                android:id="@+id/phone"
+                android:layout_width="@dimen/size_30dp"
+                android:layout_height="@dimen/size_30dp"
+                android:layout_centerVertical="true"
+                android:layout_marginStart="10dp"
+                android:src="@drawable/starlarge" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:layout_toRightOf="@id/phone"
+                android:layout_centerVertical="true"
+                android:text="Save Phone Number"
+                android:textColor="@color/gray_text"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="bold" />
+
+        </RelativeLayout>-->
+
+
+
+    </LinearLayout>
+
+</LinearLayout>

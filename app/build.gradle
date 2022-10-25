@@ -1,0 +1,119 @@
+plugins {
+    id 'com.android.library'
+    id 'org.jetbrains.kotlin.android'
+    id 'kotlin-kapt'
+    id 'com.google.gms.google-services'
+
+}
+
+android {
+    compileSdk 31
+
+    defaultConfig {
+        applicationId "com.arhamsoft.deskilz"
+        minSdk 21
+        targetSdk 31
+        versionCode 1
+        versionName "1.0"
+
+        testInstrumentationRunner "androidx.test.runner.AndroidJUnitRunner"
+    }
+
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android-optimize.txt'), 'proguard-rules.pro'
+        }
+    }
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_1_8
+        targetCompatibility JavaVersion.VERSION_1_8
+    }
+    kotlinOptions {
+        jvmTarget = '1.8'
+    }
+
+    buildFeatures {
+        viewBinding true
+    }
+}
+
+dependencies {
+
+    implementation 'androidx.core:core-ktx:1.8.0'
+    implementation 'androidx.appcompat:appcompat:1.4.2'
+    implementation 'com.google.android.material:material:1.6.1'
+    implementation 'androidx.constraintlayout:constraintlayout:2.1.4'
+    implementation 'androidx.legacy:legacy-support-v4:1.0.0'
+    testImplementation 'junit:junit:4.13.2'
+    androidTestImplementation 'androidx.test.ext:junit:1.1.3'
+//    implementation 'com.android.support:cardview-v7:31.0.0'
+    androidTestImplementation 'androidx.test.espresso:espresso-core:3.4.0'
+
+    //Circle Image view
+    implementation 'de.hdodenhof:circleimageview:3.1.0'
+
+    implementation("io.coil-kt:coil:2.1.0")
+
+    implementation 'com.google.code.gson:gson:2.9.0'
+
+    implementation group: 'org.bytedeco', name: 'javacpp', version: '1.5.7'
+
+    //room db
+    def roomVersion = "2.3.0"
+
+    implementation "androidx.room:room-runtime:$roomVersion"
+    kapt "androidx.room:room-compiler:$roomVersion"
+    implementation "androidx.room:room-ktx:$roomVersion"
+
+    //lottie
+    def lottieVersion = "3.4.0"
+    implementation "com.airbnb.android:lottie:$lottieVersion"
+
+    //sdp
+    implementation 'com.intuit.sdp:sdp-android:1.0.6'
+
+    //bottom Bar
+    implementation "com.github.BassamRazzaq100:BottomBarSDK:0.0.2-alpha"
+
+    //Retrofit
+    implementation 'com.squareup.retrofit2:retrofit:2.9.0'
+    implementation 'com.squareup.retrofit2:converter-gson:2.9.0'
+    implementation 'com.squareup.okhttp3:okhttp:5.0.0-alpha.3'
+    implementation 'com.squareup.okhttp3:logging-interceptor:5.0.0-alpha.3'
+
+    //Coroutines
+    implementation "org.jetbrains.kotlinx:kotlinx-coroutines-android:1.6.0"
+
+    //navigation graph
+    implementation "androidx.navigation:navigation-fragment-ktx:2.4.2"
+    implementation "androidx.navigation:navigation-ui-ktx:2.4.2"
+
+
+    //web socket
+    implementation 'com.squareup.okhttp3:okhttp:3.12.6'
+    implementation 'com.squareup.okhttp3:mockwebserver:3.12.1'
+
+    //permissions
+    implementation 'com.karumi:dexter:6.2.3'
+
+    //socketIO
+    implementation ('io.socket:socket.io-client:2.0.0') {
+        exclude group: 'org.json', module: 'json'
+    }
+
+
+    //firebase
+    implementation 'com.google.gms:google-services:4.3.12'
+    implementation 'com.google.firebase:firebase-bom:30.2.0'
+    implementation 'com.google.firebase:firebase-messaging-ktx:22.0.0'
+    implementation 'com.google.firebase:firebase-core:21.0.0'
+
+
+    implementation 'com.google.android.gms:play-services-location:19.0.1'
+
+
+
+
+
+}

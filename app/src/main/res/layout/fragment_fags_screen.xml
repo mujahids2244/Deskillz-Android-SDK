@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/black">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_margin="@dimen/size_10dp"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+
+            <ImageView
+                android:layout_width="@dimen/size_30dp"
+                android:layout_height="@dimen/size_30dp"
+                android:src="@drawable/back_button" />
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:text="FAGS"
+                android:textColor="@color/white"
+                android:layout_weight="1"
+                android:gravity="center"
+                android:textSize="@dimen/text_size_18sp"
+                android:fontFamily="@font/titan_one_regular"/>
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_margin="@dimen/size_10dp"
+            android:paddingBottom="@dimen/size_20dp"
+            android:background="@drawable/background_layout_white_rounded"
+            android:padding="@dimen/size_10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_18sp"
+                android:fontFamily="@font/titan_one_regular"
+                android:layout_margin="@dimen/size_5dp"
+                android:text="I deposited money. Why does it say cash play is not available in my area?" />
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:textSize="@dimen/text_size_18sp"
+                android:layout_margin="@dimen/size_5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:text="This error can occur because a player's location services are not turned on. Try the following steps to ensure that your location services are on for the specific game you are playing:" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="iOS:"
+                android:layout_margin="@dimen/size_5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1: Open the Setting application on your device.\n2: Tap on “Privacy” and then “Location Services”.\n3: Enable the location services by checking off the box related to the game you are playing."
+                android:layout_margin="@dimen/size_5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Samsung and similar Android devices:"
+                android:layout_margin="@dimen/size_5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_18sp" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="1: Open the Setting application on your device.\n2: Navigate to “Apps” and open the Apps list.\n3: Find the DeSkillz game in question, for example, Solitaire Cube.\n4: Tap on the game to open its individual settings.\n5: Under “App setting” open “ Permission.”\n6: Make sure the slider for “ Location” is turned on."
+                android:layout_margin="@dimen/size_5dp"
+                android:fontFamily="@font/poppins_regular"
+                android:textStyle="bold"
+                android:textSize="@dimen/text_size_18sp" />
+
+        </LinearLayout>
+
+        <TextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:fontFamily="@font/poppins_regular"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18sp"
+            android:text="Didn't answer your question?" />
+
+        <Button
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="Contact Player Support"
+            android:textColor="@color/white"
+            android:layout_margin="@dimen/size_20dp"
+            android:fontFamily="@font/titan_one_regular"
+            android:padding="@dimen/size_10dp"
+            android:textSize="@dimen/text_size_18sp"
+            android:background="@drawable/button_bg_blue"/>
+
+    </LinearLayout>
+
+</ScrollView>

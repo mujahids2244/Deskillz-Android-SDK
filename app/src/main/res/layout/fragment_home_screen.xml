@@ -1,0 +1,498 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context=".ui.fragment.navBarFragments.HomeScreenFragment">
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:gravity="center_horizontal"
+        android:padding="@dimen/size_10dp"
+        android:orientation="vertical">
+
+        <include
+            android:id="@+id/noint"
+            layout="@layout/no_internet_connection" />
+
+
+
+        <RelativeLayout
+            android:visibility="gone"
+
+            android:id="@+id/practiceLeague1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_130dp">
+
+            <com.arhamsoft.deskilz.ui.backGroundLayout.BackGroundLayoutView
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_130dp"
+                android:alpha=".8"
+                app:backgroundColorView="@color/gray_bg_color"
+                app:cornersValue="@dimen/size_10dp"
+                app:corners_side="1"
+                app:lower_cut_value="@dimen/size_20dp"
+                app:upper_cut_value="@dimen/size_30dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="@dimen/size_130dp"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_20dp"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_30dp"
+                        android:layout_height="@dimen/size_30dp"
+                        android:src="@drawable/cuplarge" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/size_10dp"
+                        android:text="Practice League"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="@dimen/size_65dp"
+                    android:layout_gravity="center"
+                    android:layout_marginStart="@dimen/size_20dp"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:layout_marginEnd="@dimen/size_20dp"
+                    android:background="@drawable/background_layout_white_rounded"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_65dp"
+                        android:layout_height="@dimen/size_65dp"
+                        android:padding="@dimen/_10sdp"
+                        android:src="@drawable/personlarge" />
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_margin="@dimen/_8sdp"
+                        android:orientation="vertical">
+
+                        <TextView
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:text="Name"
+                            android:textColor="@color/black"
+                            android:textSize="@dimen/_13sdp"
+                            android:textStyle="bold" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="Rank:"
+                            android:textSize="@dimen/_10sdp" />
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:id="@+id/practiceLeague2"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/size_10dp">
+
+            <com.arhamsoft.deskilz.ui.backGroundLayout.BackGroundLayoutView
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:alpha=".8"
+                app:backgroundColorView="@color/gray_bg_color"
+                app:cornersValue="@dimen/size_10dp"
+                app:corners_side="1"
+                android:padding="@dimen/size_10dp"
+                app:lower_cut_value="@dimen/size_20dp"
+                app:upper_cut_value="@dimen/size_30dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent"/>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:layout_marginBottom="@dimen/size_10dp"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:layout_marginStart="@dimen/size_20dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_30dp"
+                        android:layout_height="@dimen/size_30dp"
+                        android:src="@drawable/starlarge" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/size_10dp"
+                        android:text="Player Rank"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+                    android:orientation="horizontal"
+                    android:layout_marginTop="@dimen/size_10dp"
+                    android:layout_marginStart="@dimen/size_20dp"
+                    android:layout_marginEnd="@dimen/size_20dp">
+
+                    <RelativeLayout
+                        android:id="@+id/deskillzLevelLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/size_150dp"
+                        android:layout_marginEnd="@dimen/size_5dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_layout_white_rounded"
+                        android:orientation="vertical"
+                        android:padding="@dimen/size_5dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/size_30dp"
+                            android:layout_height="@dimen/size_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/size_30dp"
+                            android:src="@drawable/d_level_large" />
+
+                        <ProgressBar
+                            android:id="@+id/progressbar"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="@dimen/size_120dp"
+                            android:layout_height="@dimen/size_100dp"
+                            android:layout_centerHorizontal="true"
+                            android:max="100"
+                            android:progress="40"
+                            android:progressDrawable="@drawable/progress_design" />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/size_30dp"
+                            android:layout_height="@dimen/size_30dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/size_75dp"
+                            android:background="@drawable/background_layout_red_cricle"
+                            android:backgroundTint="#D52116">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/titan_one_regular"
+                                android:text="4"
+                                android:textColor="@color/white" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:text="Deskillz Level"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/battleFieldLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/size_150dp"
+                        android:layout_marginEnd="@dimen/_5sdp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_layout_white_rounded"
+                        android:orientation="vertical"
+                        android:padding="@dimen/size_5dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/size_30dp"
+                            android:layout_height="@dimen/size_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/size_30dp"
+                            android:src="@drawable/bflarge" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBar2"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="@dimen/size_120dp"
+                            android:layout_height="@dimen/size_100dp"
+                            android:layout_centerHorizontal="true"
+                            android:max="100"
+                            android:progress="40"
+                            android:progressDrawable="@drawable/progress_design"
+                            android:progressTint="#51FCDF" />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/size_30dp"
+                            android:layout_height="@dimen/size_30dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/size_75dp"
+                            android:background="@drawable/background_layout_red_cricle"
+                            android:backgroundTint="#51FCDF">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/titan_one_regular"
+                                android:text="4"
+                                android:textColor="@color/black" />
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:text="Battlefield"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/bronzeTiersLayout"
+                        android:layout_width="0dp"
+                        android:layout_height="@dimen/size_150dp"
+                        android:layout_weight="1"
+                        android:background="@drawable/background_layout_white_rounded"
+                        android:orientation="vertical"
+                        android:padding="@dimen/size_5dp">
+
+                        <ImageView
+                            android:layout_width="@dimen/size_30dp"
+                            android:layout_height="@dimen/size_50dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/size_30dp"
+                            android:src="@drawable/ticket_with_bg" />
+
+                        <ProgressBar
+                            android:id="@+id/progressBar3"
+                            style="?android:attr/progressBarStyleHorizontal"
+                            android:layout_width="@dimen/size_120dp"
+                            android:layout_height="@dimen/size_100dp"
+                            android:layout_centerHorizontal="true"
+                            android:max="100"
+                            android:progress="40"
+                            android:progressDrawable="@drawable/progress_design"
+                            android:progressTint="#A73C11" />
+
+                        <RelativeLayout
+                            android:layout_width="@dimen/size_30dp"
+                            android:layout_height="@dimen/size_30dp"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginTop="@dimen/size_75dp"
+                            android:background="@drawable/background_layout_red_cricle"
+                            android:backgroundTint="#A73C11">
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:layout_centerInParent="true"
+                                android:fontFamily="@font/titan_one_regular"
+                                android:text="4"
+                                android:textColor="@color/white" />
+
+                        </RelativeLayout>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentBottom="true"
+                            android:layout_centerHorizontal="true"
+                            android:layout_marginBottom="@dimen/_5sdp"
+                            android:text="Bronze Tier"
+                            android:textStyle="bold" />
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/ongoingLayout"
+            android:layout_width="match_parent"
+            android:layout_marginTop="10dp"
+            android:layout_height="@dimen/size_350dp">
+
+            <com.arhamsoft.deskilz.ui.backGroundLayout.BackGroundLayoutView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha=".8"
+                app:backgroundColorView="@color/gray_bg_color"
+                app:cornersValue="@dimen/size_10dp"
+                app:corners_side="1"
+                app:lower_cut_value="@dimen/size_20dp"
+                app:upper_cut_value="@dimen/size_20dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical"
+                android:paddingBottom="10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center_horizontal"
+                    android:layout_marginTop="10dp"
+                    android:text="On-Going Matches"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_18sp"
+                    android:textStyle="bold" />
+
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="0.5dp"
+                    android:layout_marginStart="15dp"
+                    android:layout_marginTop="10dp"
+                    android:layout_marginEnd="15dp"
+                    android:background="@color/black" />
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleListRequest"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="@dimen/size_10dp"
+                    android:layout_marginTop="20dp"
+                    android:layout_marginEnd="@dimen/size_10dp"
+                    android:layout_marginBottom="@dimen/size_10dp"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/row_pending_request" />
+
+
+            </LinearLayout>
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/completionView"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_350dp"
+            android:layout_marginTop="@dimen/size_10dp">
+
+            <com.arhamsoft.deskilz.ui.backGroundLayout.BackGroundLayoutView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:alpha=".8"
+                app:backgroundColorView="@color/gray_bg_color"
+                app:cornersValue="@dimen/size_10dp"
+                app:corners_side="1"
+                app:lower_cut_value="@dimen/size_20dp"
+                app:upper_cut_value="@dimen/size_30dp" />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:layout_centerHorizontal="true"
+                android:orientation="vertical">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="@dimen/size_10dp"
+                    android:orientation="horizontal">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_30dp"
+                        android:layout_height="@dimen/size_30dp"
+                        android:src="@drawable/medallarge" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_gravity="center"
+                        android:layout_marginStart="@dimen/size_10dp"
+                        android:text="Completed"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_18sp"
+                        android:textStyle="bold" />
+
+                </LinearLayout>
+
+                <androidx.recyclerview.widget.RecyclerView
+                    android:id="@+id/recycleListHome"
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_marginStart="@dimen/size_10dp"
+                    android:layout_marginEnd="@dimen/size_10dp"
+                    android:layout_marginBottom="@dimen/size_10dp"
+                    android:layout_weight="1"
+                    app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                    tools:listitem="@layout/row_home_screen" />
+
+
+                <ProgressBar
+                    android:id="@+id/progressBar"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:visibility="gone"
+
+                    />
+                <!--
+                <include
+                    layout="@layout/row_home_screen"
+                    android:layout_margin="@dimen/size_10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />
+
+                <include
+                    layout="@layout/row_home_screen"
+                    android:layout_margin="@dimen/size_10dp"
+                    android:layout_height="wrap_content"
+                    android:layout_width="match_parent" />-->
+
+            </LinearLayout>
+
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+</ScrollView>

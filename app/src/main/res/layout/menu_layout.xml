@@ -1,0 +1,490 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:visibility="gone"
+    android:clickable="false"
+    android:id="@+id/menuLayout">
+
+    <View
+        android:id="@+id/emptyClick"
+        android:layout_width="0dp"
+        android:layout_height="match_parent"
+        android:background="#4082D0"
+        android:clickable="false"
+        app:layout_constraintEnd_toEndOf="@+id/guideLine2"
+        app:layout_constraintStart_toStartOf="parent"/>
+
+    <View
+        android:id="@+id/extraView"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:background="@color/gray_text"
+        app:layout_constraintStart_toEndOf="@+id/guideLine2"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        android:alpha="0.7"/>
+
+
+    <LinearLayout
+        android:id="@+id/userAccount"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userImg"
+            android:layout_width="@dimen/size_80dp"
+            android:layout_height="@dimen/size_80dp"
+            android:layout_margin="10dp"
+            android:background="@drawable/ic_img_layout"
+            android:src="@drawable/ic_baseline_person_24"/>
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:layout_gravity="center_vertical"
+            android:layout_margin="@dimen/size_10dp">
+
+            <TextView
+                android:id="@+id/userName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Megan Meyer"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18sp"
+                android:fontFamily="@font/titan_one_regular"/>
+
+            <TextView
+                android:id="@+id/viewDetailsTxt"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="View My Profile"
+                android:textColor="@color/white"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:textSize="@dimen/text_size_18sp"
+                android:fontFamily="@font/poppins_regular"/>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/topSeparator"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_margin="@dimen/size_10dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/guideLine1"
+        app:layout_constraintTop_toBottomOf="@+id/userAccount"/>
+
+
+    <ScrollView
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_below="@id/topSeparator"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/topSeparator"
+        app:layout_constraintBottom_toTopOf="@id/bottomDivider"
+        app:layout_constraintEnd_toEndOf="@+id/guideLine1">
+
+    <LinearLayout
+        android:id="@+id/mainLayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical" >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/deskillzNewLayout"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:layout_marginEnd="@dimen/size_5dp"
+                android:layout_marginBottom="@dimen/size_5dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:padding="@dimen/size_10dp"
+                android:background="@drawable/background_layout_white_rounded">
+
+                <ImageView
+                    android:layout_width="@dimen/size_50dp"
+                    android:layout_height="@dimen/size_50dp"
+                    android:src="@drawable/icon_awesome_newspaper"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Deskillz News"
+                    android:layout_margin="@dimen/size_5dp"
+                    android:layout_gravity="center"
+                    android:gravity="center"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="@dimen/text_size_18sp"/>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/accountSettings"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:layout_marginStart="@dimen/size_5dp"
+                android:layout_marginEnd="@dimen/size_10dp"
+                android:layout_marginBottom="@dimen/size_5dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:layout_weight="1"
+                android:padding="@dimen/size_10dp"
+                android:background="@drawable/background_layout_white_rounded">
+
+                <ImageView
+                    android:layout_width="@dimen/size_50dp"
+                    android:layout_height="@dimen/size_50dp"
+                    android:src="@drawable/icon_metro_user"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Account"
+                    android:layout_margin="@dimen/size_5dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="@dimen/text_size_18sp"/>
+
+            </LinearLayout>
+
+
+            <!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginTop="@dimen/size_10dp"-->
+<!--                android:layout_marginStart="@dimen/size_10dp"-->
+<!--                android:layout_marginEnd="@dimen/size_5dp"-->
+<!--                android:layout_marginBottom="@dimen/size_5dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="@dimen/size_10dp"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/background_layout_white_rounded">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="@dimen/size_50dp"-->
+<!--                    android:layout_height="@dimen/size_50dp"-->
+<!--                    android:src="@drawable/icon_ionic_trophy"-->
+<!--                    android:layout_gravity="center"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Trophies"-->
+<!--                    android:layout_margin="@dimen/size_5dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:fontFamily="@font/poppins_regular"-->
+<!--                    android:textSize="@dimen/text_size_18sp"/>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_marginTop="@dimen/size_5dp"-->
+<!--                android:layout_marginStart="@dimen/size_5dp"-->
+<!--                android:layout_marginEnd="@dimen/size_5dp"-->
+<!--                android:layout_marginBottom="@dimen/size_5dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="@dimen/size_10dp"-->
+<!--                android:gravity="center"-->
+<!--                android:layout_weight="1"-->
+<!--                android:background="@drawable/background_layout_white_rounded">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="@dimen/size_50dp"-->
+<!--                    android:layout_height="@dimen/size_50dp"-->
+<!--                    android:src="@drawable/icon_awesome_ticket"-->
+<!--                    android:layout_gravity="center"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Tickets"-->
+<!--                    android:layout_margin="@dimen/size_5dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:fontFamily="@font/poppins_regular"-->
+<!--                    android:textSize="@dimen/text_size_18sp"/>-->
+
+<!--            </LinearLayout>-->
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+
+            <LinearLayout
+                android:id="@+id/gotoNotifications"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:layout_marginEnd="@dimen/size_5dp"
+                android:layout_marginBottom="@dimen/size_5dp"
+                android:orientation="vertical"
+                android:gravity="center"
+                android:padding="@dimen/size_10dp"
+                android:background="@drawable/background_layout_white_rounded">
+
+                <ImageView
+                    android:layout_width="@dimen/size_50dp"
+                    android:layout_height="@dimen/size_50dp"
+                    android:src="@drawable/ic_baseline_notifications_24"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Notifications"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="@dimen/text_size_18sp"/>
+
+            </LinearLayout>
+
+            <!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_marginTop="@dimen/size_5dp"-->
+<!--                android:layout_marginStart="@dimen/size_10dp"-->
+<!--                android:layout_marginEnd="@dimen/size_5dp"-->
+<!--                android:layout_marginBottom="@dimen/size_5dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:padding="@dimen/size_10dp"-->
+<!--                android:gravity="center"-->
+<!--                android:background="@drawable/background_layout_white_rounded">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="@dimen/size_50dp"-->
+<!--                    android:layout_height="@dimen/size_50dp"-->
+<!--                    android:src="@drawable/icon_ionic_gift"-->
+<!--                    android:layout_gravity="center"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Get $15"-->
+<!--                    android:layout_margin="@dimen/size_5dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:fontFamily="@font/poppins_regular"-->
+<!--                    android:textSize="@dimen/text_size_18sp"/>-->
+
+<!--            </LinearLayout>-->
+
+            <LinearLayout
+                android:id="@+id/gotoChat"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:layout_marginTop="@dimen/size_5dp"
+                android:layout_marginStart="@dimen/size_5dp"
+                android:layout_marginEnd="@dimen/size_10dp"
+                android:layout_marginBottom="@dimen/size_5dp"
+                android:orientation="vertical"
+                android:padding="@dimen/size_10dp"
+                android:gravity="center"
+                android:background="@drawable/background_layout_white_rounded">
+
+                <ImageView
+                    android:layout_width="@dimen/size_50dp"
+                    android:layout_height="@dimen/size_50dp"
+                    android:src="@drawable/icon_material_message"
+                    android:layout_gravity="center"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Chat"
+                    android:layout_margin="@dimen/size_5dp"
+                    android:layout_gravity="center"
+                    android:textColor="@color/black"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="@dimen/text_size_18sp"/>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_marginTop="@dimen/size_5dp"-->
+<!--                android:layout_marginStart="@dimen/size_10dp"-->
+<!--                android:layout_marginEnd="@dimen/size_5dp"-->
+<!--                android:layout_marginBottom="@dimen/size_10dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:gravity="center"-->
+<!--                android:padding="@dimen/size_10dp"-->
+<!--                android:background="@drawable/background_layout_white_rounded">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="@dimen/size_50dp"-->
+<!--                    android:layout_height="@dimen/size_50dp"-->
+<!--                    android:src="@drawable/icon_map_lawyer"-->
+<!--                    android:layout_gravity="center"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Legal"-->
+<!--                    android:layout_margin="@dimen/size_5dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:fontFamily="@font/poppins_regular"-->
+<!--                    android:textSize="@dimen/text_size_18sp"/>-->
+
+<!--            </LinearLayout>-->
+
+<!--            <LinearLayout-->
+<!--                android:layout_width="0dp"-->
+<!--                android:layout_height="match_parent"-->
+<!--                android:layout_weight="1"-->
+<!--                android:layout_marginTop="@dimen/size_5dp"-->
+<!--                android:layout_marginStart="@dimen/size_5dp"-->
+<!--                android:layout_marginEnd="@dimen/size_10dp"-->
+<!--                android:layout_marginBottom="@dimen/size_10dp"-->
+<!--                android:orientation="vertical"-->
+<!--                android:gravity="center"-->
+<!--                android:padding="@dimen/size_10dp"-->
+<!--                android:background="@drawable/background_layout_white_rounded">-->
+
+<!--                <ImageView-->
+<!--                    android:layout_width="@dimen/size_50dp"-->
+<!--                    android:layout_height="@dimen/size_50dp"-->
+<!--                    android:src="@drawable/icon_ionic_help_buoy"-->
+<!--                    android:layout_gravity="center"/>-->
+
+<!--                <TextView-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:text="Help Center"-->
+<!--                    android:layout_margin="@dimen/size_5dp"-->
+<!--                    android:layout_gravity="center"-->
+<!--                    android:textColor="@color/black"-->
+<!--                    android:gravity="center"-->
+<!--                    android:fontFamily="@font/poppins_regular"-->
+<!--                    android:textSize="@dimen/text_size_18sp"/>-->
+
+<!--            </LinearLayout>-->
+
+<!--        </LinearLayout>-->
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+
+
+
+<!--        </LinearLayout>-->
+
+
+<!--        <LinearLayout-->
+<!--            android:layout_width="match_parent"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:orientation="horizontal">-->
+
+
+
+<!--        </LinearLayout>-->
+
+
+    </LinearLayout>
+
+    </ScrollView>
+
+
+    <View
+        android:id="@+id/bottomDivider"
+        android:layout_width="0dp"
+        android:layout_height="0.5dp"
+        android:layout_above="@+id/layoutLogout"
+        android:layout_margin="@dimen/size_10dp"
+        android:background="@color/white"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@+id/guideLine1"
+        app:layout_constraintBottom_toTopOf="@+id/layoutLogout"/>
+
+    <LinearLayout
+
+        android:id="@+id/layoutLogout"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:orientation="horizontal"
+        android:padding="@dimen/size_10dp"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="@id/guideLine2"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:layout_width="@dimen/size_30dp"
+            android:layout_height="@dimen/size_30dp"
+            android:layout_marginStart="@dimen/size_20dp"
+            android:src="@drawable/icon_ionic_log_out" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_10dp"
+            android:fontFamily="@font/poppins_regular"
+            android:text="Log out"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_18sp" />
+
+    </LinearLayout>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.70"
+        android:orientation="vertical"/>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/guideLine2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        app:layout_constraintGuide_percent="0.75"
+        android:orientation="vertical"/>
+
+</androidx.constraintlayout.widget.ConstraintLayout>

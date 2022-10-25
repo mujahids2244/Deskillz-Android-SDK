@@ -1,0 +1,377 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context=".ui.fragment.FindCompetitiveFragment"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/size_650dp"
+            android:background="@drawable/splash_bg">
+
+            <RelativeLayout
+                android:id="@+id/topBar"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_20dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Test Your Deskillz"
+                    android:textSize="@dimen/text_size_18sp"
+                    android:layout_centerInParent="true"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/titan_one_regular" />
+
+                <ImageView
+                    android:id="@+id/exitMatch"
+                    android:layout_width="@dimen/size_20dp"
+                    android:layout_height="@dimen/size_20dp"
+                    android:layout_alignParentEnd="true"
+                    android:layout_marginEnd="@dimen/size_5dp"
+                    android:src="@drawable/close_icon" />
+
+            </RelativeLayout>
+
+            <View
+                android:id="@+id/barLayout"
+                android:layout_width="match_parent"
+                android:layout_height="0.5dp"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:background="@color/gray_bg_color"
+                android:layout_below="@+id/topBar"/>
+
+
+            <RelativeLayout
+                android:layout_width="wrap_content"
+                android:layout_below="@id/barLayout"
+                android:layout_marginTop="@dimen/size_20dp"
+                android:layout_marginStart="5dp"
+                android:padding="@dimen/size_10dp"
+                android:layout_height="wrap_content">
+
+
+                <TextView
+                    android:id="@+id/heading"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/poppins_regular"
+
+                    android:text="Request Countdown "
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:textStyle="bold" />
+
+            <TextView
+                android:id="@+id/countdown"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="00:00:00"
+                android:layout_below="@id/heading"
+                android:fontFamily="@font/poppins_regular"
+                android:textColor="@color/white"
+                android:textSize="25sp"
+                android:textStyle="bold"
+                />
+            </RelativeLayout>
+
+
+            <LinearLayout
+                android:id="@+id/topPlayer"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/barLayout"
+                android:layout_alignParentEnd="true"
+                android:layout_marginTop="@dimen/size_20dp"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:orientation="vertical">
+
+                    <TextView
+                        android:id="@+id/userName"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_20sp"
+                        android:text="Name 1"
+                        android:layout_margin="@dimen/size_10dp"
+                        android:fontFamily="@font/titan_one_regular"/>
+
+                    <ImageView
+                        android:id="@+id/userFlag"
+                        android:layout_width="30dp"
+                        android:layout_height="20dp"
+                        android:layout_gravity="end"
+                        android:background="@color/white"
+                        android:paddingStart="@dimen/size_10dp"
+                        android:paddingTop="@dimen/size_5dp"
+                        android:paddingEnd="@dimen/size_10dp"
+                        android:paddingBottom="@dimen/size_5dp"
+                        />
+
+                </LinearLayout>
+
+                <de.hdodenhof.circleimageview.CircleImageView
+                    android:id="@+id/userImg"
+                    android:layout_width="@dimen/size_80dp"
+                    android:layout_height="@dimen/size_80dp"
+                    android:padding="@dimen/size_10dp"
+                    android:src="@drawable/personlarge"/>
+
+            </LinearLayout>
+
+            <RelativeLayout
+                android:id="@+id/vsSign"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/topPlayer"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="@dimen/size_150dp"
+                    android:layout_height="@dimen/size_150dp"
+                    android:layout_centerInParent="true"
+                    android:src="@drawable/spark_icon" />
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_centerInParent="true"
+                    android:fontFamily="@font/titan_one_regular"
+                    android:text="VS"
+                    android:textColor="@color/white"
+                    android:textSize="@dimen/text_size_25sp" />
+
+            </RelativeLayout>
+
+
+            <androidx.recyclerview.widget.RecyclerView
+                android:id="@+id/recycleListOpponent"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/vsSign"
+                android:layout_marginStart="@dimen/size_10dp"
+                android:layout_marginEnd="@dimen/size_10dp"
+                app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+                tools:listitem="@layout/row_home_screen" />
+
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="@color/white"
+            android:padding="@dimen/size_20dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal">
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    android:padding="@dimen/size_20dp"
+                    android:layout_weight="1"
+                    android:background="@drawable/black_layout_left">
+
+                    <ImageView
+                        android:layout_width="@dimen/size_30dp"
+                        android:layout_height="@dimen/size_30dp"
+                        android:layout_gravity="center_vertical"
+                        android:src="@drawable/coin_medium" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="2"
+                        android:layout_gravity="center_vertical"
+                        android:layout_marginStart="@dimen/size_5dp"
+                        android:textColor="@color/blue2"
+                        android:fontFamily="@font/titan_one_regular"
+                        android:textSize="@dimen/text_size_25sp"/>
+
+                    <LinearLayout
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:layout_marginStart="@dimen/size_5dp">
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="IN PRIZES"
+                            android:layout_marginStart="@dimen/size_5dp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/poppins_regular"
+                            android:textSize="@dimen/text_size_25sp"/>
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="GUARANTEED"
+                            android:layout_marginStart="@dimen/size_5dp"
+                            android:textColor="@color/white"
+                            android:fontFamily="@font/titan_one_regular"
+                            android:textSize="@dimen/text_size_25sp"/>
+
+                    </LinearLayout>
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_weight="0.3"
+                    android:layout_marginStart="@dimen/size_5dp"
+                    android:padding="@dimen/size_20dp"
+                    android:background="@drawable/black_layout_right">
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="01"
+                        android:layout_gravity="center"
+                        android:fontFamily="@font/titan_one_regular"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_30sp"/>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@drawable/background_layout_white_rounded"
+                android:backgroundTint="@color/black"
+                android:padding="@dimen/size_10dp"
+                android:layout_marginTop="@dimen/size_10dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Entry Fee:"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="@dimen/text_size_20sp"
+                    android:textColor="@color/white"/>
+
+                <ImageView
+                    android:layout_width="@dimen/size_30dp"
+                    android:layout_height="@dimen/size_30dp"
+                    android:layout_marginStart="@dimen/size_5dp"
+                    android:src="@drawable/d_level_large"/>
+
+                <TextView
+                    android:id="@+id/entry_fee"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="1"
+                    android:layout_marginStart="@dimen/size_2dp"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="@dimen/text_size_20sp"
+                    android:textColor="@color/white"/>
+
+                <TextView
+                    android:id="@+id/p_count"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="2 Players"
+                    android:layout_weight="1"
+                    android:gravity="end"
+                    android:textColor="@color/white"
+                    android:fontFamily="@font/poppins_regular"
+                    android:textSize="@dimen/text_size_20sp" />
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/size_10dp"
+                android:orientation="horizontal">
+
+                <RelativeLayout
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1">
+
+                    <com.arhamsoft.deskilz.ui.backGroundLayout.BackGroundLayoutView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:corners_side="0"
+                        app:apply_gradient="1"
+                        app:gradient1="@color/red1"
+                        app:gradient2="@color/red2"
+                        app:cornersValue="@dimen/size_10dp"
+                        app:upper_cut_value="@dimen/size_10dp"
+                        app:lower_cut_value="@dimen/size_10dp" />
+
+                    <TextView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:textSize="@dimen/text_size_20sp"
+                        android:textColor="@color/white"
+                        android:padding="@dimen/size_5dp"
+                        android:fontFamily="@font/titan_one_regular"
+                        android:text="MATCH \nDETAILS" />
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:id="@+id/beginMatch"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_marginStart="@dimen/size_5dp"
+                    android:layout_weight="2">
+
+                    <com.arhamsoft.deskilz.ui.backGroundLayout.BackGroundLayoutView
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        app:corners_side="1"
+                        app:apply_gradient="1"
+                        app:gradient1="@color/blue1"
+                        app:gradient2="@color/blue2"
+                        app:cornersValue="@dimen/size_10dp"
+                        app:upper_cut_value="@dimen/size_15dp"
+                        app:lower_cut_value="@dimen/size_10dp" />
+
+                    <TextView
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:layout_centerInParent="true"
+                        android:fontFamily="@font/titan_one_regular"
+                        android:padding="@dimen/size_5dp"
+                        android:text="BEGIN MATCH NOW"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_20sp" />
+
+                </RelativeLayout>
+
+            </LinearLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+</ScrollView>

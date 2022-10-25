@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="350dp"
+    android:id="@+id/rewardLayout"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:visibility="gone"
+    android:layout_margin="@dimen/size_10dp"
+   >
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="@dimen/size_10dp"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:fontFamily="@font/titan_one_regular"
+        android:text="Featured"
+        android:textColor="@color/red"
+        android:textSize="@dimen/text_size_18sp" />
+
+
+    <LinearLayout
+        android:background="@drawable/background_layout_white_rounded"
+        android:backgroundTint="@color/white"
+        android:layout_width="300dp"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_margin="10dp">
+
+
+
+    <ImageView
+        android:id="@+id/imgSet"
+        android:layout_width="@dimen/size_150dp"
+        android:layout_height="match_parent"
+        android:backgroundTint="#EAEAEA"
+        android:padding="@dimen/size_10dp"
+        android:src="@drawable/coin_medium"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+
+    <TextView
+        android:id="@+id/nameTxt"
+        android:layout_height="wrap_content"
+        android:layout_margin="@dimen/size_10dp"
+        android:layout_width="wrap_content"
+        android:fontFamily="@font/titan_one_regular"
+        android:gravity="center"
+        android:textColor="@color/black"
+        android:textSize="@dimen/text_size_18sp" />
+
+        <View
+            android:layout_width="0dp"
+            android:layout_height="40dp"/>
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+
+        android:layout_margin="@dimen/size_10dp"
+        android:orientation="horizontal">
+
+        <ImageView
+            android:layout_width="@dimen/size_20dp"
+            android:layout_height="@dimen/size_20dp"
+            android:src="@drawable/ticket_without_bg"/>
+
+        <TextView
+            android:id="@+id/ticketPrice"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/titan_one_regular"
+            android:gravity="center"
+            android:text="1K"
+            android:textColor="@color/red"
+            android:textSize="@dimen/text_size_18sp" />
+
+    </LinearLayout>
+
+    </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</LinearLayout>

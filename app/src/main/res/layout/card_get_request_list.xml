@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_marginTop="20dp"
+    >
+
+
+    <LinearLayout
+        android:id="@+id/friendReqLayout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <de.hdodenhof.circleimageview.CircleImageView
+            android:id="@+id/userPicReq"
+            android:layout_width="@dimen/size_40dp"
+            android:layout_height="@dimen/size_40dp"
+            android:layout_alignParentTop="true"
+            android:src="@drawable/ic_baseline_person_24" />
+
+
+        <TextView
+            android:id="@+id/userNameReq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_5sdp"
+            android:layout_toEndOf="@id/userPicReq"
+            android:padding="@dimen/_5sdp"
+
+            android:text="sacscasvadvadasd"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_15sdp" />
+
+        <ImageView
+            android:id="@+id/cancelReq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_cancel_24"
+            android:padding="5dp"/>
+
+        <ImageView
+            android:id="@+id/acceptReq"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:src="@drawable/ic_baseline_check_ok_24"
+            android:padding="5dp"/>
+
+    </LinearLayout>
+
+
+
+
+
+    <TextView
+        android:visibility="gone"
+        android:id="@+id/noData"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textSize="20sp"
+        android:layout_centerInParent="true"
+        android:textColor="@color/white"
+        android:text="No Request Available Right Now"
+        android:layout_gravity="center"/>
+
+
+</RelativeLayout>

@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "333202632738",
+    "project_id": "deskillz",
+    "storage_bucket": "deskillz.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:333202632738:android:5416e4f298de110c381a7b",
+        "android_client_info": {
+          "package_name": "com.arhamsoft.deskilz"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "333202632738-g54taq1fb3h9cm7786u195n5svei93so.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.arhamsoft.deskilz",
+            "certificate_hash": "434c813715350821379c32649be75bf663b95a5c"
+          }
+        },
+        {
+          "client_id": "333202632738-bfc04oe174j30edjr1tuo1pkti89qa8d.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyA_lZ9EbVjOUWUJWGFJLO-fjw9TQWWV8bc"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "333202632738-bfc04oe174j30edjr1tuo1pkti89qa8d.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "333202632738-iqm32gk99hia3h44vb764gt19o31pipv.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.deskillz.ios"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

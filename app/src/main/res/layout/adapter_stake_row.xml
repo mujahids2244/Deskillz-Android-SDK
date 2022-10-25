@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/size_5dp"
+    android:background="@drawable/background_layout_white_rounded"
+    android:gravity="center_vertical">
+
+    <ImageView
+        android:layout_width="@dimen/size_20dp"
+        android:layout_height="@dimen/size_20dp"
+        android:src="@drawable/ring_black_bg"
+        android:layout_margin="@dimen/size_10dp"/>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/titan_one_regular"
+        android:layout_marginStart="@dimen/size_5dp"
+        android:textColor="@color/green_teal_text"
+        android:text="$3" />
+
+    <TextView
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:fontFamily="@font/poppins_regular"
+        android:layout_marginStart="@dimen/size_5dp"
+        android:layout_weight="1"
+        android:text="Prize Pool" />
+
+    <LinearLayout
+        android:layout_width="wrap_content"
+        android:layout_height="match_parent"
+        android:orientation="horizontal"
+        android:padding="@dimen/size_10dp"
+        android:background="@color/green_teal">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/titan_one_regular"
+            android:layout_marginStart="@dimen/size_5dp"
+            android:text="$3"
+            android:textColor="@color/green_teal_text"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/poppins_regular"
+            android:layout_marginStart="@dimen/size_5dp"
+            android:text="Prize Pool" />
+
+    </LinearLayout>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Entry Free"
+        android:visibility="gone"
+        android:layout_marginEnd="@dimen/size_10dp"
+        android:fontFamily="@font/poppins_regular"/>
+
+</LinearLayout>

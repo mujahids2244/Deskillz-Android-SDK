@@ -1,0 +1,13 @@
+<component name="libraryTable">
+  <library name="Gradle: com.github.BassamRazzaq100:BottomBarSDK:0.0.2-alpha@aar">
+    <CLASSES>
+      <root url="jar://$USER_HOME$/.gradle/caches/transforms-3/9c3c2a81de7eda487f789af12f222608/transformed/BottomBarSDK-0.0.2-alpha/jars/classes.jar!/" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9c3c2a81de7eda487f789af12f222608/transformed/BottomBarSDK-0.0.2-alpha/res" />
+      <root url="file://$USER_HOME$/.gradle/caches/transforms-3/9c3c2a81de7eda487f789af12f222608/transformed/BottomBarSDK-0.0.2-alpha/AndroidManifest.xml" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$USER_HOME$/.gradle/caches/modules-2/files-2.1/com.github.BassamRazzaq100/BottomBarSDK/0.0.2-alpha/e97d2c3c787c57e9a8c67c772a745a3e5031d5c0/BottomBarSDK-0.0.2-alpha-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

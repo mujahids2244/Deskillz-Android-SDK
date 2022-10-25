@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/splash_bg"
+    android:layout_height="match_parent"
+    tools:context=".SwitchAccountFragment">
+
+    <LinearLayout
+        android:id="@+id/main"
+        android:layout_width="@dimen/size_300dp"
+        android:layout_height="@dimen/_350sdp"
+        android:orientation="vertical"
+        android:layout_centerInParent="true"
+        android:background="@drawable/background_layout_white_rounded">
+
+        <LinearLayout
+            android:id="@+id/text"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="@drawable/rounded_gradient"
+            android:padding="@dimen/size_10dp">
+
+            <TextView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                android:text="Switch Account"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18sp"
+                android:textStyle="bold" />
+
+        </LinearLayout>
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycleListRanking"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:padding="@dimen/size_10dp"
+            app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+            tools:listitem="@layout/row_accounts" />
+
+
+
+
+    </LinearLayout>
+
+    <Button
+        android:id="@+id/gotoLogin"
+        android:layout_below="@id/main"
+        android:layout_width="@dimen/size_300dp"
+        android:layout_marginTop="@dimen/size_20dp"
+        android:layout_height="wrap_content"
+        android:text="Add New User"
+        android:textColor="@color/white"
+        android:textSize="18sp"
+        android:layout_centerHorizontal="true"
+        android:background="@drawable/rounded_gradient"/>
+
+
+</RelativeLayout>

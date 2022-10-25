@@ -1,0 +1,226 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:background="@drawable/splash_bg"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.fragment.SignUpFragment">
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingTop="@dimen/_30sdp">
+
+        <ImageView
+            android:id="@+id/backToSignIn"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="@dimen/_25sdp"
+            android:src="@drawable/back_button" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/_10sdp"
+            android:fontFamily="@font/titan_one_regular"
+            android:text="Sign Up"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_17sdp" />
+
+        <ImageView
+            android:id="@+id/poweredLogo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_marginEnd="@dimen/_15sdp"
+            android:src="@drawable/poweredlogo" />
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/break_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/top"
+        android:background="@color/white" />
+
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_weight="9"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="0.5"
+        android:gravity="center_horizontal"
+        android:orientation="vertical">
+
+        <ImageView
+            android:layout_width="@dimen/size_150dp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/deskillzlarge" />
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Register Your  Account"
+            android:textColor="@color/white"
+            android:fontFamily="@font/titan_one_regular"
+            android:textSize="@dimen/text_size_18sp"/>
+
+        <TextView
+            android:layout_marginTop="@dimen/size_20dp"
+            android:alpha=".6"
+            android:layout_width="@dimen/_280sdp"
+            android:textAlignment="center"
+            android:layout_height="wrap_content"
+            android:text="To Compete for cool prizes, contact our support team, and access great customer rewards, please save your account"
+            android:textColor="@color/white"
+            android:fontFamily="@font/poppins_regular" />
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_marginTop="@dimen/size_20dp"
+        android:layout_weight="1"
+        android:orientation="vertical">
+
+        <EditText
+            android:id="@+id/username"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginTop="@dimen/_10sdp"
+            android:layout_marginEnd="@dimen/_40sdp"
+            android:hint="Username"
+            android:paddingStart="@dimen/_10sdp"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/text_size_15sp"
+            android:fontFamily="@font/poppins_regular"
+            android:background="@drawable/edit_text_deisgn"
+            android:alpha=".6" />
+
+
+        <EditText
+            android:id="@+id/mail"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/_40sdp"
+            android:hint="Enter Your Email"
+            android:paddingStart="@dimen/_10sdp"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/text_size_15sp"
+            android:fontFamily="@font/poppins_regular"
+            android:background="@drawable/edit_text_deisgn"
+            android:alpha=".6" />
+
+        <EditText
+            android:id="@+id/password"
+            android:alpha=".6"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/_40sdp"
+            android:hint="Enter Your Password"
+            android:paddingStart="@dimen/size_10dp"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/text_size_15sp"
+            android:inputType="textPassword"
+            android:fontFamily="@font/poppins_regular"
+            android:background="@drawable/edit_text_deisgn" />
+
+        <EditText
+            android:id="@+id/repassword"
+            android:alpha=".6"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/_40sdp"
+            android:layout_marginStart="@dimen/_40sdp"
+            android:layout_marginTop="10dp"
+            android:layout_marginEnd="@dimen/_40sdp"
+            android:hint="Re-enter Your Password"
+            android:paddingStart="@dimen/size_10dp"
+            android:textColorHint="@color/white"
+            android:textSize="@dimen/text_size_15sp"
+            android:fontFamily="@font/poppins_regular"
+            android:background="@drawable/edit_text_deisgn" />
+
+            <CheckBox
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="@dimen/size_50dp"
+                android:layout_marginEnd="@dimen/size_50dp"
+                android:gravity="top"
+                android:buttonTint="@color/white"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_12sp"
+                android:fontFamily="@font/poppins_regular"
+                android:layout_marginTop="@dimen/size_20dp"
+                android:text="I consent to being contacted by Skkilz and its prize partner about Skillz andits prize partner products,offers and specials events." />
+
+        <RelativeLayout
+            android:layout_marginTop="@dimen/size_20dp"
+            android:id="@+id/registerBtn"
+            android:layout_gravity="center|bottom"
+            android:layout_width="@dimen/size_300dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/button_bg_blue" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerInParent="true"
+                android:fontFamily="@font/titan_one_regular"
+                android:text="Sign Up"
+                android:textColor="@color/white"
+                android:textSize="@dimen/text_size_18sp"/>
+
+        </RelativeLayout>
+
+<!--        <TextView-->
+<!--            android:id="@+id/forgot"-->
+<!--            android:layout_width="wrap_content"-->
+<!--            android:layout_height="wrap_content"-->
+<!--            android:layout_gravity="center"-->
+<!--            android:layout_marginTop="@dimen/size_10dp"-->
+<!--            android:alpha=".5"-->
+<!--            android:text="Forget Username/Password "-->
+<!--            android:textColor="@color/white"-->
+<!--            android:textSize="@dimen/text_size_15sp"-->
+<!--            android:fontFamily="@font/poppins_regular" />-->
+
+    </LinearLayout>
+        </LinearLayout>
+
+
+    </ScrollView>
+
+    <TextView
+        android:id="@+id/gotoSignIn"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:padding="@dimen/size_10dp"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:text="Existing User? Sign In."
+        android:textColor="@color/white"
+        android:textSize="@dimen/text_size_15sp"
+        android:fontFamily="@font/poppins_regular" />
+
+</LinearLayout>

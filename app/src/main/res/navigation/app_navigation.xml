@@ -1,0 +1,369 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/app_navigation"
+    app:startDestination="@id/splashFragment">
+
+    <fragment
+        android:id="@+id/splashFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.SplashFragment"
+        android:label="activity_splash"
+        tools:layout="@layout/fragment_splash">
+        <action
+            android:id="@+id/action_splashFragment_to_startSDKFragment"
+            app:destination="@id/startSDKFragment"
+            app:popUpTo="@id/app_navigation"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_chatFragment"
+            app:destination="@id/chatFragment"
+            app:popUpTo="@id/app_navigation"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_splashFragment_to_chatHeadsFragment"
+            app:destination="@id/chatHeadsFragment"
+            app:popUpTo="@id/app_navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/startSDKFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.StartSDKFragment"
+        android:label="activity_start_sdk"
+        tools:layout="@layout/fragment_start_sdk">
+        <action
+            android:id="@+id/action_startSDKFragment_to_loadingActivity"
+            app:destination="@id/loadingActivity" />
+    </fragment>
+    <fragment
+        android:id="@+id/loadingActivity"
+        android:name="com.arhamsoft.deskilz.ui.fragment.LoadingActivity"
+        android:label="fragment_loading_screen"
+        tools:layout="@layout/fragment_loading_screen">
+        <action
+            android:id="@+id/action_loadingActivity_to_dashboardActivity"
+            app:destination="@id/dashboardActivity"
+            app:popUpTo="@id/app_navigation"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_loadingActivity_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:popUpTo="@id/app_navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/dashboardActivity"
+        android:name="com.arhamsoft.deskilz.ui.fragment.DashboardFragment"
+        android:label="fragment_dashboard"
+        tools:layout="@layout/fragment_dashboard">
+        <action
+            android:id="@+id/action_dashboardActivity_to_rewardFragment"
+            app:destination="@id/rewardFragment" />
+        <action
+            android:id="@+id/action_dashboardActivity_to_deskillzNewFragment"
+            app:destination="@id/deskillzNewFragment" />
+        <action
+            android:id="@+id/action_dashboardActivity_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_dashboardActivity_to_headToHeadDetailFragment"
+            app:destination="@id/headToHeadDetailFragment" />
+        <argument
+            android:name="FromOutOfFund"
+            android:defaultValue="false"
+            app:argType="boolean" />
+        <action
+            android:id="@+id/action_dashboardActivity_to_levelScreenFragment"
+            app:destination="@id/levelScreenFragment" />
+        <action
+            android:id="@+id/action_dashboardActivity_to_claimTokenFragment"
+            app:destination="@id/claimTokenFragment" />
+        <action
+            android:id="@+id/action_dashboardActivity_to_trophyScreenDetailFragment"
+            app:destination="@id/trophyScreenDetailFragment" />
+        <action
+            android:id="@+id/action_dashboardActivity_to_findCompetitiveFragment"
+            app:destination="@id/findCompetitiveFragment" />
+        <action
+            android:id="@+id/action_dashboardActivity_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_dashboardActivity_to_gameResultFragment"
+            app:destination="@id/gameResultFragment" />
+        <action
+            android:id="@+id/action_dashboardActivity_to_notificationsFragment"
+            app:destination="@id/notificationsFragment" />
+        <action
+            android:id="@+id/action_dashboardActivity_to_pendingRequestFragment"
+            app:destination="@id/pendingRequestFragment" />
+        <action
+            android:id="@+id/action_dashboardActivity_to_accountSettingFragment"
+            app:destination="@id/accountSettingFragment" />
+        <action
+            android:id="@+id/action_dashboardActivity_to_signInFragment"
+            app:destination="@id/signInFragment"
+            app:popUpTo="@id/app_navigation"
+            app:popUpToInclusive="true" />
+        <deepLink
+            android:id="@+id/deepLink"
+            android:autoVerify="true"
+            app:uri="www.mujahid.com" />
+        <action
+            android:id="@+id/action_dashboardActivity_to_redeemPointsFragment"
+            app:destination="@id/redeemPointsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/rewardFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.RewardFragment"
+        android:label="fragment_reward_screen"
+        tools:layout="@layout/fragment_reward_screen">
+        <action
+            android:id="@+id/action_rewardFragment_to_deskillzRewardInstructionFragment"
+            app:destination="@id/deskillzRewardInstructionFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/deskillzNewFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.DeskillzNewFragment"
+        android:label="fragment_deskillz_news"
+        tools:layout="@layout/fragment_deskillz_news" />
+    <fragment
+        android:id="@+id/chatFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.ChatFragment"
+        android:label="ChatFragment" >
+        <action
+            android:id="@+id/action_chatFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_chatFragment_to_chatHeadsFragment"
+            app:destination="@id/chatHeadsFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/headToHeadDetailFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.HeadToHeadDetailFragment"
+        android:label="fragment_headto_head_detail"
+        tools:layout="@layout/fragment_headto_head_detail">
+        <action
+            android:id="@+id/action_headToHeadDetailFragment_to_dashboardActivity"
+            app:destination="@id/dashboardActivity"
+            app:popUpTo="@id/app_navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/deskillzRewardInstructionFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.DeskillzRewardInstructionFragment"
+        android:label="fragment_deskillz_reward_instruction"
+        tools:layout="@layout/fragment_deskillz_reward_instruction" />
+    <fragment
+        android:id="@+id/levelScreenFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.LevelScreenFragment"
+        android:label="fragment_level_screen"
+        tools:layout="@layout/fragment_level_screen" />
+    <fragment
+        android:id="@+id/claimTokenFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.ClaimTokenFragment"
+        android:label="fragment_claim_token"
+        tools:layout="@layout/fragment_claim_token" />
+    <fragment
+        android:id="@+id/trophyScreenDetailFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.TrophyScreenDetailFragment"
+        android:label="fragment_trophy_screen_details"
+        tools:layout="@layout/fragment_trophy_screen_details" />
+    <fragment
+        android:id="@+id/fragmentRewardPopUp"
+        android:name="com.arhamsoft.deskilz.ui.fragment.FragmentRewardPopUp"
+        android:label="fragment_reward_pop_up"
+        tools:layout="@layout/fragment_reward_pop_up" />
+    <fragment
+        android:id="@+id/signInFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.SignInFragment"
+        android:label="fragment_sign_in"
+        tools:layout="@layout/fragment_sign_in" >
+        <action
+            android:id="@+id/action_signInFragment_to_signUpFragment"
+            app:destination="@id/signUpFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_chatFragment"
+            app:destination="@id/chatFragment" />
+        <action
+            android:id="@+id/action_signInFragment_to_dashboardActivity"
+            app:destination="@id/dashboardActivity"
+            app:popUpTo="@id/app_navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/signUpFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.SignUpFragment"
+        android:label="fragment_sign_up"
+        tools:layout="@layout/fragment_sign_up" >
+        <action
+            android:id="@+id/action_signUpFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/chatHeadsFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.navBarFragments.ChatHeadsFragment"
+        android:label="fragment_chat_heads"
+        tools:layout="@layout/fragment_chat_heads" >
+        <action
+            android:id="@+id/action_chatHeadsFragment_to_addFriendFragment"
+            app:destination="@id/addFriendFragment"
+            app:popUpToInclusive="false" />
+        <action
+            android:id="@+id/action_chatHeadsFragment_to_chatFragment"
+            app:destination="@id/chatFragment"
+            app:popUpTo="@id/chatFragment"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/addFriendFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.navBarFragments.AddFriendFragment"
+        android:label="fragment_add_friend"
+        tools:layout="@layout/fragment_add_friend" >
+        <action
+            android:id="@+id/action_addFriendFragment_to_acceptFriendReqFragment"
+            app:destination="@id/acceptFriendReqFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/acceptFriendReqFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.AcceptFriendReqFragment"
+        android:label="fragment_accept_friend_req"
+        tools:layout="@layout/fragment_accept_friend_req" />
+    <fragment
+        android:id="@+id/findCompetitiveFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.FindCompetitiveFragment"
+        android:label="fragment_find_competitive"
+        tools:layout="@layout/fragment_find_competitive" >
+        <action
+            android:id="@+id/action_findCompetitiveFragment_to_fragmentMatchScore"
+            app:destination="@id/fragmentMatchScore" />
+    </fragment>
+    <fragment
+        android:id="@+id/profileFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.navBarFragments.ProfileFragment"
+        android:label="fragment_profile"
+        tools:layout="@layout/fragment_profile" >
+        <action
+            android:id="@+id/action_profileFragment_to_dashboardActivity"
+            app:destination="@id/dashboardActivity"
+            app:popUpTo="@id/app_navigation"
+            app:popUpToInclusive="true" />
+        <action
+            android:id="@+id/action_profileFragment_to_updateProfileFragment"
+            app:destination="@id/updateProfileFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/updateProfileFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.navBarFragments.UpdateProfileFragment"
+        android:label="fragment_update_profile"
+        tools:layout="@layout/fragment_update_profile" >
+        <action
+            android:id="@+id/action_updateProfileFragment_to_profileFragment"
+            app:destination="@id/profileFragment"
+            app:popUpTo="@id/app_navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/gameResultFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.GameResultFragment"
+        android:label="fragment_result_screen"
+        tools:layout="@layout/fragment_result_screen" >
+        <action
+            android:id="@+id/action_gameResultFragment_to_reportPlayerFragment"
+            app:destination="@id/reportPlayerFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/testSkillsFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.TestSkillsFragment"
+        android:label="fragment_test_skills_screen"
+        tools:layout="@layout/fragment_test_skills_screen" />
+    <fragment
+        android:id="@+id/playGameMainFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.PlayGameMainFragment"
+        android:label="fragment_play_game_main"
+        tools:layout="@layout/fragment_play_game_main" />
+    <fragment
+        android:id="@+id/acceptFriendReqFragment2"
+        android:name="com.arhamsoft.deskilz.ui.fragment.AcceptFriendReqFragment"
+        android:label="fragment_accept_friend_req"
+        tools:layout="@layout/fragment_accept_friend_req" />
+    <fragment
+        android:id="@+id/fragmentMatchScore"
+        android:name="com.arhamsoft.deskilz.ui.fragment.navBarFragments.FragmentMatchScore"
+        android:label="fragment_match_score"
+        tools:layout="@layout/fragment_match_score" >
+        <action
+            android:id="@+id/action_fragmentMatchScore_to_dashboardActivity"
+            app:destination="@id/dashboardActivity"
+            app:popUpTo="@id/app_navigation"
+            app:popUpToInclusive="true" />
+    </fragment>
+    <fragment
+        android:id="@+id/pendingRequestFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.PendingRequestFragment"
+        android:label="fragment_pending_request"
+        tools:layout="@layout/fragment_pending_request" >
+        <action
+            android:id="@+id/action_pendingRequestFragment_to_findCompetitiveFragment"
+            app:destination="@id/findCompetitiveFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/reportPlayerFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.ReportPlayerFragment"
+        android:label="fragment_report_player"
+        tools:layout="@layout/fragment_report_player" />
+    <fragment
+        android:id="@+id/notificationsFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.NotificationsFragment"
+        android:label="fragment_notifications"
+        tools:layout="@layout/fragment_notifications" />
+    <fragment
+        android:id="@+id/accountSettingFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.AccountSettingFragment"
+        android:label="fragment_account_setting"
+        tools:layout="@layout/fragment_account_setting" >
+        <action
+            android:id="@+id/action_accountSettingFragment_to_resetPasswordFragment"
+            app:destination="@id/resetPasswordFragment" />
+        <action
+            android:id="@+id/action_accountSettingFragment_to_updateProfileFragment"
+            app:destination="@id/updateProfileFragment" />
+        <action
+            android:id="@+id/action_accountSettingFragment_to_profileFragment"
+            app:destination="@id/profileFragment" />
+        <action
+            android:id="@+id/action_accountSettingFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+        <action
+            android:id="@+id/action_accountSettingFragment_to_redeemPointsFragment"
+            app:destination="@id/redeemPointsFragment" />
+        <action
+            android:id="@+id/action_accountSettingFragment_to_switchAccountFragment"
+            app:destination="@id/switchAccountFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/redeemPointsFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.RedeemPointsFragment"
+        android:label="fragment_redeem_points"
+        tools:layout="@layout/fragment_redeem_points" />
+    <fragment
+        android:id="@+id/resetPasswordFragment"
+        android:name="com.arhamsoft.deskilz.ui.fragment.ResetPasswordFragment"
+        android:label="fragment_reset_password"
+        tools:layout="@layout/fragment_reset_password" >
+        <action
+            android:id="@+id/action_resetPasswordFragment_to_accountSettingFragment"
+            app:destination="@id/accountSettingFragment" />
+    </fragment>
+    <fragment
+        android:id="@+id/switchAccountFragment"
+        android:name="com.arhamsoft.deskilz.SwitchAccountFragment"
+        android:label="fragment_switch_account"
+        tools:layout="@layout/fragment_switch_account" >
+        <action
+            android:id="@+id/action_switchAccountFragment_to_dashboardActivity"
+            app:destination="@id/dashboardActivity" />
+        <action
+            android:id="@+id/action_switchAccountFragment_to_signInFragment"
+            app:destination="@id/signInFragment" />
+    </fragment>
+</navigation>

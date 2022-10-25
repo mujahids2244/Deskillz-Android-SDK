@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:background="@drawable/splash_bg"
+    tools:context=".ui.fragment.navBarFragments.AddFriendFragment">
+
+
+    <RelativeLayout
+        android:id="@+id/top"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:paddingTop="@dimen/size_10dp">
+
+        <ImageView
+            android:id="@+id/backToAccount"
+            android:layout_width="@dimen/_50sdp"
+            android:layout_height="wrap_content"
+            android:src="@drawable/back_button" />
+
+        <TextView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="@dimen/size_10dp"
+            android:layout_toRightOf="@id/backToAccount"
+            android:fontFamily="@font/titan_one_regular"
+            android:text="Add Friends"
+            android:textColor="@color/white"
+            android:textSize="@dimen/_17sdp" />
+
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/break_line"
+        android:layout_width="match_parent"
+        android:layout_height="0.5dp"
+        android:layout_below="@+id/top"
+        android:layout_marginTop="5dp"
+        android:background="@color/gray_text" />
+
+
+
+
+    <!--    <EditText-->
+<!--        android:id="@+id/search"-->
+<!--        android:layout_width="match_parent"-->
+<!--        android:layout_marginStart="@dimen/size_20dp"-->
+<!--        android:layout_marginEnd="@dimen/size_20dp"-->
+<!--        android:layout_height="50dp"-->
+<!--        android:layout_marginTop="@dimen/size_15dp"-->
+<!--        android:layout_gravity="center_horizontal"-->
+<!--        android:background="@drawable/searchview_background"-->
+<!--        android:drawableStart="@drawable/ic_search_sm"-->
+<!--        android:paddingStart="@dimen/_10sdp"-->
+<!--        app:iconifiedByDefault="false"-->
+<!--        app:queryBackground="@android:color/transparent"-->
+<!--        app:queryHint="Search" />-->
+
+
+<!--    <ImageView-->
+<!--        android:id="@+id/acceptReq"-->
+<!--        android:layout_width="@dimen/size_30dp"-->
+<!--        android:layout_height="@dimen/_30sdp"-->
+<!--        android:src="@drawable/ic_baseline_person_add_alt_24"-->
+<!--        android:layout_gravity="end"-->
+<!--        android:layout_margin="@dimen/size_15dp"/>-->
+
+
+
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recycleListChatHeads"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="@dimen/size_10dp"
+        android:layout_below="@id/break_line"
+        android:overScrollMode="never"
+        android:layout_weight="9"
+        android:paddingStart="@dimen/_10sdp"
+        app:layoutManager="androidx.recyclerview.widget.LinearLayoutManager"
+        android:layout_above="@+id/bottomPanal"/>
+
+
+    <ProgressBar
+        android:id="@+id/progressBar"
+        android:layout_width="match_parent"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:visibility="gone"
+
+        />
+
+
+
+
+
+
+</LinearLayout>

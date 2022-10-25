@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/Deskilz.iml" filepath="$PROJECT_DIR$/.idea/modules/Deskilz.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Deskilz.app.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Deskilz.app.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Deskilz.app.androidTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Deskilz.app.androidTest.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Deskilz.app.main.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Deskilz.app.main.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/modules/app/Deskilz.app.unitTest.iml" filepath="$PROJECT_DIR$/.idea/modules/app/Deskilz.app.unitTest.iml" />
+    </modules>
+  </component>
+</project>
