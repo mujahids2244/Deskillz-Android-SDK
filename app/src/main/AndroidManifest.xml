@@ -21,7 +21,6 @@
         android:usesCleartextTraffic="true"
         tools:targetApi="m">
 
-
         <meta-data
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/ic_app_icon_deskillz" />
@@ -52,8 +51,6 @@
 <!--                <action android:name="com.google.firebase.MESSAGING_EVENT" />-->
 <!--            </intent-filter>-->
 <!--        </receiver>-->
-
-
 
     </application>
 
