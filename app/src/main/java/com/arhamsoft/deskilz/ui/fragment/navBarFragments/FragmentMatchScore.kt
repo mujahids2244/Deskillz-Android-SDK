@@ -70,7 +70,6 @@ class FragmentMatchScore : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        binding.score.text = URLConstant.score.toString()
 
 
 
@@ -247,5 +246,9 @@ class FragmentMatchScore : Fragment() {
     }
 
 
+    override fun onResume() {
+        super.onResume()
+        binding.score.text = URLConstant.score.toString()
 
+    }
 }

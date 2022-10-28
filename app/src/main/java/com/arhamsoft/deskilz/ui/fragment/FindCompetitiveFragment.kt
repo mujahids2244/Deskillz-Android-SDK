@@ -520,14 +520,11 @@ class FindCompetitiveFragment : Fragment() {
 
 
             val checked = WebSocketJoinLeaveModel(
-                ({
-                    if (URLConstant.eventId?.isNotEmpty() == true){
-                        URLConstant.eventId
-                    }else {
-                        click?.tournamentID!!
-                    }
-                }),
-
+                if (URLConstant.eventId?.isNotEmpty() == true) {
+                    URLConstant.eventId
+                } else {
+                    click?.tournamentID!!
+                },
                 URLConstant.u_id!!,
 
                 )
@@ -561,8 +558,8 @@ class FindCompetitiveFragment : Fragment() {
 
 
             val checked = WebSocketJoinLeaveModel(
-                { click?.tournamentID!! },
-                URLConstant.u_id!!,
+                 click?.tournamentID!! ,
+                URLConstant.u_id!!
                 )
 //            val map = HashMap<String, Any>()
 //            map["gameId"] = "00000067"
