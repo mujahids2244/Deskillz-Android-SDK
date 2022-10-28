@@ -51,38 +51,38 @@
                 android:layout_below="@+id/topBar"/>
 
 
-            <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_below="@id/barLayout"
-                android:layout_marginTop="@dimen/size_20dp"
-                android:layout_marginStart="5dp"
-                android:padding="@dimen/size_10dp"
-                android:layout_height="wrap_content">
+<!--            <RelativeLayout-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_below="@id/barLayout"-->
+<!--                android:layout_marginTop="@dimen/size_20dp"-->
+<!--                android:layout_marginStart="5dp"-->
+<!--                android:padding="@dimen/size_10dp"-->
+<!--                android:layout_height="wrap_content">-->
 
 
-                <TextView
-                    android:id="@+id/heading"
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:fontFamily="@font/poppins_regular"
+<!--                <TextView-->
+<!--                    android:id="@+id/heading"-->
+<!--                    android:layout_width="wrap_content"-->
+<!--                    android:layout_height="wrap_content"-->
+<!--                    android:fontFamily="@font/poppins_regular"-->
 
-                    android:text="Request Countdown "
-                    android:textColor="@color/white"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+<!--                    android:text="Request Countdown "-->
+<!--                    android:textColor="@color/white"-->
+<!--                    android:textSize="16sp"-->
+<!--                    android:textStyle="bold" />-->
 
-            <TextView
-                android:id="@+id/countdown"
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
-                android:text="00:00:00"
-                android:layout_below="@id/heading"
-                android:fontFamily="@font/poppins_regular"
-                android:textColor="@color/white"
-                android:textSize="25sp"
-                android:textStyle="bold"
-                />
-            </RelativeLayout>
+<!--            <TextView-->
+<!--                android:id="@+id/countdown"-->
+<!--                android:layout_width="wrap_content"-->
+<!--                android:layout_height="wrap_content"-->
+<!--                android:text="00:00:00"-->
+<!--                android:layout_below="@id/heading"-->
+<!--                android:fontFamily="@font/poppins_regular"-->
+<!--                android:textColor="@color/white"-->
+<!--                android:textSize="25sp"-->
+<!--                android:textStyle="bold"-->
+<!--                />-->
+<!--            </RelativeLayout>-->
 
 
             <LinearLayout
@@ -311,6 +311,7 @@
                 android:orientation="horizontal">
 
                 <RelativeLayout
+                    android:id="@+id/cancelMatch"
                     android:layout_width="0dp"
                     android:layout_height="match_parent"
                     android:layout_weight="1">
@@ -330,11 +331,12 @@
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
                         android:layout_centerInParent="true"
-                        android:textSize="@dimen/text_size_20sp"
-                        android:textColor="@color/white"
-                        android:padding="@dimen/size_5dp"
                         android:fontFamily="@font/titan_one_regular"
-                        android:text="MATCH \nDETAILS" />
+                        android:gravity="center"
+                        android:padding="@dimen/size_5dp"
+                        android:text="Cancel Match"
+                        android:textColor="@color/white"
+                        android:textSize="@dimen/text_size_20sp" />
 
                 </RelativeLayout>
 

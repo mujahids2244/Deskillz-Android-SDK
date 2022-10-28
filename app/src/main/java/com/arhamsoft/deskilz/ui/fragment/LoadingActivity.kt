@@ -140,17 +140,28 @@ class LoadingActivity : Fragment() {
                 object : NetworkListener<ThemeModel> {
                     override fun successFul(t: ThemeModel) {
 
-                        apiHit = true
-                        if (t.status == 1) {
+                        activity?.runOnUiThread {
+                            apiHit = true
+
+                            if (t.status == 1) {
 
                                 URLConstant.themeModel = t
 //                            URLConstant.check = true
 
 
+                            } else {
+                                StaticFields.toastClass("abcd")
+                            }
 
+                            if (!binding.lottieLoader.isAnimating) {
 
+                                if (sharedPreference.isLogin("LOGIN")) {
+                                    navController.navigate(R.id.action_loadingActivity_to_dashboardActivity)
+                                } else {
+                                    navController.navigate(R.id.action_loadingActivity_to_signInFragment)
+                                }
+                            }
                         }
-
                     }
                     override fun failure() {
                         activity?.runOnUiThread {

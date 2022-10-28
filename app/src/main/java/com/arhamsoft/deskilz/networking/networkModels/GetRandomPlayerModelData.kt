@@ -8,6 +8,7 @@ data class GetRandomPlayerModelData(
     val gamePlatform: Long,
 
     val IsPlayable: Boolean,
+    val playerCount: Int,
 
     val listOfOpponents: List<ListofOpponentModel>
 )

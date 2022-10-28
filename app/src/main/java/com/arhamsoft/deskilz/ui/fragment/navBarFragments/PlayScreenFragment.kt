@@ -115,6 +115,8 @@ class PlayScreenFragment : Fragment() {
 //                    URLConstant.tournamentId = click.tournamentID
 //                    URLConstant.Fee = click.entryFee
 //                    showDialog()
+                    URLConstant.eventId =""
+
                     findNavController().navigate(R.id.action_dashboardActivity_to_findCompetitiveFragment,bundle)
 
                 }
@@ -131,10 +133,11 @@ class PlayScreenFragment : Fragment() {
                 override fun onClick(click: GetTournamentsListData, position: Int) {
                     val bundle = bundleOf()
                     bundle.putSerializable("GET_MATCHES_OBJ",click)
-                    URLConstant.tournamentId = click.tournamentID
-                    URLConstant.Fee = click.entryFee
-                    URLConstant.player_count = click.playerCount
+//                    URLConstant.tournamentId = click.tournamentID
+//                    URLConstant.Fee = click.entryFee
+//                    URLConstant.player_count = click.playerCount
 //                    loading.startLoading()
+                    URLConstant.eventId =""
 
                     findNavController().navigate(R.id.action_dashboardActivity_to_findCompetitiveFragment,bundle)
 
@@ -154,11 +157,11 @@ class PlayScreenFragment : Fragment() {
                 override fun onClick(click: GetTournamentsListData, position: Int) {
                     val bundle = bundleOf()
                     bundle.putSerializable("GET_MATCHES_OBJ",click)
-                    URLConstant.tournamentId = click.tournamentID
-                    URLConstant.Fee = click.entryFee
-                    URLConstant.player_count = click.playerCount
+//                    URLConstant.tournamentId = click.tournamentID
+//                    URLConstant.Fee = click.entryFee
+//                    URLConstant.player_count = click.playerCount
 //                    loading.startLoading()
-
+                    URLConstant.eventId =""
                     findNavController().navigate(R.id.action_dashboardActivity_to_findCompetitiveFragment,bundle)
 
 //                    showDialog()
@@ -174,7 +177,7 @@ class PlayScreenFragment : Fragment() {
                 override fun onClick(click: EventsModelData, position: Int) {
 //                    val bundle = bundleOf()
 //                    bundle.putSerializable("GET_MATCHES_OBJ",click)
-                    URLConstant.tournamentId = click.eventID
+                    URLConstant.eventId = click.eventID
                     findNavController().navigate(R.id.action_dashboardActivity_to_findCompetitiveFragment)
 
 //                    showDialog()

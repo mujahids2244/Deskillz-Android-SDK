@@ -18,7 +18,7 @@ import com.arhamsoft.deskilz.utils.CustomSharedPreference
 import com.arhamsoft.deskilz.utils.LogoutHandler
 import com.arhamsoft.deskilz.utils.LogoutInterface
 
-open class BaseActivity : AppCompatActivity(), LogoutInterface {
+class BaseActivity : AppCompatActivity(), LogoutInterface {
 
     private lateinit var binding: ActivityBaseBinding
     private lateinit var navController: NavController

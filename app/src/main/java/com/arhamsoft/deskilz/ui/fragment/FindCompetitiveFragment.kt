@@ -8,11 +8,13 @@ import android.os.Bundle
 import android.os.CountDownTimer
 import android.text.SpannableString
 import android.text.style.UnderlineSpan
+import android.util.Log
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.fragment.app.Fragment
 import androidx.navigation.fragment.findNavController
+import androidx.recyclerview.widget.LinearLayoutManager
 import coil.load
 import com.arhamsoft.deskilz.utils.CustomSharedPreference
 import com.arhamsoft.deskilz.R
@@ -22,13 +24,19 @@ import com.arhamsoft.deskilz.domain.listeners.NetworkListener
 import com.arhamsoft.deskilz.domain.repository.NetworkRepo
 import com.arhamsoft.deskilz.networking.networkModels.*
 import com.arhamsoft.deskilz.networking.retrofit.URLConstant
+import com.arhamsoft.deskilz.services.SocketHandler
 import com.arhamsoft.deskilz.ui.adapter.AdapterOpponents
 import com.arhamsoft.deskilz.utils.LoadingDialog
 import com.arhamsoft.deskilz.utils.StaticFields
+import com.google.gson.Gson
+import com.google.gson.JsonObject
+import com.google.gson.JsonParser
+import io.socket.client.Socket
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
-import java.util.concurrent.TimeUnit
+import org.json.JSONArray
+import org.json.JSONObject
 
 class FindCompetitiveFragment : Fragment() {
 
@@ -40,8 +48,11 @@ class FindCompetitiveFragment : Fragment() {
     private lateinit var rvAdapter: AdapterOpponents
     lateinit var time: CountDownTimer
     lateinit var sharedPreference: CustomSharedPreference
+    private var mSocket: Socket? = null
+//    var obj1:GetRandomPlayerModelData? = null
+//    var obj2:ListofOpponentModel? = null
 
-    var click :GetTournamentsListData? = null
+    var click: GetTournamentsListData? = null
 
     override fun onCreateView(
         inflater: LayoutInflater,
@@ -63,7 +74,9 @@ class FindCompetitiveFragment : Fragment() {
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
 
-        countdownTimer()
+        StaticFields.toastClass("Please wait, while we are matching opponent for you.")
+
+//        countdownTimer()
         userNameandImg()
 
         val bundle = arguments
@@ -71,12 +84,22 @@ class FindCompetitiveFragment : Fragment() {
 
             click = bundle.getSerializable("GET_MATCHES_OBJ") as GetTournamentsListData
 
-            binding.entryFee.text = click?.entryFee
-            binding.pCount.text = "${click?.playerCount} players"
+            binding.entryFee.text = click?.entryFee!!
+            binding.pCount.text = "${click?.playerCount!!} players"
         }
 
 
 
+        if (!(StaticFields.isNetworkConnected(requireContext()))) {
+            StaticFields.toastClass("Check your network connection")
+        } else {
+            connectSocket()
+        }
+
+
+
+
+        binding.recycleListOpponent.layoutManager = LinearLayoutManager(requireContext(),LinearLayoutManager.VERTICAL,false)
 
         rvAdapter = AdapterOpponents(object : AdapterOpponents.OnItemClickListenerHandler {
             override fun onItemClicked(click: ListofOpponentModel, position: Int) {
@@ -91,8 +114,25 @@ class FindCompetitiveFragment : Fragment() {
 
         binding.exitMatch.setOnClickListener {
 
+            leavePlayer()
+            findNavController().popBackStack()
+
+        }
+
+        binding.cancelMatch.setOnClickListener {
+
+            leavePlayer()
             findNavController().popBackStack()
         }
+
+//        binding.beginMatch.setOnClickListener {
+//
+//            if (!(obj1?.IsPlayable!! && click?.playerCount?.toInt() == obj1?.playerCount)) {
+//
+//            }
+//
+//
+//            }
 
 //        if (!(URLConstant.tournamentId.isNullOrEmpty())) {
 //
@@ -101,53 +141,55 @@ class FindCompetitiveFragment : Fragment() {
 //        }
 //            val user = UserDatabase.getDatabase(requireContext()).userDao().getUser()
 //            u_id = user?.userId
-        loading.startLoading()
-        selectRandomplayer()
+//        loading.startLoading()
+////        selectRandomplayer()
     }
 
 
-    private fun countdownTimer() {
-        time = object : CountDownTimer(30000, 1000) {
+//    private fun countdownTimer() {
+//        time = object : CountDownTimer(30000, 1000) {
+//
+//            // Callback function, fired on regular interval
+//            override fun onTick(millisUntilFinished: Long) {
+//
+//                //Convert milliseconds into hour,minute and seconds
+//                //Convert milliseconds into hour,minute and seconds
+//                val hms = java.lang.String.format(
+//                    "%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(millisUntilFinished),
+//
+//                    TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(
+//                        TimeUnit.MILLISECONDS.toHours(millisUntilFinished)
+//                    ),
+//                    TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(
+//                        TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)
+//                    )
+//                )
+//                binding.countdown.text = hms //set text
+//
+//
+////                binding.countdown.text = ""+millisUntilFinished / 1000
+//            }
+//
+//            // Callback function, fired
+//            // when the time is up
+//            override fun onFinish() {
+//                showDialog("Request Timeout. No player found at the moment. Try again later", "", 0)
+//
+//            }
+//        }.start()
+//    }
 
-            // Callback function, fired on regular interval
-            override fun onTick(millisUntilFinished: Long) {
-
-                //Convert milliseconds into hour,minute and seconds
-                //Convert milliseconds into hour,minute and seconds
-                val hms = java.lang.String.format(
-                    "%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(millisUntilFinished),
-
-                    TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(
-                        TimeUnit.MILLISECONDS.toHours(millisUntilFinished)
-                    ),
-                    TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(
-                        TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)
-                    )
-                )
-                binding.countdown.text = hms //set text
-
-
-//                binding.countdown.text = ""+millisUntilFinished / 1000
-            }
-
-            // Callback function, fired
-            // when the time is up
-            override fun onFinish() {
-                showDialog("Request Timeout. No player found at the moment. Try again later", "", 0)
-
-            }
-        }.start()
-    }
-
-    private fun userNameandImg(){
+    private fun userNameandImg() {
         if (sharedPreference.returnValue("USERIMG") != null
-            && sharedPreference.returnValue("USERNAME") != null) {
+            && sharedPreference.returnValue("USERNAME") != null
+        ) {
             binding.userImg.load(sharedPreference.returnValue("USERIMG")) {
                 placeholder(R.drawable.ic_baseline_person_24)
                 error(R.drawable.ic_baseline_person_24)
             }
             //underline text
-            val mSpannableString = SpannableString(sharedPreference.returnValue("USERNAME") ?: "Name")
+            val mSpannableString =
+                SpannableString(sharedPreference.returnValue("USERNAME") ?: "Name")
             mSpannableString.setSpan(UnderlineSpan(), 0, mSpannableString.length, 0)
             binding.userName.text = mSpannableString
 
@@ -255,6 +297,297 @@ class FindCompetitiveFragment : Fragment() {
     }
 
 
+    private fun connectSocket() {
+        loading.startLoading()
+        SocketHandler.setSocket()
+        mSocket = SocketHandler.getSocket()
+        SocketHandler.establishConnection()
+
+        mSocket?.on(Socket.EVENT_CONNECT_ERROR) { args ->
+            Log.e(
+                "error",
+                "onCreate:${args.contentToString()} "
+            )
+        }
+
+
+
+        mSocket?.on(Socket.EVENT_CONNECT) { args ->
+            Log.e("connect", "onCreate: ")
+
+            loading.isDismiss()
+
+            joinPlayer()
+
+            mSocket?.on(
+                "getMatchInfo"
+            ) { args ->
+
+                activity?.runOnUiThread {
+
+
+                    try {
+//                        receivedChat = ArrayList()
+
+//                    val json = (args[0] as JSONObject).get("data") as JSONObject
+
+                        val json = (args[0] as JSONObject) as JSONObject
+//                        roomID = (args[0] as JSONObject).get("roomId") as Int
+                        val gson = Gson()
+
+                        val obj1 =
+                            gson.fromJson(json.toString(), GetRandomPlayerModelData::class.java)
+
+
+
+
+
+                        URLConstant.matchId =
+                            obj1?.matchID //is match id pr report hona hai match lkn hum getmatches record k response ki match id pr report kr rahy jo k thk hai hai
+//                        opponentList.addAll(t.data.listOfOpponents)
+//                        rvAdapter.setData(opponentList)
+//                        StaticFields.toastClass(t.message)
+                        if (click?.gamePlay == 1) {
+
+
+                            if (click!!.isPractice == true) {
+
+                                if (obj1?.IsPlayable!! && click?.playerCount?.toInt() == obj1?.playerCount) {
+//                                    time.cancel()
+                                    loading.startLoading()
+                                    participateInTournament()
+                                }
+//                                else{
+//                                    opponentList = ArrayList()
+//                                    loading.isDismiss()
+//                                    selectRandomplayer()
+//                                }
+                            } else {
+                                if (obj1?.IsPlayable!! && click?.playerCount?.toInt() == obj1?.playerCount) {
+//                                    time.cancel()
+                                    binding.beginMatch.setOnClickListener {
+
+                                        showDialog(
+                                            "You need to deposit following amount in order to proceed further.",
+                                            "Deposit",
+                                            1
+                                        )
+                                    }
+                                }
+//                                else {
+//                                    opponentList = ArrayList()
+//                                    loading.isDismiss()
+//                                    selectRandomplayer()
+//                                }
+                            }
+
+
+                        } else if (click?.gamePlay == 2) {
+
+
+                            if (obj1?.IsPlayable!!) {
+//                            time.cancel()
+
+                                binding.beginMatch.setOnClickListener {
+                                    showDialog(
+                                        "You need to deposit following amount in order to proceed further.",
+                                        "Deposit",
+                                        1
+                                    )
+                                }
+                            }
+//                            else{
+//                                opponentList = ArrayList()
+//                                loading.isDismiss()
+//                                selectRandomplayer()
+//                            }
+
+//                            URLConstant.playerId = t.data.listOfOpponents
+//
+                        }
+//                            loading.isDismiss()
+                    } catch (e: Exception) {
+                        Log.e(
+                            "exception=",
+                            "$e"
+                        )
+                    }
+
+                }
+
+                Log.e(
+                    "retrievematchInfoSocket=",
+                    "onCreate:${args.contentToString()} "
+                )
+//                comments.addAll(args)
+
+//                    val mJsonString = "..."
+//                    val parser = JsonParser()
+//                    val mJson = JsonParser.parse(item as JsonObject)
+//                    val gson = Gson()
+//                    val `object`: MyDataObject = gson.fromJson(mJson, MyDataObject::class.java)
+
+            }
+
+
+
+
+            mSocket?.on(
+                "getRandomPlayer"
+            ) { args ->
+
+                activity?.runOnUiThread {
+                    try {
+
+                        val json = (args[0] as JSONArray) as JSONArray
+
+                        opponentList = ArrayList()
+
+                        for (index in 0 until json.length()) {
+
+                            val obj = Gson().fromJson(
+                                json.getJSONObject(index).toString(),
+                                ListofOpponentModel::class.java
+                            )
+
+                            if (obj.opponentId != URLConstant.u_id) {
+                                opponentList.add(obj)
+                            }
+
+                        }
+                        if (opponentList.size > 0){
+                            StaticFields.toastClass("New Player has joined")
+                        }
+                        else if (opponentList.size == 0){
+                            StaticFields.toastClass("Player has leave the game, please wait for next match")
+
+                        }
+                        rvAdapter.setData(opponentList)
+
+
+//                        if (opponentList[index].isLeave!!) {
+//                            for (item in opponentList) {
+//
+//                                if (obj2?.opponentId == item.opponentId) {
+//
+//                                    opponentList.remove(item)
+//                                    rvAdapter.setData(opponentList)
+////                                    loading.isDismiss()
+//
+////                                rvAdapter.notifyDataSetChanged()
+//                                }
+//                            }
+//                        } else {
+//                            if (obj2.opponentId != URLConstant.u_id){
+//                                opponentList.add(obj2!!)
+//                                rvAdapter.setData(opponentList)
+////                                loading.isDismiss()
+//                            }
+//                            loading.isDismiss()
+
+
+//                        rvAdapter.notifyDataSetChanged()
+
+
+
+
+                    } catch (e: Exception) {
+                        Log.e(
+                            "exception=",
+                            "$e"
+                        )
+
+                    }
+
+                }
+
+                Log.e(
+                    "retrieveOpponentSocket",
+                    "onCreate:${args.contentToString()} "
+                )
+
+
+            }
+
+        }
+
+    }
+
+
+    private fun joinPlayer() {
+        if (mSocket?.connected() == true) {
+            Log.e("connected", "onCreate:bami ")
+
+
+            val checked = WebSocketJoinLeaveModel(
+                ({
+                    if (URLConstant.eventId?.isNotEmpty() == true){
+                        URLConstant.eventId
+                    }else {
+                        click?.tournamentID!!
+                    }
+                }),
+
+                URLConstant.u_id!!,
+
+                )
+//            val map = HashMap<String, Any>()
+//            map["gameId"] = "00000067"
+//            map["userId"] = "62ebd0aa2a494e2a1260777f"
+//            map["type"] = 0
+//
+//            val obj = abcd()
+//            obj.gameId = "00000067"
+//            obj.userId = "62ebd0aa2a494e2a1260777f"
+//            obj.type = 0
+            val gson: JsonObject = JsonParser.parseString(Gson().toJson(checked)).asJsonObject
+
+//            val jsonObj = Gson().toJson(map)
+//            Log.e("JSONOBJ", "onCreate:$jsonObj " )
+
+            mSocket?.emit("joinPlayer", gson)
+//            mSocket?.emit("joinRoom", map)
+//            map.clear()
+        } else {
+            Log.e("notconnected", "onCreate:bami ")
+        }
+
+    }
+
+
+    private fun leavePlayer() {
+        if (mSocket?.connected() == true) {
+            Log.e("connected", "onCreate:bami ")
+
+
+            val checked = WebSocketJoinLeaveModel(
+                { click?.tournamentID!! },
+                URLConstant.u_id!!,
+                )
+//            val map = HashMap<String, Any>()
+//            map["gameId"] = "00000067"
+//            map["userId"] = "62ebd0aa2a494e2a1260777f"
+//            map["type"] = 0
+//
+//            val obj = abcd()
+//            obj.gameId = "00000067"
+//            obj.userId = "62ebd0aa2a494e2a1260777f"
+//            obj.type = 0
+            val gson: JsonObject = JsonParser.parseString(Gson().toJson(checked)).asJsonObject
+
+//            val jsonObj = Gson().toJson(map)
+//            Log.e("JSONOBJ", "onCreate:$jsonObj " )
+
+            mSocket?.emit("leavePlayer", gson)
+//            mSocket?.emit("joinRoom", map)
+//            map.clear()
+        } else {
+            Log.e("notconnected", "onCreate:bami ")
+        }
+
+    }
+
+
     private fun selectRandomplayer() {
 
         CoroutineScope(Dispatchers.IO).launch {
@@ -270,26 +603,25 @@ class FindCompetitiveFragment : Fragment() {
 
                             if (t.status == 1) {
                                 // same match id hai ye or getmatched record wali
-                                URLConstant.matchId = t.data.matchID //is match id pr report hona hai match lkn hum getmatches record k response ki match id pr report kr rahy jo k thk hai hai
+                                URLConstant.matchId =
+                                    t.data.matchID //is match id pr report hona hai match lkn hum getmatches record k response ki match id pr report kr rahy jo k thk hai hai
                                 opponentList.addAll(t.data.listOfOpponents)
                                 rvAdapter.setData(opponentList)
                                 StaticFields.toastClass(t.message)
                                 if (click?.gamePlay == 1) {
 
-                                    if(click!!.isPractice == true){
+                                    if (click!!.isPractice == true) {
 
-                                        if (t.data.IsPlayable && click?.playerCount?.toInt() == t.data.listOfOpponents.size +1){
+                                        if (t.data.IsPlayable && click?.playerCount?.toInt() == t.data.listOfOpponents.size + 1) {
                                             time.cancel()
                                             loading.startLoading()
                                             participateInTournament()
-                                        }
-                                        else{
+                                        } else {
                                             opponentList = ArrayList()
                                             loading.isDismiss()
                                             selectRandomplayer()
                                         }
-                                    }
-                                    else {
+                                    } else {
                                         if (t.data.IsPlayable && click?.playerCount?.toInt() == t.data.listOfOpponents.size + 1) {
                                             time.cancel()
                                             binding.beginMatch.setOnClickListener {
@@ -300,8 +632,7 @@ class FindCompetitiveFragment : Fragment() {
                                                     1
                                                 )
                                             }
-                                        }
-                                        else {
+                                        } else {
                                             opponentList = ArrayList()
                                             loading.isDismiss()
                                             selectRandomplayer()
@@ -309,9 +640,7 @@ class FindCompetitiveFragment : Fragment() {
                                     }
 
 
-                                }
-
-                                else if (click?.gamePlay == 2) {
+                                } else if (click?.gamePlay == 2) {
 
                                     if (t.data.IsPlayable) {
                                         time.cancel()
@@ -323,8 +652,7 @@ class FindCompetitiveFragment : Fragment() {
                                                 1
                                             )
                                         }
-                                    }
-                                    else{
+                                    } else {
                                         opponentList = ArrayList()
                                         loading.isDismiss()
                                         selectRandomplayer()
@@ -333,10 +661,7 @@ class FindCompetitiveFragment : Fragment() {
 //                            URLConstant.playerId = t.data.listOfOpponents
 //
                                 }
-                            }
-
-
-                            else {
+                            } else {
                                 time.cancel()
                                 showDialog(t.message, "", 0)
 
@@ -360,4 +685,17 @@ class FindCompetitiveFragment : Fragment() {
     }
 
 
+    override fun onPause() {
+
+        leavePlayer()
+        mSocket?.disconnect()
+
+        super.onPause()
+
+
+    }
 }
+
+
+
+

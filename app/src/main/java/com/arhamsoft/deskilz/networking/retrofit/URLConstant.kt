@@ -60,7 +60,7 @@ object URLConstant {
 //    var userId:String?=""
     var fcmToken:String?=""
 //    var check:Boolean = false
-    var tournamentId: String? =""
+    var eventId: String? =""
     var matchId: String? = ""
     var playerId: String =""
     var userImg: String = ""

@@ -5,5 +5,6 @@ data class ListofOpponentModel(
 
     val opponentId: String? ="",
 
-    val opponentName: String? = ""
+    val opponentName: String? = "",
+    val isLeave:Boolean = false
 )
