@@ -1,12 +1,14 @@
 package com.arhamsoft.deskilz.ui.fragment.navBarFragments
 
 import android.app.Activity
+import android.content.Intent
 import android.os.Bundle
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import androidx.activity.result.contract.ActivityResultContracts
 import androidx.navigation.fragment.findNavController
 import coil.load
 import com.alphaCareInc.app.room.UserDatabase
@@ -32,6 +34,24 @@ class FragmentMatchScore : Fragment() {
     var progressionList:ArrayList<ProgressPost> = ArrayList()
     var gameCustomDataList: ArrayList<CustomPlayerModelData> = ArrayList()
 
+    val someActivity = registerForActivityResult(
+        ActivityResultContracts.StartActivityForResult()
+    ) { result ->
+        if (result.resultCode == Activity.RESULT_OK) {
+            val data = result.data
+            URLConstant.score= data?.extras?.get("matchScore") as Long
+            Log.d("dataResult", data.toString())
+
+            loading.startLoading()
+
+            getGameCustomData()
+            progressionData()
+
+
+        }
+    }
+
+
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -39,6 +59,12 @@ class FragmentMatchScore : Fragment() {
     ): View? {
         binding= FragmentMatchScoreBinding.inflate(LayoutInflater.from(context))
         loading = LoadingDialog(requireContext() as Activity)
+
+        val myClass = Class.forName(URLConstant.gameActivity)
+        val intent = Intent(requireContext(), myClass)
+        someActivity.launch(intent)
+
+
         return binding.root
     }
 
@@ -46,11 +72,6 @@ class FragmentMatchScore : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         binding.score.text = URLConstant.score.toString()
 
-
-        loading.startLoading()
-
-        getGameCustomData()
-        progressionData()
 
 
 

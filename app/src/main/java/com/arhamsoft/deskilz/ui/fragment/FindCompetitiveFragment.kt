@@ -662,7 +662,7 @@ class FindCompetitiveFragment : Fragment() {
 //
                                 }
                             } else {
-                                time.cancel()
+//                                time.cancel()
                                 showDialog(t.message, "", 0)
 
 

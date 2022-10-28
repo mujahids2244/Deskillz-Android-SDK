@@ -71,6 +71,7 @@ object URLConstant {
     var joinType:Int = 9
     var currentLoginId:Int = 0
     var score:Long=85
+    var gameActivity:String = ""
 
 
 }
