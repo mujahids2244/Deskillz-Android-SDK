@@ -113,6 +113,18 @@
 
             </LinearLayout>
 
+            <TextView
+                android:id="@+id/shoutout"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@color/blue1"
+                android:text="shoutout"
+                android:textColor="@color/white"
+                android:maxLines="1"
+                android:paddingStart="@dimen/size_5dp"
+                />
+
+
             <RelativeLayout
                 android:id="@+id/status_bar"
                 android:layout_width="match_parent"
@@ -132,7 +144,7 @@
                     app:gradient1="@color/red1"
                     app:gradient2="@color/red2"
                     app:lower_cut_value="@dimen/size_20dp"
-                    app:upper_cut_value="@dimen/size_20dp" />
+                    app:upper_cut_value="@dimen/size_2dp" />
 
 
                 <LinearLayout

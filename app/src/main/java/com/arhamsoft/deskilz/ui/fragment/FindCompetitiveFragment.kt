@@ -392,6 +392,7 @@ class FindCompetitiveFragment : Fragment() {
 
                             if (obj1?.IsPlayable!!) {
 //                            time.cancel()
+                                StaticFields.toastClass("Its a Non-Live Match. Press button to play match.")
 
                                 binding.beginMatch.setOnClickListener {
                                     showDialog(

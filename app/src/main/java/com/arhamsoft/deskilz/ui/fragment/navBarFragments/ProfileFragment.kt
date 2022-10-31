@@ -145,7 +145,7 @@ class ProfileFragment : Fragment() {
 
                                 binding.winStreak.text = t.data.winStreak.toString()
                                 binding.matchesWon.text = t.data.userWin.toString()
-//                                    binding.shoutout.text = t.data.userData.userShoutOut
+                                binding.shoutout.text = t.data.userData.userShoutOut
                                 binding.win.text = t.data.userWin.toString()
                                 binding.lose.text = t.data.userLoose.toString()
 
