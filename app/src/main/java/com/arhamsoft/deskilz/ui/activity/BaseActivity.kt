@@ -32,10 +32,10 @@ open class BaseActivity : AppCompatActivity(), LogoutInterface {
         super.onCreate(savedInstanceState, persistentState)
         packageManager.getApplicationInfo(packageName, PackageManager.GET_META_DATA).apply {
             StaticFields.key = metaData.getString("GameId").toString()
-            Log.e("gameKeyInt", "onCreate:${StaticFields.key}..String " )
-            if (StaticFields.key.isNullOrEmpty()) {
+            Log.e("gameKeyStringOnCreate1", "onCreate:${StaticFields.key}..String " )
+            if (StaticFields.key.isEmpty() || StaticFields.key == "null") {
                 StaticFields.key = metaData.getInt("GameId").toString()
-                Log.e("gameKeyInt", "onCreate:${StaticFields.key}..Int " )
+                Log.e("gameKeyIntOnCreate1", "onCreate:${StaticFields.key}..Int " )
 
             }
             URLConstant.gameActivity = metaData.getString("gameActivity").toString()
@@ -50,8 +50,12 @@ open class BaseActivity : AppCompatActivity(), LogoutInterface {
 
         packageManager.getApplicationInfo(packageName, PackageManager.GET_META_DATA).apply {
             StaticFields.key = metaData.getString("GameId").toString()
-            if (StaticFields.key.isEmpty()) {
+            Log.e("gameKeyStringOnCreate2", "onCreate:${StaticFields.key}..String " )
+
+            if (StaticFields.key.isEmpty() || StaticFields.key == "null") {
                 StaticFields.key = metaData.getInt("GameId").toString()
+                Log.e("gameKeyIntOnCreate2", "onCreate:${StaticFields.key}..Int " )
+
             }
             URLConstant.gameActivity = metaData.getString("gameActivity").toString()
         }

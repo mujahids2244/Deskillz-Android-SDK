@@ -527,7 +527,6 @@ class FindCompetitiveFragment : Fragment() {
                     click?.tournamentID!!
                 },
                 URLConstant.u_id!!,
-
                 )
 //            val map = HashMap<String, Any>()
 //            map["gameId"] = "00000067"
