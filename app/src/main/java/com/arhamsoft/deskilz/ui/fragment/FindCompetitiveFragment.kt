@@ -82,7 +82,11 @@ class FindCompetitiveFragment : Fragment() {
         val bundle = arguments
         if (bundle != null) {
 
-            click = bundle.getSerializable("GET_MATCHES_OBJ") as GetTournamentsListData
+
+
+            click = Gson().fromJson(bundle.getString("GET_MATCHES_OBJ"),GetTournamentsListData::class.java)
+
+
 
             binding.entryFee.text = click?.entryFee!!
             binding.pCount.text = "${click?.playerCount!!} players"
@@ -558,7 +562,11 @@ class FindCompetitiveFragment : Fragment() {
 
 
             val checked = WebSocketJoinLeaveModel(
-                 click?.tournamentID!! ,
+                if (URLConstant.eventId?.isNotEmpty() == true) {
+                    URLConstant.eventId
+                } else {
+                    click?.tournamentID!!
+                },
                 URLConstant.u_id!!
                 )
 //            val map = HashMap<String, Any>()

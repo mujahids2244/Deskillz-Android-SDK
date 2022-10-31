@@ -30,6 +30,7 @@ import com.arhamsoft.deskilz.networking.retrofit.URLConstant
 import com.arhamsoft.deskilz.ui.adapter.*
 import com.arhamsoft.deskilz.utils.LoadingDialog
 import com.arhamsoft.deskilz.utils.StaticFields
+import com.google.gson.Gson
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -110,8 +111,10 @@ class PlayScreenFragment : Fragment() {
             practiceList,
             object : RVAdapterPractice.OnItemClick {
                 override fun onClick(click: GetTournamentsListData, position: Int) {
+
+                    val obj = Gson().toJson(click)
                     val bundle = bundleOf()
-                    bundle.putSerializable("GET_MATCHES_OBJ",click)
+                    bundle.putString("GET_MATCHES_OBJ",obj)
 //                    URLConstant.tournamentId = click.tournamentID
 //                    URLConstant.Fee = click.entryFee
 //                    showDialog()
@@ -131,8 +134,10 @@ class PlayScreenFragment : Fragment() {
             headToHeadList,
             object : RVAdapterHeadToHead.OnItemClick {
                 override fun onClick(click: GetTournamentsListData, position: Int) {
+                    val obj = Gson().toJson(click)
+
                     val bundle = bundleOf()
-                    bundle.putSerializable("GET_MATCHES_OBJ",click)
+                    bundle.putSerializable("GET_MATCHES_OBJ",obj)
 //                    URLConstant.tournamentId = click.tournamentID
 //                    URLConstant.Fee = click.entryFee
 //                    URLConstant.player_count = click.playerCount
@@ -155,8 +160,10 @@ class PlayScreenFragment : Fragment() {
             bracketsList,
             object : RVAdapterBrackets.OnItemClick {
                 override fun onClick(click: GetTournamentsListData, position: Int) {
+                    val obj = Gson().toJson(click)
+
                     val bundle = bundleOf()
-                    bundle.putSerializable("GET_MATCHES_OBJ",click)
+                    bundle.putSerializable("GET_MATCHES_OBJ",obj)
 //                    URLConstant.tournamentId = click.tournamentID
 //                    URLConstant.Fee = click.entryFee
 //                    URLConstant.player_count = click.playerCount

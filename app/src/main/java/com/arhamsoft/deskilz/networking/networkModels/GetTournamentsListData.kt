@@ -1,6 +1,5 @@
 package com.arhamsoft.deskilz.networking.networkModels
 
-import java.io.Serializable
 
 data class GetTournamentsListData(
     val isPractice: Boolean? = null,
@@ -16,4 +15,4 @@ data class GetTournamentsListData(
     val gamePromoCode: String?,
     val prizes: List<PrizesModel?>
 
-):Serializable
+)
