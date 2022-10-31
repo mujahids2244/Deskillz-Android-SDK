@@ -22,7 +22,7 @@ import com.arhamsoft.deskilz.utils.LogoutHandler
 import com.arhamsoft.deskilz.utils.LogoutInterface
 import com.arhamsoft.deskilz.utils.StaticFields
 
-class BaseActivity : AppCompatActivity(), LogoutInterface {
+open class BaseActivity : AppCompatActivity(), LogoutInterface {
 
     private lateinit var binding: ActivityBaseBinding
     private lateinit var navController: NavController
