@@ -382,7 +382,8 @@ class FindCompetitiveFragment : Fragment() {
                             }
 
 
-                        } else if (click?.gamePlay == 2) {
+                        }
+                        else if (click?.gamePlay == 2) {
 
 
                             if (obj1?.IsPlayable!!) {

@@ -15,14 +15,6 @@
             android:name="com.google.firebase.messaging.default_notification_icon"
             android:resource="@drawable/ic_app_icon_deskillz" />
 
-
-        <activity
-            android:name=".ui.activity.BaseActivity"
-            android:screenOrientation="portrait"
-            android:exported="true">
-
-        </activity>
-
         <service
             android:name=".services.MyFirebaseMessagingService"
             android:exported="true">

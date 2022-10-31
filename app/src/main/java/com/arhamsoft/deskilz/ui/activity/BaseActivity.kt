@@ -1,9 +1,11 @@
 package com.arhamsoft.deskilz.ui.activity
 
 import android.app.Dialog
+import android.content.pm.PackageManager
 import android.graphics.Color
 import android.graphics.drawable.ColorDrawable
 import android.os.Bundle
+import android.os.PersistableBundle
 import android.util.Log
 import android.view.View
 import androidx.appcompat.app.AppCompatActivity
@@ -14,9 +16,11 @@ import com.arhamsoft.deskilz.AppController
 import com.arhamsoft.deskilz.R
 import com.arhamsoft.deskilz.databinding.ActivityBaseBinding
 import com.arhamsoft.deskilz.databinding.DialogDepositBinding
+import com.arhamsoft.deskilz.networking.retrofit.URLConstant
 import com.arhamsoft.deskilz.utils.CustomSharedPreference
 import com.arhamsoft.deskilz.utils.LogoutHandler
 import com.arhamsoft.deskilz.utils.LogoutInterface
+import com.arhamsoft.deskilz.utils.StaticFields
 
 class BaseActivity : AppCompatActivity(), LogoutInterface {
 
@@ -24,14 +28,35 @@ class BaseActivity : AppCompatActivity(), LogoutInterface {
     private lateinit var navController: NavController
     lateinit var sharedPreference: CustomSharedPreference
 
+    override fun onCreate(savedInstanceState: Bundle?, persistentState: PersistableBundle?) {
+        super.onCreate(savedInstanceState, persistentState)
+        packageManager.getApplicationInfo(packageName, PackageManager.GET_META_DATA).apply {
+            StaticFields.key = metaData.getString("GameId").toString()
+            Log.e("gameKeyInt", "onCreate:${StaticFields.key}..String " )
+            if (StaticFields.key.isNullOrEmpty()) {
+                StaticFields.key = metaData.getInt("GameId").toString()
+                Log.e("gameKeyInt", "onCreate:${StaticFields.key}..Int " )
+
+            }
+            URLConstant.gameActivity = metaData.getString("gameActivity").toString()
+        }
+        LogoutHandler.setListener(this)
+    }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        binding = ActivityBaseBinding.inflate(layoutInflater)
-        setContentView(binding.root)
+//        binding = ActivityBaseBinding.inflate(layoutInflater)
+//        setContentView(binding.root)
 
-
-        val fragmentHost = supportFragmentManager.findFragmentById(binding.navGraph.id) as NavHostFragment
-        navController = fragmentHost.navController
+        packageManager.getApplicationInfo(packageName, PackageManager.GET_META_DATA).apply {
+            StaticFields.key = metaData.getString("GameId").toString()
+            if (StaticFields.key.isEmpty()) {
+                StaticFields.key = metaData.getInt("GameId").toString()
+            }
+            URLConstant.gameActivity = metaData.getString("gameActivity").toString()
+        }
+//        val fragmentHost = supportFragmentManager.findFragmentById(binding.navGraph.id) as NavHostFragment
+//        navController = fragmentHost.navController
 
         LogoutHandler.setListener(this)
 
