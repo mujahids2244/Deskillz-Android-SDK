@@ -306,7 +306,7 @@
 
             <LinearLayout
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content"
+                android:layout_height="@dimen/size_65dp"
                 android:layout_marginTop="@dimen/size_10dp"
                 android:orientation="horizontal">
 

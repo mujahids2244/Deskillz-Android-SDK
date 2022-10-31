@@ -25,6 +25,7 @@ import com.arhamsoft.deskilz.databinding.FragmentStartSdkBinding
 import com.arhamsoft.deskilz.domain.listeners.NetworkListener
 import com.arhamsoft.deskilz.domain.repository.NetworkRepo
 import com.arhamsoft.deskilz.networking.networkModels.CustomPlayerModel
+import com.arhamsoft.deskilz.networking.networkModels.ForgotModel
 import com.arhamsoft.deskilz.networking.networkModels.ProgressPost
 import com.arhamsoft.deskilz.networking.retrofit.URLConstant
 import com.arhamsoft.deskilz.utils.InternetConLiveData
@@ -72,8 +73,11 @@ class StartSDKFragment : Fragment() {
         if (!(StaticFields.isNetworkConnected(requireContext()))){
             binding.noint.noInternet.visibility = View.VISIBLE
         }
+        coreLoop()
+
 
         checkNetworkConnection()
+
 
 //        StaticFields.fcmToken()
 
@@ -248,6 +252,8 @@ class StartSDKFragment : Fragment() {
 
             if (isConnected) {
                 binding.noint.noInternet.visibility = View.GONE
+                coreLoop()
+
 //                loading.startLoading()
 //                getGameCustomData()
             }
@@ -255,6 +261,45 @@ class StartSDKFragment : Fragment() {
                 binding.noint.noInternet.visibility = View.VISIBLE
 
             }
+        }
+
+    }
+
+    private fun coreLoop(){
+        CoroutineScope(Dispatchers.IO).launch {
+            NetworkRepo.coreLoop(
+                StaticFields.key,
+                object : NetworkListener<ForgotModel> {
+                    override fun successFul(t: ForgotModel) {
+                        activity?.runOnUiThread {
+                            loading.isDismiss()
+
+                            if (t.status == 1) {
+
+
+                                StaticFields.toastClass(t.message)
+
+                            }
+                            else{
+                                StaticFields.toastClass(t.message)
+                            }
+                        }
+
+
+
+                    }
+
+
+                    override fun failure() {
+
+                        activity?.runOnUiThread {
+                            loading.isDismiss()
+
+                            StaticFields.toastClass("Api syncing fail getCustomgameDAta")
+                        }
+                    }
+                }
+            )
         }
 
     }

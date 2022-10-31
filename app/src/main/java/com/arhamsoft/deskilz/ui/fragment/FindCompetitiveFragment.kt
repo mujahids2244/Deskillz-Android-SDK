@@ -460,11 +460,21 @@ class FindCompetitiveFragment : Fragment() {
                             }
 
                         }
-                        if (opponentList.size > 0){
-                            StaticFields.toastClass("New Player has joined")
+                        if (click?.gamePlay == 1){
+                            if (opponentList.size > 0) {
+                                StaticFields.toastClass("New Player has joined")
+                            } else if (opponentList.size == 0) {
+                                StaticFields.toastClass("No Player at the moment, please wait")
+
+                            }
                         }
-                        else if (opponentList.size == 0){
-                            StaticFields.toastClass("Player has leave the game, please wait for next match")
+                        else if(click?.gamePlay == 2){
+                            if (opponentList.size > 0) {
+                                StaticFields.toastClass("New Player has joined")
+                            } else if (opponentList.size == 0) {
+                                StaticFields.toastClass("Its a Non-Live Match. Press button to play match.")
+
+                            }
 
                         }
                         rvAdapter.setData(opponentList)

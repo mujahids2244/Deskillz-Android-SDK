@@ -45,8 +45,7 @@ interface ApiListCalling {
     @FormUrlEncoded
     @POST(URLConstant.coreloopUrl)
     suspend fun coreLoop(
-        @Field("matchId") matchID:String,
-        @Field("userId") userID:String,
+        @Field("gameID") matchID:String,
     ): Response<ForgotModel>
 
     @FormUrlEncoded

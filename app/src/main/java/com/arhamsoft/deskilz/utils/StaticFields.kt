@@ -15,7 +15,7 @@ object StaticFields {
 
 
     var userModel: LoginModel? = null
-    var key : String = "00000067"
+    var key : String = "0"
 
 //    00000067
     fun toastClass(text:String,context: Context = AppController.getContext()){

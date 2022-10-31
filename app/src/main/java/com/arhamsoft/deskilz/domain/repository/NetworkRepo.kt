@@ -136,12 +136,11 @@ object NetworkRepo {
 
 
     suspend fun coreLoop(
-        userID: String,
-        matchID:String,
+       gameID:String,
         listener: NetworkListener<ForgotModel>
     ) {
         callApi.callApi(
-            retrofitClient.coreLoop(matchID,userID),
+            retrofitClient.coreLoop(gameID),
             object : ResponseHandler<ForgotModel> {
                 override fun success(model: ForgotModel) {
 //                    forgotsuccessLiveData.postValue(model)
