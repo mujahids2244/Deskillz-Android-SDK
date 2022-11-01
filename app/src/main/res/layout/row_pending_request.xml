@@ -46,7 +46,7 @@
                     <LinearLayout
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:layout_margin="@dimen/_8sdp"
+                        android:padding="@dimen/size_5dp"
                         android:layout_weight="1"
                         android:orientation="vertical">
 
@@ -74,8 +74,8 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="vs"
+                            android:textSize="@dimen/text_size_10sp"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/text_size_15sp"
                             android:fontFamily="@font/poppins_regular" />
 
                         <TextView
@@ -83,8 +83,9 @@
                             android:layout_width="wrap_content"
                             android:layout_height="wrap_content"
                             android:text="abcd"
+                            android:textSize="@dimen/text_size_10sp"
+                            android:maxLines="1"
                             android:textColor="@color/black"
-                            android:textSize="@dimen/text_size_15sp"
                             android:fontFamily="@font/poppins_regular" />
 
                     </LinearLayout>
