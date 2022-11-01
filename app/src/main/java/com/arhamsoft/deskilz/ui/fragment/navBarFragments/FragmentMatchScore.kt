@@ -33,19 +33,19 @@ class FragmentMatchScore : Fragment() {
     var u_id:String? =null
     var progressionList:ArrayList<ProgressPost> = ArrayList()
     var gameCustomDataList: ArrayList<CustomPlayerModelData> = ArrayList()
-
+    private lateinit var prog:HashMap<*,*>
     val someActivity = registerForActivityResult(
         ActivityResultContracts.StartActivityForResult()
     ) { result ->
         if (result.resultCode == Activity.RESULT_OK) {
             val data = result.data
             URLConstant.score= data?.extras?.get("matchScore") as Long
+            prog =  data.extras?.get("progression") as HashMap<*,*>
             Log.d("dataResult", data.toString())
 
             loading.startLoading()
 
             getGameCustomData()
-            progressionData()
 
 
         }
@@ -104,22 +104,24 @@ class FragmentMatchScore : Fragment() {
 
                                 gameCustomDataList.addAll(t.data)
 
-                                val map = HashMap<String, Any>()
-                                map["AA1"] = 100
-                                map["test1"] = 200
+//                                val map = HashMap<String, Any>()
+//                                map["AA1"] = 100
+//                                map["test1"] = 200
 
 
                                 for (item in gameCustomDataList){
-                                    for (i in map.keys){
+                                    for (i in prog.keys){
                                         if (item.keyName == i){
 
-                                            progressionList.add(ProgressPost(item.keyName,map[i]!!))
+                                            progressionList.add(ProgressPost(item.keyName,prog[i]!!))
 
                                         }
                                     }
 
 
                                 }
+                                progressionData()
+
 
 //                            activity?.runOnUiThread {
 //                                StaticFields.toastClass("api chal ri hai ")
