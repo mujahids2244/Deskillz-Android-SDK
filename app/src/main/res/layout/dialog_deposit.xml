@@ -31,9 +31,21 @@
         android:orientation="horizontal">
 
         <Button
+            android:id="@+id/cancel_button2"
+            android:layout_width="@dimen/size_100dp"
+            android:layout_height="@dimen/size_40dp"
+            android:visibility="gone"
+            android:background="@drawable/button_bg_red"
+            android:fontFamily="@font/titan_one_regular"
+            android:text="Cancel"
+            android:textColor="@color/white"
+            android:textSize="@dimen/text_size_15sp" />
+
+        <Button
             android:id="@+id/cancel_button"
             android:layout_width="@dimen/size_100dp"
             android:layout_height="@dimen/size_40dp"
+
             android:background="@drawable/button_bg_red"
             android:fontFamily="@font/titan_one_regular"
             android:text="Cancel"

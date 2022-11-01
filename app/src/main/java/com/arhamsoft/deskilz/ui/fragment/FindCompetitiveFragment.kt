@@ -152,7 +152,7 @@ class FindCompetitiveFragment : Fragment() {
 
 
     private fun countdownTimer() {
-        time = object : CountDownTimer(60000, 1000) {
+        time = object : CountDownTimer(180000, 1000) {
 
             // Callback function, fired on regular interval
             override fun onTick(millisUntilFinished: Long) {
@@ -178,7 +178,7 @@ class FindCompetitiveFragment : Fragment() {
             // Callback function, fired
             // when the time is up
             override fun onFinish() {
-                showDialog("Request Timeout. No player found at the moment. Try again later", "", 0)
+                showDialog("Request Timeout, Try again. ", "", 0)
 
             }
         }.start()
@@ -217,6 +217,8 @@ class FindCompetitiveFragment : Fragment() {
             dialogBinding.para.text = t
             dialogBinding.price.visibility = View.GONE
             dialogBinding.cancelButton.visibility = View.GONE
+            dialogBinding.cancelButton2.text = "Continue Searching"
+            dialogBinding.cancelButton2.visibility = View.VISIBLE
             dialogBinding.okButton.text = "return to Play Screen"
         } else {
             dialogBinding.h1.text = h
@@ -224,6 +226,10 @@ class FindCompetitiveFragment : Fragment() {
             dialogBinding.price.text = " Entry Fee: ${click?.entryFee}"
         }
 
+        dialogBinding.cancelButton2.setOnClickListener {
+            countdownTimer()
+            dialog.dismiss()
+        }
         dialogBinding.cancelButton.setOnClickListener {
             dialog.dismiss()
         }
@@ -469,17 +475,18 @@ class FindCompetitiveFragment : Fragment() {
                                 StaticFields.toastClass("No Player at the moment, please wait")
 
                             }
+
+                            rvAdapter.setData(opponentList)
+
                         }
                         else if(click?.gamePlay == 2){
-                            if (opponentList.size > 0) {
-                                StaticFields.toastClass("New Player has joined")
-                            } else if (opponentList.size == 0) {
+                            opponentList = ArrayList()
+                             if (opponentList.size == 0) {
                                 StaticFields.toastClass("Its a Non-Live Match. Press button to play match.")
-
                             }
+                            rvAdapter.setData(opponentList)
 
                         }
-                        rvAdapter.setData(opponentList)
 
 
 //                        if (opponentList[index].isLeave!!) {
