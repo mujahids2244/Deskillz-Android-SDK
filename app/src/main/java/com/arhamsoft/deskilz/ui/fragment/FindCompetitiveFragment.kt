@@ -37,6 +37,7 @@ import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
 import org.json.JSONArray
 import org.json.JSONObject
+import java.util.concurrent.TimeUnit
 
 class FindCompetitiveFragment : Fragment() {
 
@@ -76,7 +77,7 @@ class FindCompetitiveFragment : Fragment() {
 
         StaticFields.toastClass("Please wait, while we are matching opponent for you.")
 
-//        countdownTimer()
+        countdownTimer()
         userNameandImg()
 
         val bundle = arguments
@@ -150,38 +151,38 @@ class FindCompetitiveFragment : Fragment() {
     }
 
 
-//    private fun countdownTimer() {
-//        time = object : CountDownTimer(30000, 1000) {
-//
-//            // Callback function, fired on regular interval
-//            override fun onTick(millisUntilFinished: Long) {
-//
-//                //Convert milliseconds into hour,minute and seconds
-//                //Convert milliseconds into hour,minute and seconds
-//                val hms = java.lang.String.format(
-//                    "%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(millisUntilFinished),
-//
-//                    TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(
-//                        TimeUnit.MILLISECONDS.toHours(millisUntilFinished)
-//                    ),
-//                    TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(
-//                        TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)
-//                    )
-//                )
-//                binding.countdown.text = hms //set text
-//
-//
-////                binding.countdown.text = ""+millisUntilFinished / 1000
-//            }
-//
-//            // Callback function, fired
-//            // when the time is up
-//            override fun onFinish() {
-//                showDialog("Request Timeout. No player found at the moment. Try again later", "", 0)
-//
-//            }
-//        }.start()
-//    }
+    private fun countdownTimer() {
+        time = object : CountDownTimer(60000, 1000) {
+
+            // Callback function, fired on regular interval
+            override fun onTick(millisUntilFinished: Long) {
+
+                //Convert milliseconds into hour,minute and seconds
+                //Convert milliseconds into hour,minute and seconds
+                val hms = java.lang.String.format(
+                    "%02d:%02d:%02d", TimeUnit.MILLISECONDS.toHours(millisUntilFinished),
+
+                    TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished) - TimeUnit.HOURS.toMinutes(
+                        TimeUnit.MILLISECONDS.toHours(millisUntilFinished)
+                    ),
+                    TimeUnit.MILLISECONDS.toSeconds(millisUntilFinished) - TimeUnit.MINUTES.toSeconds(
+                        TimeUnit.MILLISECONDS.toMinutes(millisUntilFinished)
+                    )
+                )
+                binding.countdown.text = hms //set text
+
+
+//                binding.countdown.text = ""+millisUntilFinished / 1000
+            }
+
+            // Callback function, fired
+            // when the time is up
+            override fun onFinish() {
+                showDialog("Request Timeout. No player found at the moment. Try again later", "", 0)
+
+            }
+        }.start()
+    }
 
     private fun userNameandImg() {
         if (sharedPreference.returnValue("USERIMG") != null
@@ -357,7 +358,7 @@ class FindCompetitiveFragment : Fragment() {
                             if (click!!.isPractice == true) {
 
                                 if (obj1?.IsPlayable!! && click?.playerCount?.toInt() == obj1?.playerCount) {
-//                                    time.cancel()
+                                    time.cancel()
                                     loading.startLoading()
                                     participateInTournament()
                                 }
@@ -368,7 +369,7 @@ class FindCompetitiveFragment : Fragment() {
 //                                }
                             } else {
                                 if (obj1?.IsPlayable!! && click?.playerCount?.toInt() == obj1?.playerCount) {
-//                                    time.cancel()
+                                    time.cancel()
                                     binding.beginMatch.setOnClickListener {
 
                                         showDialog(
@@ -391,7 +392,7 @@ class FindCompetitiveFragment : Fragment() {
 
 
                             if (obj1?.IsPlayable!!) {
-//                            time.cancel()
+                            time.cancel()
                                 StaticFields.toastClass("Its a Non-Live Match. Press button to play match.")
 
                                 binding.beginMatch.setOnClickListener {
