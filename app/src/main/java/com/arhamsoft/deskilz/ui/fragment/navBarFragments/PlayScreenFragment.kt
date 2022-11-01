@@ -213,7 +213,7 @@ class PlayScreenFragment : Fragment() {
 
                             if (t.data.isNotEmpty()) {
 
-                                binding.eventLayout.visibility = View.VISIBLE
+                                binding.eventLayout.visibility = View.GONE
 
                                 eventList.addAll(t.data)
 
