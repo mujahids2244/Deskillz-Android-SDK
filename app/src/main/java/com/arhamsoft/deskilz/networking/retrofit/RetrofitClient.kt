@@ -47,7 +47,7 @@ class RetrofitClient {
             val request = chain.request().newBuilder()
                 .addHeader("DeSkillzSdkKey", StaticFields.key)
                 .addHeader("Authorization", bearerToken)
-                .addHeader("x-auth-token", "Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2ODAwMTIwMTcsImlhdCI6MTY0ODQ3NjAxNywic3ViIjoiNjI0MWJkMWVjNzc4NGU3MDE1YjA4ZDE3In0.cMWXoq3n8Oaz2DjiKu54t2cwGQiPF5dVWklZstn1PNI")
+                .addHeader("x-auth-token", "")
                 .build()
                 chain.proceed(request)
 
