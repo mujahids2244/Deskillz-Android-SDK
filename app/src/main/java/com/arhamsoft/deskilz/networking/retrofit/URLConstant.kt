@@ -7,7 +7,7 @@ import com.arhamsoft.deskilz.networking.networkModels.ThemeModel
 object URLConstant {
 
 
-    const val baseUrl = "https://deskillz.arhamsoft.org/v1/mobile/"
+    const val baseUrl = ""
 //    const val loginUrl = "login"
 //    const val logoutUrl = "logout"
     const val acceptReqUrl = "users/accept-friend-request"
