@@ -19,22 +19,22 @@ object SocketHandler {
             options.path = "/socket.io/?EIO=4&"
 //            options.port = 8081
 
-            mSocket = IO.socket("https://deskillz.arhamsoft.org/",options)
+            mSocket = IO.socket("",options)
 
 //              /////for headers
 
 ////            val extraHeaders: MutableMap<String, String> = HashMap()
-////            extraHeaders["x-auth-token"] = ("Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2ODAwMTIwMTcsImlhdCI6MTY0ODQ3NjAxNywic3ViIjoiNjI0MWJkMWVjNzc4NGU3MDE1YjA4ZDE3In0.cMWXoq3n8Oaz2DjiKu54t2cwGQiPF5dVWklZstn1PNI")
+////            extraHeaders["x-auth-token"] = ("Bearer")
 ////           extraHeaders["DeSkillzSdkKey"] = ("00000067")
-////           extraHeaders["Authorization"] = (" Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2ODAwMTIwMTcsImlhdCI6MTY0ODQ3NjAxNywic3ViIjoiNjI0MWJkMWVjNzc4NGU3MDE1YjA4ZDE3In0.cMWXoq3n8Oaz2DjiKu54t2cwGQiPF5dVWklZstn1PNI")
+////           extraHeaders["Authorization"] = (" Bearer")
 ////             options.auth = extraHeaders
 
 
 //              /////for headers
 //            val extra: MutableMap<String,List<String>> = HashMap()
-//            extra["x-auth-token"] = listOf("Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2ODAwMTIwMTcsImlhdCI6MTY0ODQ3NjAxNywic3ViIjoiNjI0MWJkMWVjNzc4NGU3MDE1YjA4ZDE3In0.cMWXoq3n8Oaz2DjiKu54t2cwGQiPF5dVWklZstn1PNI")
+//            extra["x-auth-token"] = listOf("Bearer")
 //            extra["DeSkillzSdkKey"] = listOf("00000067")
-//            extra["Authorization"] = listOf(" Bearer eyJ0eXAiOiJKV1QiLCJhbGciOiJIUzI1NiJ9.eyJleHAiOjE2ODAwMTIwMTcsImlhdCI6MTY0ODQ3NjAxNywic3ViIjoiNjI0MWJkMWVjNzc4NGU3MDE1YjA4ZDE3In0.cMWXoq3n8Oaz2DjiKu54t2cwGQiPF5dVWklZstn1PNI")
+//            extra["Authorization"] = listOf(" Bearer")
 //            options.extraHeaders = extra
 
 
